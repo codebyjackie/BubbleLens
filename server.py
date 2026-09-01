@@ -114,7 +114,7 @@ def build_catalog() -> dict:
         "sourceCount": len(tags),
         "sourceRowCount": 49844,
         "fallbackCount": fallback_count,
-        "version": 14,
+        "version": 15,
     }
 
 
@@ -161,7 +161,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self.send_json(500, {"error": str(exc)})
             return
         if path == "/api/health":
-            self.send_json(200, {"ok": True, "database": DATA_FILE.exists(), "app": "bubblelens", "version": 14})
+            self.send_json(200, {"ok": True, "database": DATA_FILE.exists(), "app": "bubblelens", "version": 15})
             return
         if path == "/api/shutdown":
             self.send_json(200, {"ok": True})

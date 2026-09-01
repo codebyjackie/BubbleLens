@@ -121,7 +121,7 @@ namespace BubbleLensLauncher
         private static bool IsAppHealthy()
         {
             var body = ReadHealth();
-            return body != null && body.Contains("\"app\":\"bubblelens\"") && body.Contains("\"version\":14");
+            return body != null && body.Contains("\"app\":\"bubblelens\"") && body.Contains("\"version\":15");
         }
 
         private static void StopStaleApp()

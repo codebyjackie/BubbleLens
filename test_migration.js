@@ -16,7 +16,7 @@ function catalogFrom(rows) {
     if (tagName) categories.get(categoryId).push({ name: tagName });
   });
   return {
-    version: 14,
+    version: 15,
     folders: [...folders].map(([folderId, categories]) => ({
       id: folderId,
       categories: [...categories].map(([categoryId, tags]) => ({ id: categoryId, tags }))
@@ -133,7 +133,7 @@ const removedCategories = new Set(migrated.removed.categories.map(api.rowKey));
   .forEach(id => assert(removedCategories.has(api.tupleKey('symbols', id))));
 ['hairband_ribbon', 'hairclip_pin', 'hairtie_ring', 'wig_hairpiece', 'themed_hair_ornament']
   .forEach(id => assert.deepStrictEqual(migrated.overrides.categories[api.tupleKey('head_accessories', id)], { name: '我的发饰' }));
-assert.strictEqual(migrated.baseCatalogVersion, 14);
+assert.strictEqual(migrated.baseCatalogVersion, 15);
 assert.deepStrictEqual(api.normalizeLibraryEdits(migrated, catalog), migrated);
 
 const v7Raw = {
@@ -157,7 +157,7 @@ assert.deepStrictEqual(migratedV8.order, { folders: [], categories: {}, tags: {}
 assert(migratedV8.removed.categories.some(row => api.rowKey(row) === api.tupleKey('pose', 'arm_pose')));
 assert(migratedV8.removed.categories.some(row => api.rowKey(row) === api.tupleKey('pose', 'hand_gesture')));
 assert.deepStrictEqual(migratedV8.overrides.categories['["head_accessories","hats_caps"]'], { name: '我的头饰' });
-assert.strictEqual(migratedV8.baseCatalogVersion, 14);
+assert.strictEqual(migratedV8.baseCatalogVersion, 15);
 
 const v8OrderRaw = {
   schemaVersion: 1,
@@ -171,7 +171,7 @@ const migratedV9 = api.normalizeLibraryEdits(v8OrderRaw, catalog);
 assert.deepStrictEqual(migratedV9.order.folders, []);
 assert.deepStrictEqual(migratedV9.order.categories, {});
 assert.deepStrictEqual(migratedV9.order.tags, {});
-assert.strictEqual(migratedV9.baseCatalogVersion, 14);
+assert.strictEqual(migratedV9.baseCatalogVersion, 15);
 
 const v9Raw = {
   schemaVersion: 1,
@@ -216,7 +216,7 @@ assert(migratedV10.removed.tags.some(
 ['flower_general', 'flower_species', 'tree', 'foliage_vine', 'grass_crop', 'potted_shrub', 'unusual_plant']
   .forEach(id => assert.deepStrictEqual(migratedV10.overrides.categories[api.tupleKey('nature', id)], { name: '我的植物' }));
 assert.deepStrictEqual(migratedV10.order, { folders: [], categories: {}, tags: {} });
-assert.strictEqual(migratedV10.baseCatalogVersion, 14);
+assert.strictEqual(migratedV10.baseCatalogVersion, 15);
 
 const v10Raw = {
   schemaVersion: 1,
@@ -245,7 +245,7 @@ assert(migratedV11.removed.categories.some(row => api.rowKey(row) === api.tupleK
 assert.deepStrictEqual(migratedV11.overrides.categories[api.tupleKey('nature', 'flower_species')], { name: '水生植物' });
 assert.deepStrictEqual(migratedV11.overrides.categories[api.tupleKey('nature', 'grass_crop')], { name: '水生植物' });
 assert.deepStrictEqual(migratedV11.order, { folders: [], categories: {}, tags: {} });
-assert.strictEqual(migratedV11.baseCatalogVersion, 14);
+assert.strictEqual(migratedV11.baseCatalogVersion, 15);
 
 const v11StructuralRaw = {
   schemaVersion: 1,
@@ -353,7 +353,7 @@ assert.deepStrictEqual(migratedV12.overrides.tags[api.tupleKey('body_detail', 's
 assert.deepStrictEqual(migratedV12.overrides.tags[api.tupleKey('nature', 'flower_species', 'rose')], { cn: '玫瑰花' });
 assert.deepStrictEqual(migratedV12.overrides.tags[api.tupleKey('building_parts', 'surface', 'tiles')], { cn: '瓷砖' });
 assert.deepStrictEqual(migratedV12.order, { folders: [], categories: {}, tags: {} });
-assert.strictEqual(migratedV12.baseCatalogVersion, 14);
+assert.strictEqual(migratedV12.baseCatalogVersion, 15);
 assert.deepStrictEqual(api.normalizeLibraryEdits(migratedV12, catalog), migratedV12);
 
 const v12ArmorRaw = {
@@ -469,7 +469,7 @@ assert.deepStrictEqual(
   { cn: 'knee edit' }
 );
 assert.deepStrictEqual(migratedV13.order, { folders: [], categories: {}, tags: {} });
-assert.strictEqual(migratedV13.baseCatalogVersion, 14);
+assert.strictEqual(migratedV13.baseCatalogVersion, 15);
 assert.deepStrictEqual(api.normalizeLibraryEdits(migratedV13, catalog), migratedV13);
 
 const v13BootRaw = {
@@ -558,7 +558,7 @@ assert.deepStrictEqual(
 assert.deepStrictEqual(migratedV14.order.folders, ['people', 'legwear_footwear']);
 assert.deepStrictEqual(migratedV14.order.categories, { people: ['age'] });
 assert.deepStrictEqual(migratedV14.order.tags, { '["people","age"]': ['adult'] });
-assert.strictEqual(migratedV14.baseCatalogVersion, 14);
+assert.strictEqual(migratedV14.baseCatalogVersion, 15);
 assert.deepStrictEqual(api.normalizeLibraryEdits(migratedV14, catalog), migratedV14);
 
-console.log('v6/v7/v8/v9/v10/v11/v12/v13 -> v14 library migration: ok');
+console.log('v6/v7/v8/v9/v10/v11/v12/v13/v14 -> v15 library migration: ok');

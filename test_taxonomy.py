@@ -17,7 +17,7 @@ tags = {
     for tag in category["tags"]
 }
 
-assert catalog["version"] == 14
+assert catalog["version"] == 15
 assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
@@ -28,7 +28,7 @@ assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
 assert max(len(category["name"]) for category in categories) <= 6
 assert max(len(folder["categories"]) for folder in catalog["folders"] if folder["id"] not in {"copyright", "character"}) <= 12
-assert catalog["fallbackCount"] == 2673
+assert catalog["fallbackCount"] == 2322
 assert sum(map(len, SYMBOL_LOCATION_SETS.values())) == 414
 assert len(set().union(*SYMBOL_LOCATION_SETS.values())) == 414
 
@@ -157,6 +157,25 @@ expected = {
     "batter": ("food_drink", "bakery"),
     "tiles": ("building_parts", "surface"),
     "ruins": ("urban_architecture", "public_building"),
+    "bras_d'honneur": ("pose", "hand_gesture"),
+    "blanket_veil": ("head_accessories", "headwrap_veil"),
+    "headband_around_neck": ("accessories", "neckwear"),
+    "onion_rings": ("food_drink", "dessert_snack"),
+    "multi-lane_road": ("urban_architecture", "urban"),
+    "karaginu_mo": ("traditional_clothes", "traditional_japan"),
+    "wrists_extended": ("pose", "arm_pose"),
+    "camel": ("creatures", "mammal"),
+    "statue_of_liberty": ("urban_architecture", "tower_landmark"),
+    "yari": ("weapons", "polearm"),
+    "jiaoling_ruqun": ("traditional_clothes", "traditional_china"),
+    "hishimochi": ("food_drink", "dessert_snack"),
+    "dodecagram": ("symbols", "shape_math"),
+    "automail": ("mech_scifi", "cybernetic"),
+    "german_shepherd": ("creatures", "mammal"),
+    "car_crash": ("sensitive", "injury_death"),
+    "floorplan": ("composition", "layout"),
+    "rebreather": ("protective_clothes", "civilian_helmet"),
+    "wrist_blades": ("weapons", "blade"),
 }
 for tag_name, location in expected.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
@@ -218,4 +237,4 @@ for removed_key in {
 }:
     assert removed_key not in category_keys
 
-print("taxonomy v14: ok")
+print("taxonomy v15: ok")
