@@ -1,6 +1,25 @@
 const $ = (selector) => document.querySelector(selector);
-const SESSION_KEY = 'prompt-atelier-state';
-const LIBRARY_KEY = 'prompt-atelier-library-v1';
+const SESSION_KEY = 'bubblelens-state';
+const LIBRARY_KEY = 'bubblelens-library-v1';
+const UI_SCALE_KEY = 'bubblelens-ui-scale';
+const LEGACY_STORAGE_KEYS = [
+  ['prompt-atelier-state', SESSION_KEY],
+  ['prompt-atelier-library-v1', LIBRARY_KEY],
+  ['prompt-atelier-ui-scale', UI_SCALE_KEY]
+];
+
+function migrateLegacyStorage() {
+  for (const [legacyKey, currentKey] of LEGACY_STORAGE_KEYS) {
+    try {
+      if (localStorage.getItem(currentKey) === null) {
+        const value = localStorage.getItem(legacyKey);
+        if (value !== null) localStorage.setItem(currentKey, value);
+      }
+    } catch {
+      // Storage can be unavailable in hardened browser profiles.
+    }
+  }
+}
 
 const state = {
   baseCatalog: null,
@@ -807,11 +826,11 @@ function applyUiScale(value, persist = false) {
   document.body.style.overflow = scale > 100 ? 'auto' : '';
   $('#font-scale').value = scale;
   $('#font-scale-value').textContent = `${scale}%`;
-  if (persist) localStorage.setItem('prompt-atelier-ui-scale', String(scale));
+  if (persist) localStorage.setItem(UI_SCALE_KEY, String(scale));
 }
 
 function openSettings() {
-  const saved = Number(localStorage.getItem('prompt-atelier-ui-scale') || 100);
+  const saved = Number(localStorage.getItem(UI_SCALE_KEY) || 100);
   applyUiScale(saved);
   $('#settings-backdrop').hidden = false;
   $('#settings-panel').hidden = false;
@@ -2674,7 +2693,9 @@ function bindActions() {
 }
 
 async function init() {
-  applyUiScale(localStorage.getItem('prompt-atelier-ui-scale') || 100);
+  migrateLegacyStorage();
+  applyUiScale(localStorage.getItem(UI_SCALE_KEY) || 100);
+  localStorage.removeItem('bubblelens-logo-style');
   localStorage.removeItem('prompt-atelier-logo-style');
   bindActions();
   try {

@@ -17,7 +17,7 @@ from taxonomy import TAXONOMY, classify_tag
 ROOT = Path(__file__).resolve().parent
 DATA_FILE = ROOT / "data" / "tags_enhanced.csv"
 HOST = "127.0.0.1"
-PORT = int(os.environ.get("PROMPT_GENERATOR_PORT", "7873"))
+PORT = int(os.environ.get("BUBBLELENS_PORT", os.environ.get("PROMPT_GENERATOR_PORT", "7873")))
 
 # Corrections for source aliases whose literal Chinese label conflicts with the
 # bundled wiki definition.  Keeping them here preserves the source CSV while
@@ -135,7 +135,7 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
     def log_message(self, fmt, *args):
-        print("[PromptGenerator] " + fmt % args)
+        print("[BubbleLens] " + fmt % args)
 
     def send_json(self, status: int, payload: dict):
         body = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
@@ -161,7 +161,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self.send_json(500, {"error": str(exc)})
             return
         if path == "/api/health":
-            self.send_json(200, {"ok": True, "database": DATA_FILE.exists(), "app": "prompt-atelier", "version": 14})
+            self.send_json(200, {"ok": True, "database": DATA_FILE.exists(), "app": "bubblelens", "version": 14})
             return
         if path == "/api/shutdown":
             self.send_json(200, {"ok": True})
@@ -181,10 +181,11 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 def main():
-    print(f"提示词生成器：http://{HOST}:{PORT}")
+    print(f"BubbleLens：http://{HOST}:{PORT}")
     print(f"标签数据库：{DATA_FILE}")
     server = ThreadingHTTPServer((HOST, PORT), Handler)
-    if os.environ.get("PROMPT_GENERATOR_NO_BROWSER") != "1" and "--no-browser" not in sys.argv:
+    no_browser = os.environ.get("BUBBLELENS_NO_BROWSER", os.environ.get("PROMPT_GENERATOR_NO_BROWSER"))
+    if no_browser != "1" and "--no-browser" not in sys.argv:
         threading.Timer(0.8, lambda: webbrowser.open(f"http://{HOST}:{PORT}")).start()
     try:
         server.serve_forever()

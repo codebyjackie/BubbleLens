@@ -1,8 +1,8 @@
 @echo off
 cd /d "%~dp0"
-set PROMPT_GENERATOR_NO_BROWSER=0
-if defined PROMPT_GENERATOR_PYTHON (
-  "%PROMPT_GENERATOR_PYTHON%" -B server.py
+set BUBBLELENS_NO_BROWSER=0
+if defined BUBBLELENS_PYTHON (
+  "%BUBBLELENS_PYTHON%" -B server.py
   exit /b %errorlevel%
 )
 where python >nul 2>nul

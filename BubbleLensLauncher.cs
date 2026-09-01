@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace PromptGeneratorLauncher
+namespace BubbleLensLauncher
 {
     internal static class Program
     {
@@ -23,19 +23,19 @@ namespace PromptGeneratorLauncher
             {
                 if (IsPortOpen(7873) && !IsAppHealthy())
                 {
-                    if (IsPromptApp())
+                    if (IsBubbleLens())
                         StopStaleApp();
                     else
-                        throw new InvalidOperationException("Local port 7873 is being used by another program. Close that program, then start Prompt Generator again.");
+                        throw new InvalidOperationException("Local port 7873 is being used by another program. Close that program, then start BubbleLens again.");
                 }
 
                 if (!IsAppHealthy())
                 {
                     if (!File.Exists(Path.Combine(BaseDir, "server.py")))
-                        throw new FileNotFoundException("server.py was not found next to PromptGenerator.exe.");
+                        throw new FileNotFoundException("server.py was not found next to BubbleLens.exe.");
                     var python = FindPython();
                     if (python == null)
-                        throw new FileNotFoundException("Python 3 was not found. Install Python 3.10 or newer, or set PROMPT_GENERATOR_PYTHON to python.exe.");
+                        throw new FileNotFoundException("Python 3 was not found. Install Python 3.10 or newer, or set BUBBLELENS_PYTHON to python.exe.");
                     var info = new ProcessStartInfo
                     {
                         FileName = python.Item1,
@@ -52,13 +52,14 @@ namespace PromptGeneratorLauncher
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Startup failed:\n\n" + ex.Message, "Prompt Generator", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Startup failed:\n\n" + ex.Message, "BubbleLens", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private static Tuple<string, string> FindPython()
         {
-            var configured = Environment.GetEnvironmentVariable("PROMPT_GENERATOR_PYTHON");
+            var configured = Environment.GetEnvironmentVariable("BUBBLELENS_PYTHON");
+            if (String.IsNullOrWhiteSpace(configured)) configured = Environment.GetEnvironmentVariable("PROMPT_GENERATOR_PYTHON");
             if (!String.IsNullOrWhiteSpace(configured) && File.Exists(configured))
                 return Tuple.Create(configured, "");
 
@@ -111,16 +112,16 @@ namespace PromptGeneratorLauncher
             catch { return null; }
         }
 
-        private static bool IsPromptApp()
+        private static bool IsBubbleLens()
         {
             var body = ReadHealth();
-            return body != null && body.Contains("\"app\":\"prompt-atelier\"");
+            return body != null && (body.Contains("\"app\":\"bubblelens\"") || body.Contains("\"app\":\"prompt-atelier\""));
         }
 
         private static bool IsAppHealthy()
         {
             var body = ReadHealth();
-            return body != null && body.Contains("\"app\":\"prompt-atelier\"") && body.Contains("\"version\":14");
+            return body != null && body.Contains("\"app\":\"bubblelens\"") && body.Contains("\"version\":14");
         }
 
         private static void StopStaleApp()
@@ -136,7 +137,7 @@ namespace PromptGeneratorLauncher
             catch { }
             for (var i = 0; i < 20 && IsPortOpen(7873); i++) Thread.Sleep(100);
             if (IsPortOpen(7873))
-                throw new InvalidOperationException("An older Prompt Generator service could not be restarted. Close it and try again.");
+                throw new InvalidOperationException("An older BubbleLens service could not be restarted. Close it and try again.");
         }
 
         private static bool IsPortOpen(int port)
@@ -151,13 +152,35 @@ namespace PromptGeneratorLauncher
             throw new TimeoutException("The local service timed out while starting.");
         }
 
+        private static string GetProfilePath(string localData)
+        {
+            var currentRoot = Path.Combine(localData, "BubbleLens");
+            var currentProfile = Path.Combine(currentRoot, "EdgeProfile");
+            var legacyRoot = Path.Combine(localData, "PromptAtelier");
+            var legacyProfile = Path.Combine(legacyRoot, "EdgeProfile");
+
+            if (!Directory.Exists(currentRoot) && Directory.Exists(legacyProfile))
+            {
+                try
+                {
+                    Directory.Move(legacyRoot, currentRoot);
+                }
+                catch
+                {
+                    return legacyProfile;
+                }
+            }
+            Directory.CreateDirectory(currentProfile);
+            return currentProfile;
+        }
+
         private static void OpenWindow()
         {
             var edge = System.IO.File.Exists(EdgeX86) ? EdgeX86 : Edge;
             if(System.IO.File.Exists(edge))
             {
                 var localData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                var profile = System.IO.Path.Combine(localData, "PromptAtelier", "EdgeProfile");
+                var profile = GetProfilePath(localData);
                 System.IO.Directory.CreateDirectory(profile);
                 Process.Start(new ProcessStartInfo
                 {

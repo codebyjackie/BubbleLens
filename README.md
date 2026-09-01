@@ -1,13 +1,13 @@
-# Prompt Atelier 提示词生成器
+# BubbleLens
 
 一个完全本地、轻量的 Danbooru 标签选择、复制与提示词编辑工具。它不加载模型、不调用生图，也不会把标签或提示词发送到互联网。
 
 ## 系统要求与启动
 
 - Windows 10/11、Microsoft Edge，以及 Python 3.10 或更高版本。
-- 下载完整项目后双击 `PromptGenerator.exe`。
+- 下载完整项目后双击 `BubbleLens.exe`。
 - 应用会在独立的 Edge 应用窗口中打开。
-- 如果需要手动启动，可运行 `StartPromptGenerator.bat`。
+- 如果需要手动启动，可运行 `StartBubbleLens.bat`。
 - 也可以在项目目录执行 `python server.py`，再打开 `http://127.0.0.1:7873`。
 
 ## 界面逻辑
@@ -25,7 +25,7 @@
 
 - 管理模式支持新增、编辑和删除大词库、细分类与标签，并可通过拖动手柄分别调整三层内容的顺序。
 - 内置数据采用“本地隐藏”，可在设置中恢复；不会改坏原始 CSV。
-- 自建内容和界面缩放保存在 `%LocalAppData%\PromptAtelier\EdgeProfile`，关闭或重启后仍会保留。
+- 自建内容和界面缩放保存在 `%LocalAppData%\BubbleLens\EdgeProfile`，关闭或重启后仍会保留；旧版 `PromptAtelier` 配置会在首次启动时迁移。
 
 ## 标签数据库与分类
 
@@ -62,10 +62,10 @@ npm install
 npm run test:ui
 ```
 
-Windows EXE 只是一个轻量启动器；它会查找系统 Python、`py -3`、项目内的 `python\python.exe` / `runtime\python.exe`，或环境变量 `PROMPT_GENERATOR_PYTHON` 指向的解释器。可使用 .NET Framework 自带的 C# 编译器重新编译：
+Windows EXE 只是一个轻量启动器；它会查找系统 Python、`py -3`、项目内的 `python\python.exe` / `runtime\python.exe`，或环境变量 `BUBBLELENS_PYTHON` 指向的解释器。可使用 .NET Framework 自带的 C# 编译器重新编译：
 
 ```powershell
-& "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /target:winexe /out:PromptGenerator.exe /win32icon:assets\grimoire-logo-transparent-v2.ico /reference:System.Windows.Forms.dll PromptGeneratorLauncher.cs
+& "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /target:winexe /out:BubbleLens.exe /win32icon:assets\grimoire-logo-transparent-v2.ico /reference:System.Windows.Forms.dll BubbleLensLauncher.cs
 ```
 
 ## 许可证与数据来源

@@ -11,7 +11,7 @@ License v3.0. This repository therefore uses GPL-3.0 for the combined work.
 
 Danbooru tag names and metadata originate from the Danbooru API. Chinese
 aliases, descriptions, and NSFW annotations were enriched by the upstream
-pipeline. Prompt Atelier adds a manually audited selection taxonomy and a
+pipeline. BubbleLens adds a manually audited selection taxonomy and a
 local desktop interface. Upstream authors do not endorse this derivative.
 
 The database can contain adult and sensitive terminology. It contains text
