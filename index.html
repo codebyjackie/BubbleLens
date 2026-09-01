@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11131a" />
+    <title>Prompt Atelier · 提示词生成器</title>
+    <link id="app-favicon" rel="icon" href="assets/grimoire-logo-transparent-v2-256.png?v=2" />
+    <link rel="stylesheet" href="styles.css?v=21" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" id="brand-mark" aria-hidden="true"><img class="brand-logo-image" src="assets/grimoire-logo-transparent-v2-256.png?v=2" alt="" /></div>
+          <div><strong>Prompt Atelier</strong><small>点选式提示词工作台</small></div>
+        </div>
+        <div class="tag-search" id="tag-search">
+          <div class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="tag-search-input" type="search" autocomplete="off" placeholder="搜索标签、中文说明…" aria-label="搜索标签" aria-expanded="false" aria-controls="tag-search-results" />
+            <button id="clear-search" class="search-clear" type="button" aria-label="清空搜索" title="清空搜索内容">×</button>
+            <div class="search-scope" role="group" aria-label="搜索范围">
+              <button id="search-scope-global" class="active" type="button" data-scope="global">全局</button>
+              <button id="search-scope-library" type="button" data-scope="library">当前词库</button>
+              <button id="search-scope-local" type="button" data-scope="local">当前分类</button>
+            </div>
+          </div>
+          <div id="tag-search-results" class="search-results" role="listbox" hidden></div>
+        </div>
+        <div class="header-stats">
+          <span id="database-stat">正在读取标签库…</span>
+          <label class="switch"><input id="nsfw-toggle" type="checkbox" /><span></span>显示敏感标签</label>
+          <button class="ghost-btn" id="clear-all">清空全部</button>
+          <button class="primary-btn" id="copy-all">复制提示词</button>
+          <button class="settings-btn" id="open-settings" title="界面设置" aria-label="打开界面设置">⚙</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="builder-panel panel">
+          <div class="section-head category-head">
+            <div>
+              <span class="eyebrow">当前分类</span>
+              <h1 id="folder-title">镜头构图</h1>
+            </div>
+            <div class="category-area">
+              <div id="category-tabs" class="category-tabs" aria-label="标签分类" tabindex="0" title="细分类较多时可在此滚动"></div>
+              <button class="icon-btn add-category-btn" id="add-category" title="新建细分类" aria-label="新建细分类">＋</button>
+            </div>
+          </div>
+          <div class="tag-toolbar">
+            <div><span id="category-name">景别范围</span><small id="visible-count"></small></div>
+            <div class="tag-toolbar-actions">
+              <p>单击标签加入或移除，也可在顶部搜索并定位。</p>
+              <button class="mini-btn" id="add-tag">＋ 标签</button>
+            </div>
+          </div>
+          <div id="tag-cloud" class="tag-cloud"><div class="loading-card">正在整理标签数据库…</div></div>
+
+          <section class="modifier">
+            <div class="section-head compact">
+              <div>
+                <span class="eyebrow">Prompt modifier</span>
+                <h2>提示词修改器</h2>
+              </div>
+              <div class="modifier-actions">
+                <button class="mini-btn" id="weight-down" title="降低全部权重">− 权重</button>
+                <button class="mini-btn" id="weight-up" title="提高全部权重">＋ 权重</button>
+                <button class="mini-btn" id="reverse-order">反转顺序</button>
+              </div>
+            </div>
+            <p class="helper">这里显示所有已选标签。可以拖动排序、调整单项权重，也可以直接编辑下方文本。</p>
+            <div id="selected-list" class="selected-list"><div class="empty-inline">还没有选择标签</div></div>
+            <div class="editor-wrap">
+              <textarea id="prompt-editor" spellcheck="false" placeholder="选择上方标签，或直接输入自定义提示词；用英文逗号分隔。"></textarea>
+              <div class="editor-footer"><span id="prompt-count">0 个提示词</span><span>支持 (tag:1.2) 权重格式</span></div>
+            </div>
+          </section>
+        </section>
+
+        <aside class="preview-panel panel">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">Live preview</span>
+              <h2>组合预览</h2>
+            </div>
+            <button class="icon-btn" id="copy-preview" title="复制预览">⧉</button>
+          </div>
+          <div class="preview-frame">
+            <div class="preview-grid"></div>
+            <div class="preview-orb orb-a"></div>
+            <div class="preview-orb orb-b"></div>
+            <div class="preview-center">
+              <span id="preview-total">0</span>
+              <small>SELECTED TAGS</small>
+            </div>
+          </div>
+          <div class="preview-caption"><span class="status-dot"></span>仅预览提示词结构，不调用生图</div>
+          <div id="preview-groups" class="preview-groups"><div class="empty-preview">从右侧选择一个词库，然后在左侧点选标签。</div></div>
+          <div class="final-prompt-card">
+            <label>最终提示词</label>
+            <p id="final-prompt">等待选择…</p>
+          </div>
+        </aside>
+
+        <aside class="library-panel panel">
+          <div class="section-head compact sticky-head">
+            <div>
+              <span class="eyebrow">Prompt library</span>
+              <h2>提示词库</h2>
+            </div>
+            <div class="library-head-actions">
+              <span id="library-count" class="count-badge">0</span>
+              <button class="icon-btn" id="add-folder" title="新建提示词库" aria-label="新建提示词库">＋</button>
+              <button class="mini-btn manage-toggle" id="toggle-manage">管理</button>
+            </div>
+          </div>
+          <p class="library-help"></p>
+          <div id="library-list" class="library-list"></div>
+        </aside>
+      </main>
+    </div>
+    <div id="settings-backdrop" class="settings-backdrop" hidden></div>
+    <section id="settings-panel" class="settings-panel" hidden aria-label="界面设置">
+      <div class="settings-title">
+        <div>
+          <span class="eyebrow">Appearance</span>
+          <h2>界面设置</h2>
+        </div>
+        <button id="close-settings" class="icon-btn" aria-label="关闭">×</button>
+      </div>
+      <label class="scale-setting" for="font-scale">
+        <span><strong>界面布局大小</strong><small>面板、按钮、标签、间距和文字会整体缩放</small></span>
+        <output id="font-scale-value">100%</output>
+      </label>
+      <input id="font-scale" class="scale-slider" type="range" min="100" max="140" step="5" value="100" />
+      <div class="scale-marks"><span>默认</span><span>适中</span><span>最大</span></div>
+      <div class="settings-data">
+        <span class="eyebrow">Library data</span>
+        <strong>词库数据</strong>
+        <small>内置内容被删除后只是隐藏，可以随时恢复。自建内容仅保存在本机。</small>
+        <div class="settings-data-actions">
+          <button class="ghost-btn" id="restore-builtin" type="button">恢复内置内容</button>
+          <button class="danger-btn" id="clear-custom" type="button">清除全部自定义</button>
+        </div>
+      </div>
+      <div class="settings-footer"><button class="ghost-btn" id="reset-settings">恢复默认</button><button class="primary-btn" id="save-settings">保存设置</button></div>
+    </section>
+    <dialog id="library-editor" class="library-editor" aria-labelledby="library-editor-title">
+      <form id="library-editor-form">
+        <div class="dialog-title">
+          <div>
+            <span class="eyebrow">Library editor</span>
+            <h2 id="library-editor-title">新建提示词库</h2>
+            <p id="library-editor-subtitle"></p>
+          </div>
+          <button class="icon-btn" id="close-library-editor" type="button" aria-label="关闭">×</button>
+        </div>
+        <div id="tag-source-field" class="tag-source-field" hidden>
+          <span>标签来源</span>
+          <div class="tag-source-tabs" role="group" aria-label="标签来源">
+            <button id="tag-source-database" class="active" type="button" data-tag-source="database">从数据库选择</button>
+            <button id="tag-source-manual" type="button" data-tag-source="manual">手动创建</button>
+          </div>
+        </div>
+        <section id="tag-database-panel" class="tag-database-panel" aria-label="数据库标签选择" hidden>
+          <label class="database-tag-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="database-tag-search" type="search" autocomplete="off" placeholder="搜索 Tag、中文说明或描述…" aria-label="搜索数据库标签" />
+          </label>
+          <div class="database-tag-summary">
+            <span id="database-tag-result-count">输入关键词查找数据库标签</span>
+            <strong id="database-tag-selected-count">已选择 0 个</strong>
+          </div>
+          <div id="database-tag-results" class="database-tag-results" role="listbox" aria-multiselectable="true"></div>
+          <p class="database-tag-help">候选会显示标签说明和原分类；敏感标签遵循顶部的显示开关。复制后原标签仍保留在原处。</p>
+        </section>
+        <label id="library-name-field" class="dialog-field">
+          <span id="library-name-label">名称</span>
+          <input id="library-name" type="text" maxlength="200" autocomplete="off" required />
+        </label>
+        <label class="dialog-field folder-field">
+          <span>说明</span>
+          <input id="library-description" type="text" maxlength="80" autocomplete="off" />
+        </label>
+        <div class="dialog-field-row folder-field">
+          <label class="dialog-field"><span>图标</span><input id="library-icon" type="text" maxlength="4" autocomplete="off" /></label>
+          <label class="dialog-field color-field"><span>主题色</span><input id="library-accent" type="color" value="#78a7ff" /></label>
+        </div>
+        <label class="dialog-field tag-field">
+          <span>中文说明</span>
+          <input id="library-cn" type="text" maxlength="80" autocomplete="off" />
+        </label>
+        <label class="dialog-check tag-field"><input id="library-nsfw" type="checkbox" /><span>敏感标签（仅在开启 NSFW 显示时出现）</span></label>
+        <p id="library-editor-error" class="dialog-error" role="alert"></p>
+        <div class="dialog-actions"><button class="ghost-btn" id="cancel-library-editor" type="button">取消</button><button class="primary-btn" id="library-editor-submit" type="submit">保存</button></div>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js?v=27"></script>
+  </body>
+</html>
