@@ -17,7 +17,7 @@ tags = {
     for tag in category["tags"]
 }
 
-assert catalog["version"] == 15
+assert catalog["version"] == 16
 assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
@@ -28,7 +28,7 @@ assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
 assert max(len(category["name"]) for category in categories) <= 6
 assert max(len(folder["categories"]) for folder in catalog["folders"] if folder["id"] not in {"copyright", "character"}) <= 12
-assert catalog["fallbackCount"] == 2322
+assert catalog["fallbackCount"] == 2163
 assert sum(map(len, SYMBOL_LOCATION_SETS.values())) == 414
 assert len(set().union(*SYMBOL_LOCATION_SETS.values())) == 414
 
@@ -176,6 +176,16 @@ expected = {
     "floorplan": ("composition", "layout"),
     "rebreather": ("protective_clothes", "civilian_helmet"),
     "wrist_blades": ("weapons", "blade"),
+    "saddlebags": ("body", "waist_hips"),
+    "hitchhiking": ("action", "movement"),
+    "umbrella_stand": ("household_objects", "storage_furniture"),
+    "dragon_horn": ("animal_traits", "horns"),
+    "gyarugasaki": ("franchise_clothes", "school_variant"),
+    "guqin": ("culture_objects", "music"),
+    "nintendo_64": ("digital_media", "game_device"),
+    "border_collie": ("creatures", "mammal"),
+    "strappado": ("adult_kink", "adult_bondage"),
+    "winchester_model_1897": ("weapons", "firearm"),
 }
 for tag_name, location in expected.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
@@ -237,4 +247,4 @@ for removed_key in {
 }:
     assert removed_key not in category_keys
 
-print("taxonomy v15: ok")
+print("taxonomy v16: ok")

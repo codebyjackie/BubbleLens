@@ -7,6 +7,8 @@ __pycache__/
 
 .DS_Store
 node_modules/
+.audit-cache/
+audit_output/
 
 Thumbs.db
 Desktop.ini

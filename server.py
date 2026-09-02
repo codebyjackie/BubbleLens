@@ -114,7 +114,7 @@ def build_catalog() -> dict:
         "sourceCount": len(tags),
         "sourceRowCount": 49844,
         "fallbackCount": fallback_count,
-        "version": 15,
+        "version": 16,
     }
 
 
