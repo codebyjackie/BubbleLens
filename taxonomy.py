@@ -257,6 +257,7 @@ TAXONOMY = [
         category("forest_field", "森林田野"), category("mountain_desert", "山地荒漠"),
         category("water_scene", "水域水边"), category("sky_space", "天空宇宙"),
         category("terrain_surface", "地面道路"),
+        category("country_region", "国家地区"),
         category("other_scene", "户外地点"),
     ]),
     folder("background", "背景样式", "▦", "#58c68d", "纯色、渐变、图案与抽象画面背景", [
@@ -1187,7 +1188,7 @@ def _normalize_location_once(location: tuple[str, str], tag_name: str = "") -> t
         if "broken" in base_name and any(word in base_name for word in ("pillar", "column")):
             return "building_parts", "frame_structure"
         if base_name in {"arch", "archway", "arches"} or any(word in base_name for word in (
-            "pillar", "column", "truss", "steel_beam", "scaffolding", "colonnade",
+            "pillar", "column", "bollard", "truss", "steel_beam", "scaffolding", "colonnade",
         )):
             return "building_parts", "frame_structure"
         if any(word in base_name for word in (
@@ -9882,6 +9883,53 @@ EXACT_OVERRIDES.update({
     'xylophone': ('culture_objects', 'music'),
     'yellow_shrug': ('outerwear_suits', 'cardigan_shawl'),
     'zanscare': ('relationships', 'group_faction'),
+})
+
+# v17 screenshot audit: definitions were read individually.  These entries also
+# cover categories that lexical similarity consistently confused (a country is
+# not scenery; a medical catheter is not an adult preference; a named character
+# remains a character even when the source CSV marks it as a general tag).
+EXACT_OVERRIDES.update({
+    "ardor_blossom_star_(e.g.o)": ("franchise_clothes", "franchise_armor"),
+    "argentina": ("outdoor_scene", "country_region"),
+    "chloroform": ("household_objects", "other_object"),
+    "eighteen_(fate)": ("character", "letter_e"),
+    "desire_driver": ("mech_scifi", "scifi_device"),
+    "color-coded": ("light_effect", "palette"),
+    "coiled": ("pose", "body_pose"),
+    "convention_greeting": ("text_meta", "text"),
+    "charisma_guard": ("pose", "body_pose"),
+    "carro_veloce_cv-33": ("transport_play", "land_vehicle"),
+    "after_insertion": ("adult", "adult_response"),
+    "donkey": ("creatures", "mammal"),
+    "anvil": ("household_objects", "tools"),
+    "croupier": ("people", "occupation"),
+    "dealer_(gambling)": ("people", "occupation"),
+    "catcher_(baseball)": ("recreation", "sports"),
+    "color_wheel_challenge": ("meta_info", "meme"),
+    "crystallization": ("themes", "identity_change"),
+    "doubledriver": ("mech_scifi", "scifi_device"),
+    "eavesdropping": ("action", "daily_action"),
+    "akg": ("digital_media", "audio_device"),
+    "alstroemeria_(idolmaster)": ("relationships", "group_faction"),
+    "caveman": ("people", "role_focus"),
+    "elasticity": ("light_effect", "other_effect"),
+    "algae": ("nature", "grass_crop"),
+    "breeding_mount": ("adult_kink", "adult_toys"),
+    "coaster": ("food_drink", "tableware"),
+    "cosmic_heart_compact": ("jewelry_accessories", "gem_brooch"),
+    "bollard": ("building_parts", "frame_structure"),
+    "box_stack": ("household_objects", "container"),
+    "eiserne_jungfrau": ("character", "letter_e"),
+    "chrysos_heirs_(honkai:_star_rail)": ("relationships", "group_faction"),
+    "extreme_dangling": ("action", "clothing_action"),
+    "apocalypse": ("style", "genre"),
+    "brown_hiphighs": ("legwear_footwear", "stockings"),
+    "cafeteria": ("indoor_scene", "public_indoor"),
+    "catheter": ("household_objects", "tools"),
+    "clothes-dissolving_potion": ("clothing_appearance", "damaged_dirty"),
+    "colored_veins": ("body_detail", "skin"),
+    "england": ("outdoor_scene", "country_region"),
 })
 
 

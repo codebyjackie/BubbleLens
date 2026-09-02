@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 DATA_FILE = ROOT / "data" / "tags_enhanced.csv"
 HOST = "127.0.0.1"
 PORT = int(os.environ.get("BUBBLELENS_PORT", os.environ.get("PROMPT_GENERATOR_PORT", "7873")))
-CATALOG_VERSION = 16
+CATALOG_VERSION = 17
 
 # Corrections for source aliases whose literal Chinese label conflicts with the
 # bundled wiki definition.  Keeping them here preserves the source CSV while

@@ -17,18 +17,18 @@ tags = {
     for tag in category["tags"]
 }
 
-assert catalog["version"] == 16
+assert catalog["version"] == 17
 assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
 assert [folder["id"] for folder in catalog["folders"]] == FOLDER_ORDER
-assert len(categories) == 395
+assert len(categories) == 396
 assert len(locations) == catalog["tagCount"]
 assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
 assert max(len(category["name"]) for category in categories) <= 6
 assert max(len(folder["categories"]) for folder in catalog["folders"] if folder["id"] not in {"copyright", "character"}) <= 12
-assert catalog["fallbackCount"] == 2163
+assert catalog["fallbackCount"] == 2123
 assert sum(map(len, SYMBOL_LOCATION_SETS.values())) == 414
 assert len(set().union(*SYMBOL_LOCATION_SETS.values())) == 414
 
@@ -190,6 +190,51 @@ expected = {
 for tag_name, location in expected.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
 
+screenshot_expected = {
+    "ardor_blossom_star_(e.g.o)": ("franchise_clothes", "franchise_armor"),
+    "argentina": ("outdoor_scene", "country_region"),
+    "chloroform": ("household_objects", "other_object"),
+    "eighteen_(fate)": ("character", "letter_e"),
+    "desire_driver": ("mech_scifi", "scifi_device"),
+    "color-coded": ("light_effect", "palette"),
+    "coiled": ("pose", "body_pose"),
+    "convention_greeting": ("text_meta", "text"),
+    "charisma_guard": ("pose", "body_pose"),
+    "carro_veloce_cv-33": ("transport_play", "land_vehicle"),
+    "after_insertion": ("adult", "adult_response"),
+    "donkey": ("creatures", "mammal"),
+    "anvil": ("household_objects", "tools"),
+    "croupier": ("people", "occupation"),
+    "dealer_(gambling)": ("people", "occupation"),
+    "catcher_(baseball)": ("recreation", "sports"),
+    "color_wheel_challenge": ("meta_info", "meme"),
+    "crystallization": ("themes", "identity_change"),
+    "doubledriver": ("mech_scifi", "scifi_device"),
+    "eavesdropping": ("action", "daily_action"),
+    "akg": ("digital_media", "audio_device"),
+    "alstroemeria_(idolmaster)": ("relationships", "group_faction"),
+    "caveman": ("people", "role_focus"),
+    "elasticity": ("light_effect", "other_effect"),
+    "algae": ("nature", "grass_crop"),
+    "breeding_mount": ("adult_kink", "adult_toys"),
+    "coaster": ("food_drink", "tableware"),
+    "cosmic_heart_compact": ("jewelry_accessories", "gem_brooch"),
+    "bollard": ("building_parts", "frame_structure"),
+    "box_stack": ("household_objects", "container"),
+    "eiserne_jungfrau": ("character", "letter_e"),
+    "chrysos_heirs_(honkai:_star_rail)": ("relationships", "group_faction"),
+    "extreme_dangling": ("action", "clothing_action"),
+    "apocalypse": ("style", "genre"),
+    "brown_hiphighs": ("legwear_footwear", "stockings"),
+    "cafeteria": ("indoor_scene", "public_indoor"),
+    "catheter": ("household_objects", "tools"),
+    "clothes-dissolving_potion": ("clothing_appearance", "damaged_dirty"),
+    "colored_veins": ("body_detail", "skin"),
+    "england": ("outdoor_scene", "country_region"),
+}
+for tag_name, location in screenshot_expected.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
 assert tags["deep_skin"]["cn"] == "抓握深陷"
 assert tags["skin_fangs"]["cn"] == "双侧口缘虎牙"
 assert tags["batter"]["cn"] == "面糊"
@@ -247,4 +292,4 @@ for removed_key in {
 }:
     assert removed_key not in category_keys
 
-print("taxonomy v16: ok")
+print("taxonomy v17: ok")
