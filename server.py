@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent
 DATA_FILE = ROOT / "data" / "tags_enhanced.csv"
 HOST = "127.0.0.1"
 PORT = int(os.environ.get("BUBBLELENS_PORT", os.environ.get("PROMPT_GENERATOR_PORT", "7873")))
+CATALOG_VERSION = 16
 
 # Corrections for source aliases whose literal Chinese label conflicts with the
 # bundled wiki definition.  Keeping them here preserves the source CSV while
@@ -114,7 +115,7 @@ def build_catalog() -> dict:
         "sourceCount": len(tags),
         "sourceRowCount": 49844,
         "fallbackCount": fallback_count,
-        "version": 16,
+        "version": CATALOG_VERSION,
     }
 
 
@@ -161,7 +162,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self.send_json(500, {"error": str(exc)})
             return
         if path == "/api/health":
-            self.send_json(200, {"ok": True, "database": DATA_FILE.exists(), "app": "bubblelens", "version": 15})
+            self.send_json(200, {"ok": True, "database": DATA_FILE.exists(), "app": "bubblelens", "version": CATALOG_VERSION})
             return
         if path == "/api/shutdown":
             self.send_json(200, {"ok": True})

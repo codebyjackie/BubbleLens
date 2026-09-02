@@ -60,7 +60,7 @@ namespace BubbleLensLauncher
         {
             var configured = Environment.GetEnvironmentVariable("BUBBLELENS_PYTHON");
             if (String.IsNullOrWhiteSpace(configured)) configured = Environment.GetEnvironmentVariable("PROMPT_GENERATOR_PYTHON");
-            if (!String.IsNullOrWhiteSpace(configured) && File.Exists(configured))
+            if (!String.IsNullOrWhiteSpace(configured) && File.Exists(configured) && CanRunPython(configured, ""))
                 return Tuple.Create(configured, "");
 
             var bundled = new[]
@@ -70,15 +70,43 @@ namespace BubbleLensLauncher
                 Path.Combine(BaseDir, "python.exe")
             };
             foreach (var candidate in bundled)
-                if (File.Exists(candidate)) return Tuple.Create(candidate, "");
+                if (File.Exists(candidate) && CanRunPython(candidate, "")) return Tuple.Create(candidate, "");
 
-            var python = FindOnPath("python.exe");
-            if (python != null) return Tuple.Create(python, "");
-            var launcher = FindOnPath("py.exe");
-            return launcher == null ? null : Tuple.Create(launcher, "-3 ");
+            // WindowsApps commonly exposes a python.exe placeholder that exits
+            // immediately instead of running Python.  Prefer the real launcher,
+            // and validate every PATH candidate before selecting it.
+            var launcher = FindOnPath("py.exe", "-3 ");
+            if (launcher != null) return Tuple.Create(launcher, "-3 ");
+            var python = FindOnPath("python.exe", "");
+            return python == null ? null : Tuple.Create(python, "");
         }
 
-        private static string FindOnPath(string executable)
+        private static bool CanRunPython(string executable, string prefix)
+        {
+            try
+            {
+                using (var process = Process.Start(new ProcessStartInfo
+                {
+                    FileName = executable,
+                    Arguments = prefix + "--version",
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true
+                }))
+                {
+                    if (process == null || !process.WaitForExit(3000))
+                    {
+                        if (process != null) process.Kill();
+                        return false;
+                    }
+                    return process.ExitCode == 0;
+                }
+            }
+            catch { return false; }
+        }
+
+        private static string FindOnPath(string executable, string prefix)
         {
             var path = Environment.GetEnvironmentVariable("PATH") ?? "";
             foreach (var part in path.Split(Path.PathSeparator))
@@ -88,7 +116,7 @@ namespace BubbleLensLauncher
                 try
                 {
                     var candidate = Path.Combine(directory, executable);
-                    if (File.Exists(candidate)) return candidate;
+                    if (File.Exists(candidate) && CanRunPython(candidate, prefix)) return candidate;
                 }
                 catch { }
             }
@@ -121,7 +149,10 @@ namespace BubbleLensLauncher
         private static bool IsAppHealthy()
         {
             var body = ReadHealth();
-            return body != null && body.Contains("\"app\":\"bubblelens\"") && body.Contains("\"version\":15");
+            // Catalog revisions do not make the local service incompatible with
+            // this lightweight launcher.  Requiring one exact data version made
+            // the v15 launcher reject and shut down the healthy v16 service.
+            return body != null && body.Contains("\"app\":\"bubblelens\"");
         }
 
         private static void StopStaleApp()
