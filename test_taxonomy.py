@@ -17,18 +17,18 @@ tags = {
     for tag in category["tags"]
 }
 
-assert catalog["version"] == 17
+assert catalog["version"] == 18
 assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
 assert [folder["id"] for folder in catalog["folders"]] == FOLDER_ORDER
-assert len(categories) == 396
+assert len(categories) == 391
 assert len(locations) == catalog["tagCount"]
 assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
 assert max(len(category["name"]) for category in categories) <= 6
 assert max(len(folder["categories"]) for folder in catalog["folders"] if folder["id"] not in {"copyright", "character"}) <= 12
-assert catalog["fallbackCount"] == 2123
+assert catalog["fallbackCount"] == 0
 assert sum(map(len, SYMBOL_LOCATION_SETS.values())) == 414
 assert len(set().union(*SYMBOL_LOCATION_SETS.values())) == 414
 
@@ -193,7 +193,7 @@ for tag_name, location in expected.items():
 screenshot_expected = {
     "ardor_blossom_star_(e.g.o)": ("franchise_clothes", "franchise_armor"),
     "argentina": ("outdoor_scene", "country_region"),
-    "chloroform": ("household_objects", "other_object"),
+    "chloroform": ("household_objects", "chemical_liquid"),
     "eighteen_(fate)": ("character", "letter_e"),
     "desire_driver": ("mech_scifi", "scifi_device"),
     "color-coded": ("light_effect", "palette"),
@@ -274,7 +274,7 @@ assert [category["id"] for category in footwear["categories"]] == [
     "traditional_shoes", "sports_shoes", "short_boots", "work_special_shoes",
 ]
 assert next(category for category in footwear["categories"] if category["id"] == "short_boots")["name"] == "靴子"
-assert next(category for category in footwear["categories"] if category["id"] == "short_boots")["tagCount"] == 39
+assert next(category for category in footwear["categories"] if category["id"] == "short_boots")["tagCount"] == 54
 assert "clothing_state" not in folder_ids
 for removed_key in {
     ("franchise_clothes", "character_costume"),
@@ -292,4 +292,4 @@ for removed_key in {
 }:
     assert removed_key not in category_keys
 
-print("taxonomy v17: ok")
+print("taxonomy v18: ok")

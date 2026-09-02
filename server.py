@@ -16,9 +16,10 @@ from taxonomy import TAXONOMY, classify_tag
 
 ROOT = Path(__file__).resolve().parent
 DATA_FILE = ROOT / "data" / "tags_enhanced.csv"
+LOCATION_FILE = ROOT / "data" / "semantic_tag_locations.json.gz"
 HOST = "127.0.0.1"
 PORT = int(os.environ.get("BUBBLELENS_PORT", os.environ.get("PROMPT_GENERATOR_PORT", "7873")))
-CATALOG_VERSION = 17
+CATALOG_VERSION = 18
 
 # Corrections for source aliases whose literal Chinese label conflicts with the
 # bundled wiki definition.  Keeping them here preserves the source CSV while
@@ -75,8 +76,23 @@ def read_tags() -> list[dict]:
     return list(by_name.values())
 
 
+def read_tag_locations(tags: list[dict]) -> dict[str, tuple[str, str]]:
+    if not LOCATION_FILE.exists():
+        raise FileNotFoundError(f"完整分类位置表不存在：{LOCATION_FILE}")
+    with gzip.open(LOCATION_FILE, "rt", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    assignments = payload.get("assignments") or {}
+    tag_names = {tag["name"] for tag in tags}
+    if set(assignments) != tag_names:
+        missing = len(tag_names - set(assignments))
+        extra = len(set(assignments) - tag_names)
+        raise RuntimeError(f"完整分类位置表与数据库不匹配：缺少 {missing}，多出 {extra}")
+    return {name: tuple(location) for name, location in assignments.items()}
+
+
 def build_catalog() -> dict:
     tags = read_tags()
+    tag_locations = read_tag_locations(tags)
     folders = []
     buckets = {}
     for folder_spec in TAXONOMY:
@@ -89,7 +105,7 @@ def build_catalog() -> dict:
         folders.append(current)
 
     for tag in tags:
-        location = classify_tag(tag)
+        location = tag_locations[tag["name"]]
         if location not in buckets:
             raise RuntimeError(f"分类器返回了不存在的位置：{tag['name']} -> {location}")
         buckets[location].append(tag)

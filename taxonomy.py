@@ -200,12 +200,13 @@ TAXONOMY = [
         category("books_paper", "书报纸张"), category("stationery", "文具画具"),
         category("music", "音乐乐器"),
     ]),
-    folder("household_objects", "生活用品", "▣", "#c49d73", "家具、灯具、家电、工具与容器", [
+    folder("household_objects", "生活用品", "▣", "#c49d73", "家具、灯具、家电、工具、容器与药剂液体", [
         category("seating_table", "桌椅床具"), category("storage_furniture", "家居陈设"),
         category("lighting_clock", "灯具"), category("clock", "时钟"), category("appliance", "家电炉具"),
         category("umbrella_fan", "伞具扇子"), category("rope_lock", "绳链锁具"),
         category("care_cleaning", "清洁护理"), category("tools", "工具器材"),
-        category("container", "容器包装"), category("other_object", "其他用品"),
+        category("container", "容器包装"), category("chemical_liquid", "药剂液体"),
+        category("other_object", "其他用品"),
     ]),
     folder("transport_play", "交通工具", "◎", "#c88d63", "陆地、空中与水上交通工具", [
         category("land_vehicle", "陆地载具"), category("air_vehicle", "飞行器"),
@@ -296,9 +297,9 @@ TAXONOMY = [
         category("flag", "旗帜"), category("emblem", "纹章徽记"),
         category("science_sign", "科学标识"),
     ]),
-    folder("meta_info", "创作信息", "※", "#8e9caf", "梗、角色扮演、审查与创作数据", [
+    folder("meta_info", "创作信息", "※", "#8e9caf", "梗、角色扮演、作品活动、审查与创作数据", [
         category("meme", "梗与戏仿"), category("cosplay", "角色扮演"),
-        category("censorship", "审查遮挡"), category("meta", "创作数据"),
+        category("work_event", "作品活动"), category("censorship", "审查遮挡"), category("meta", "创作数据"),
     ]),
     folder("adult_body", "成人身体", "◆", "#e65f78", "身体裸露、衣着走光与按部位整理的成人身体标签", [
         category("adult_nudity", "身体裸露"), category("adult_clothes", "衣着走光"),
@@ -9930,6 +9931,40 @@ EXACT_OVERRIDES.update({
     "clothes-dissolving_potion": ("clothing_appearance", "damaged_dirty"),
     "colored_veins": ("body_detail", "skin"),
     "england": ("outdoor_scene", "country_region"),
+})
+
+# Seed categories introduced after the unmatched-definition clustering pass.
+EXACT_OVERRIDES.update({
+    "chemicals": ("household_objects", "chemical_liquid"),
+    "chloroform": ("household_objects", "chemical_liquid"),
+    "acid": ("household_objects", "chemical_liquid"),
+    "oil": ("household_objects", "chemical_liquid"),
+    "petroleum": ("household_objects", "chemical_liquid"),
+    "ferrofluid": ("household_objects", "chemical_liquid"),
+    "shaped_liquid": ("household_objects", "chemical_liquid"),
+    "green_liquid": ("household_objects", "chemical_liquid"),
+    "blue_liquid": ("household_objects", "chemical_liquid"),
+    "purple_liquid": ("household_objects", "chemical_liquid"),
+    "pink_liquid": ("household_objects", "chemical_liquid"),
+    "top_of_moe_2014": ("meta_info", "work_event"),
+    "top_of_moe_2015": ("meta_info", "work_event"),
+    "top_of_moe_2016": ("meta_info", "work_event"),
+    "top_of_moe_2018": ("meta_info", "work_event"),
+    "top_of_moe_2021": ("meta_info", "work_event"),
+    "top_of_moe_2022": ("meta_info", "work_event"),
+    "touhou_16th_popularity_poll": ("meta_info", "work_event"),
+    "touhou_17th_popularity_poll": ("meta_info", "work_event"),
+    "touhou_18th_popularity_poll": ("meta_info", "work_event"),
+    "united_nations": ("relationships", "group_faction"),
+    "liquid_clothes": ("clothing_appearance", "clothing_material"),
+    "liquid_dress": ("clothing_appearance", "clothing_material"),
+    "spilled_milk": ("food_drink", "dairy_ingredient"),
+    "nectar": ("food_drink", "drink"),
+    "on_liquid": ("pose", "body_pose"),
+    "liquid-in-glass_thermometer": ("household_objects", "tools"),
+    "overflowing": ("light_effect", "other_effect"),
+    "leaking": ("light_effect", "other_effect"),
+    "moe_(phrase)": ("text_meta", "text"),
 })
 
 

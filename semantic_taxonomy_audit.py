@@ -21,7 +21,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 import server
-from taxonomy import EXACT_OVERRIDES, TAXONOMY
+from taxonomy import EXACT_OVERRIDES, TAXONOMY, classify_tag
 
 
 ROOT = Path(__file__).resolve().parent
@@ -239,10 +239,14 @@ def nearest_category_evidence(
 def audit(args: argparse.Namespace) -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
     tags = server.read_tags()
-    catalog = server.build_catalog()
-    locations = current_locations(catalog)
+    # Always rebuild the reference labels from the deterministic taxonomy.
+    # Loading last run's generated map here would create circular self-training
+    # and amplify a mistaken assignment on every subsequent pass.
+    locations = {tag["name"]: classify_tag(tag) for tag in tags}
     categories = semantic_categories()
     category_index = {item.key: index for index, item in enumerate(categories)}
+    human_locations = dict(EXACT_OVERRIDES)
+    human_locations.update(read_anchor_expectations())
     folder_indexes: dict[str, list[int]] = defaultdict(list)
     for index, item in enumerate(categories):
         folder_indexes[item.folder_id].append(index)
@@ -267,13 +271,17 @@ def audit(args: argparse.Namespace) -> None:
     adjusted_scores += args.neighbor_prior * neighbor_scores
     for row, tag in enumerate(tags):
         current = locations[tag["name"]]
+        exact_position = category_index.get(human_locations.get(tag["name"]))
+        if exact_position is not None:
+            # Human wiki-level decisions target their declared destination,
+            # never whichever generated map happened to be loaded previously.
+            adjusted_scores[row, exact_position] += args.exact_prior
+            continue
         current_position = category_index.get(current)
         if current_position is None:
             continue
         adjusted_scores[row, folder_indexes[current[0]]] += args.folder_prior
-        adjusted_scores[row, current_position] += (
-            args.exact_prior if tag["name"] in EXACT_OVERRIDES else args.current_prior
-        )
+        adjusted_scores[row, current_position] += args.current_prior
 
     top_count = min(5, len(categories))
     top_indexes = np.argpartition(adjusted_scores, -top_count, axis=1)[:, -top_count:]
@@ -405,7 +413,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed-count", type=int, default=24)
     parser.add_argument("--current-prior", type=float, default=0.035)
-    parser.add_argument("--exact-prior", type=float, default=0.060)
+    parser.add_argument("--exact-prior", type=float, default=1.0)
     parser.add_argument("--folder-prior", type=float, default=0.008)
     parser.add_argument("--neighbor-count", type=int, default=15)
     parser.add_argument("--neighbor-prior", type=float, default=0.025)
