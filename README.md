@@ -62,12 +62,15 @@ npm install
 npm run test:ui
 ```
 
-`semantic_taxonomy_audit.py` 是仅供整理词库使用的离线审计工具，不是应用运行依赖。它读取每个标签的英文名、中文名、别名和 Wiki 定义，让 49,837 个标签与全部语义分类逐一比较，再与已归类标签进行精确近邻复核；完整候选、分数和置信度写入被忽略的 `audit_output` 目录。语义结果只是复核候选，不会覆盖人工确认项。首次运行需单独安装审计依赖：
+`wiki_pairwise_taxonomy_audit.py` 是仅供整理词库使用的离线审计工具，不是应用运行依赖。它读取每个标签的英文名、中文名、别名和完整 Wiki 定义，把 49,837 个标签逐一与 345 个语义细分类及 52 个父级大分类交叉编码比较。完整候选、分数、分差、人工结论冲突和断点写入被忽略的 `audit_output` 与 `.audit-cache` 目录。模型结果只是复核候选，不会直接覆盖人工确认项。首次运行需单独安装审计依赖：
 
 ```powershell
 python -m pip install -r requirements-audit.txt
-python semantic_taxonomy_audit.py
+python wiki_pairwise_taxonomy_audit.py --mode benchmark
+python wiki_pairwise_taxonomy_audit.py --mode full
 ```
+
+模型和 CUDA 仅用于开发期的词库审计，不会打包进 BubbleLens，不影响 EXE 的离线、轻量和无模型运行方式。
 
 Windows EXE 只是一个轻量启动器；它会查找系统 Python、`py -3`、项目内的 `python\python.exe` / `runtime\python.exe`，或环境变量 `BUBBLELENS_PYTHON` 指向的解释器。可使用 .NET Framework 自带的 C# 编译器重新编译：
 
