@@ -1047,7 +1047,7 @@ index,tag,folder,category,result,reason
 1046,brown_skirt,clothes_main,skirt,确认,核心对象是棕色裙子或半身裙
 1047,alcohol,food_drink,drink,确认,Wiki 定义为含乙醇且用于饮用的酒精饮料
 1048,holding_umbrella,action,holding,确认,核心动作是角色手持雨伞
-1049,long_fingernails,body,arms_hands,确认,Wiki 定义为明显超出指尖的长指甲这一手部特征
+1049,long_fingernails,body_detail,nail_care,修正,Wiki 定义为明显超出指尖的长指甲且指甲细类比手臂手部更具体
 1050,wide-eyed,face,eye_shape,确认,Wiki 描述眼睛完全睁开且虹膜周围可见巩膜
 1051,forest,outdoor_scene,forest_field,确认,核心场景是有大量树木和林下植物的森林
 1052,anime_coloring,style,technique,确认,Wiki 定义为动画常用的硬边二维赛璐珞式上色技法
@@ -1279,3 +1279,163 @@ index,tag,folder,category,result,reason
 1278,rabbit,creatures,mammal,确认,Wiki 定义为长耳长后腿短尾的小型兔形哺乳动物
 1279,ghost,creatures,fantasy_creature,确认,Wiki 定义为死者的灵魂或鬼魂
 1280,lapels,clothing_detail,collar_detail,确认,Wiki 定义为夹克西装或大衣前部与领子相连的翻领
+1281,back_bow,accessories,bows_ribbons,确认,核心饰物是系在穿着者后腰或背部的蝴蝶结
+1282,blue_gloves,accessories,handwear,确认,核心对象是蓝色手套
+1283,fishnet_pantyhose,legwear_footwear,stockings,确认,核心服装是鱼网材质的连裤袜
+1284,nontraditional_miko,traditional_clothes,traditional_japan,确认,Wiki 定义为现代化或改编的日本巫女服装
+1285,dragon,creatures,fantasy_creature,确认,Wiki 定义为通常大型四足且能飞的神话龙类
+1286,blue_skin,body_detail,skin,确认,核心身体特征是蓝色皮肤
+1287,bandaid_on_face,body_detail,bandage_patch,确认,核心身体细节是贴在人物脸上的创可贴
+1288,on_floor,pose,object_pose,修正,Wiki 描述角色坐躺或跪在室内地板上的依物姿势
+1289,drawstring,clothing_detail,fastener,确认,Wiki 定义为拉紧后收束兜帽或裤腰材料的拉绳扣合结构
+1290,white_sweater,clothes_main,sweater_hoodie,确认,核心服装是白色毛衣
+1291,ear_covers,head_accessories,headpiece,确认,Wiki 定义为覆盖尖耳或动物耳的装饰性耳罩头饰
+1292,black_cape,outerwear_suits,cape_cloak,确认,核心服装是黑色披风
+1293,mini_hat,head_accessories,themed_hair_ornament,修正,Wiki 明确说明迷你帽用作发饰而非真正戴在头上的帽子
+1294,can,household_objects,container,确认,核心对象是用于装饮料或食物的圆柱形罐
+1295,single_side_bun,hair,hair_style,确认,核心发型是位于头部单侧的一个发髻
+1296,on_chair,pose,object_pose,修正,Wiki 描述人物坐蹲站或躺在椅子上的依物姿势而非椅子本体
+1297,weibo_watermark,meta_info,meta,确认,Wiki 描述标示新浪微博账号并常带微博标志的图像水印
+1298,red_lips,face,makeup,确认,Wiki 明确定义为嘴唇涂有红色唇膏的妆容
+1299,snowing,time_weather,weather,确认,核心天气现象是雪花从天空飘落
+1300,garter_belt,underwear_swim,bra_lingerie,确认,Wiki 定义为系在腰部并以吊带固定长筒袜的内衣
+1301,hug_from_behind,action,interaction,确认,核心互动是一名角色从背后拥抱另一角色
+1302,bouncing_breasts,body,breast_chest,确认,Wiki 描述乳房在运动中摇晃的胸部动态状态
+1303,goddess_of_victory:_nikke,copyright,letter_g,确认,Wiki 定义为 Shift Up 开发的胜利女神 NIKKE 游戏作品
+1304,glint,light_effect,optical,修正,Wiki 描述珠宝剑刃或牙齿等抛光物体上的镜面闪光而非漂浮粒子
+1305,shawl,outerwear_suits,cardigan_shawl,确认,核心服装是披在肩部和上半身的长条披肩
+1306,leash,sensitive,restraint,修正,Wiki 定义为束缚颈部且常表现主宠关系的绳索或链条拘束物
+1307,forehead_mark,face,face_mark,修正,Wiki 定义为位于额头的简单或复杂面部印记
+1308,yellow_jacket,outerwear_suits,jacket_coat,确认,核心服装是黄色夹克外套
+1309,aged_up,themes,identity_change,修正,Wiki 描述同一角色被表现得比通常年龄更大的身份年龄变化
+1310,chromatic_aberration,light_effect,optical,确认,Wiki 定义为 RGB 通道偏移形成彩色边缘的光学色差
+1311,rock,nature,mineral,修正,Wiki 定义为由坚硬矿物构成的天然岩石物体而非山地场景
+1312,arms_at_sides,pose,arm_pose,确认,核心手臂姿势是双臂自然垂放在身体两侧
+1313,blue_kimono,traditional_clothes,traditional_japan,确认,核心传统服装是蓝色日本和服
+1314,card,culture_objects,books_paper,确认,Wiki 定义为印有内容的小型平面材料片包括名片和卡牌
+1315,thighband_pantyhose,legwear_footwear,stockings,确认,核心服装是带大腿带式条纹设计的连裤袜
+1316,tracen_school_uniform,franchise_clothes,school_variant,确认,Wiki 定义为赛马娘中特雷森学园的作品专属校服
+1317,fake_horns,head_accessories,headpiece,确认,Wiki 定义为非真实的装饰性角状头饰
+1318,arrow_(symbol),symbols,general_symbol,确认,核心元素是用于指示方向的箭头符号
+1319,!?,expression,fear_surprise,确认,Wiki 定义为同时表达惊讶与疑问的感叹号问号组合
+1320,panties_under_pantyhose,legwear_footwear,stockings,确认,Wiki 描述可透过连裤袜看到其下方内裤的袜装层叠状态
+1321,naughty_face,expression,positive,修正,Wiki 描述咧嘴坏笑且顽皮捣蛋的积极笑容而非中性表情
+1322,unworn_hat,clothing_appearance,unworn_missing,确认,Wiki 描述角色应戴却未戴且画面中仍可见的帽子
+1323,impossible_clothes,clothing_detail,silhouette_fit,确认,Wiki 描述衣物以现实中不可能的程度紧贴身体轮廓
+1324,teddy_bear,recreation,toys,确认,核心对象是外观像熊的柔软填充泰迪玩具
+1325,:t,expression,anger,确认,Wiki 描述单侧鼓腮并呈 T 形嘴的不满嫉妒表情
+1326,smirk,expression,positive,确认,核心表情是一侧嘴角上扬且带自鸣得意意味的坏笑
+1327,heart_hands,pose,hand_gesture,确认,核心手势是双手比出心形以表达爱意
+1328,breasts_squeezed_together,body,breast_chest,修正,Wiki 的核心可见状态是乳房被手或上臂挤压在一起
+1329,pout,expression,anger,确认,Wiki 描述嘴唇向一侧突出以表示不满或生气的撇嘴
+1330,paw_pose,pose,arm_pose,确认,Wiki 描述前伸手臂弯肘并以松拳模仿猫爪的完整手臂姿势
+1331,object_insertion,adult_kink,adult_insertion,修正,Wiki 明确定义为将无生命物体插入阴道肛门或尿道的异物插入
+1332,tiles,building_parts,surface,确认,核心建筑表面是铺有瓷砖图案的地面或墙面
+1333,league_of_legends,copyright,letter_l,确认,Wiki 定义为英雄联盟游戏作品
+1334,foot_focus,composition,subject_focus,确认,Wiki 描述画面把角色脚部作为主要视觉焦点
+1335,armpit_crease,body,arms_hands,确认,Wiki 描述手臂放下时腋窝处形成的皮肤褶皱
+1336,stairs,building_parts,stairs_railing,确认,核心建筑构件是连接不同高度的固定楼梯
+1337,popsicle,food_drink,dessert_snack,确认,核心食物是插在棍上并冷冻成形的冰棒
+1338,bang_dream!_it's_mygo!!!!!,copyright,letter_b,确认,Wiki 定义为 BanG Dream 系列动画 It's MyGO
+1339,neon_genesis_evangelion,copyright,letter_n,确认,Wiki 定义为新世纪福音战士动画与机甲作品系列
+1340,eyebrows_hidden_by_hair,face,eyebrows,确认,Wiki 描述眉毛被刘海或其他头发完全或部分遮挡
+1341,female_masturbation,adult,adult_self,确认,Wiki 定义为女性角色以手指玩具或摩擦方式自我刺激
+1342,muscular_female,body,build,确认,Wiki 定义为整体体格和四肢明显强壮的肌肉女性体型
+1343,holding_bag,action,holding,确认,核心动作是手中拿着一个包
+1344,brown_shirt,clothes_main,shirt_top,确认,核心服装是棕色衬衫
+1345,rigging,mech_scifi,machine,确认,Wiki 定义为舰娘绑在背部和四肢的舰装机械设备
+1346,music,culture_objects,music,确认,Wiki 描述角色演奏乐器或唱歌的音乐场景
+1347,center_frills,clothing_detail,trim_detail,确认,核心服装细节是从锁骨向下延伸的中央褶边装饰
+1348,pokemon_swsh,copyright,letter_p,确认,Wiki 定义为第八世代宝可梦剑盾游戏作品
+1349,style_parody,meta_info,meme,确认,Wiki 定义为模仿另一位艺术家风格的绘画戏仿
+1350,hand_on_own_cheek,pose,arm_pose,确认,核心手臂姿势是一只手放在自己的脸颊上
+1351,final_fantasy_xiv,copyright,letter_f,确认,Wiki 定义为史克威尔艾尼克斯开发的最终幻想 XIV 游戏
+1352,ice,nature,water_ice,修正,Wiki 定义为水在零摄氏度凝固形成的固体并应与水归入水与冰
+1353,large_areolae,adult_body,nipples,修正,Wiki 明确定义为面积超过乳房一半的大乳晕形态
+1354,print_bikini,underwear_swim,bikini,确认,核心服装是带印花图案的比基尼泳装
+1355,nipple_stimulation,adult,adult_suggestive,确认,Wiki 定义为对乳头实施任何形式刺激的成人互动行为
+1356,sheathed,weapons,blade,确认,Wiki 描述剑或匕首等刃器被收纳在鞘中的状态
+1357,character_doll,recreation,toys,确认,核心对象是人类角色形象的玩偶
+1358,card_(medium),style,medium,修正,Wiki 描述整张图被绘制成卡片样式或卡片正面的视觉媒介
+1359,fire_emblem_heroes,copyright,letter_f,确认,Wiki 定义为火焰纹章英雄策略抽卡游戏作品
+1360,skull,body,internal_organs,确认并改名,Wiki 定义为头部骨骼残骸且促使细类名称由内部器官改为骨骼内脏
+1361,hand_between_legs,pose,arm_pose,确认,Wiki 描述手放在双腿之间且不涉及自慰的手臂位置姿势
+1362,zoom_layer,composition,layout,修正,Wiki 定义为把插画局部放大的附加图层这一画面布局结构
+1363,sign,household_objects,other_object,确认,核心对象是用于展示信息的平面标牌
+1364,hat_flower,accessories,badges_ornaments,修正,Wiki 定义对象是固定在帽子或帽檐上的花朵装饰而非帽子本体
+1365,yellow_ascot,accessories,neckwear,确认,核心饰物是黄色领巾
+1366,backless_outfit,clothing_detail,cutout_slit,确认,核心服装剪裁是部分或完全露出背部的开口设计
+1367,frilled_shirt,clothes_main,shirt_top,确认,核心服装是带褶边装饰的衬衫
+1368,purple_ribbon,accessories,bows_ribbons,确认,核心饰物是紫色缎带
+1369,very_short_hair,hair,hair_length,确认,Wiki 定义为长度到耳朵下巴附近或更短的极短发
+1370,sensei_(blue_archive),character,letter_s,确认,Wiki 定义为蔚蓝档案的玩家角色先生
+1371,handbag,accessories,bags_belts,确认,核心对象是携带钱和小型个人物品的手提包
+1372,water_drop,nature,water_ice,修正,Wiki 定义为因表面张力聚集成球形或泪滴状的少量水
+1373,shameimaru_aya,character,letter_s,确认,Wiki 定义为东方Project角色射命丸文
+1374,visor_cap,head_accessories,hats_caps,确认,Wiki 定义为由遮阳板和固定带构成的无顶遮阳帽
+1375,striped_bikini,underwear_swim,bikini,确认,核心服装是上下部分均有条纹的比基尼
+1376,upside-down,composition,layout,确认,核心画面布局是主体或图像上下倒置
+1377,crystal,nature,mineral,确认,Wiki 定义为粒子有序排列且有明确平面的晶体物质
+1378,ragnarok_online,copyright,letter_r,确认,Wiki 定义为仙境传说网络游戏作品
+1379,adjusting_clothes,action,clothing_action,确认,核心动作是调整身上衣物使其更舒适
+1380,=_=,expression,neutral_expression,确认,Wiki 描述眯眼并可表示满足无奈尴尬或困倦的中性颜文字表情
+1381,crown_braid,hair,hair_style,确认,核心发型是如发带或皇冠般环绕头顶的辫子
+1382,city,urban_architecture,urban,确认,Wiki 定义为规模较大且具有复杂公共设施的永久人类聚居地
+1383,spoon,food_drink,tableware,确认,核心餐具是末端圆形并用于舀取液体食物的勺子
+1384,sand,nature,mineral,修正,Wiki 定义为岩石侵蚀形成的松散矿物颗粒物质而非沙漠场景
+1385,butterfly_hair_ornament,head_accessories,themed_hair_ornament,确认,核心发饰是蝴蝶形发饰或发夹
+1386,sharp_fingernails,body_detail,nail_care,修正,Wiki 明确定义为尖锐尖状但并非爪子的指甲形态
+1387,strawberry,food_drink,fruit_vegetable,确认,核心食物是表面带小种子的多汁红色草莓
+1388,ringed_eyes,face,eye_shape,确认,核心眼部形态是瞳孔与虹膜由多个同心圆环组成
+1389,mouse_ears,animal_traits,animal_ears,确认,Wiki 描述角色具有或佩戴老鼠耳朵样式的兽耳特征
+1390,reaching_towards_viewer,pose,arm_pose,确认,核心姿势是手臂向观看者方向伸出
+1391,black_sclera,face,eye_shape,确认,Wiki 描述巩膜呈黑色而非常见白色的眼部形态
+1392,off-shoulder_shirt,clothes_main,shirt_top,确认,核心服装是低领宽口并露出肩部的衬衫
+1393,motion_blur,composition,focus,确认,Wiki 描述以局部模糊表现快速移动的运动模糊效果
+1394,fork,food_drink,tableware,确认,核心餐具是带齿并用于刺取食物的叉子
+1395,on_ground,pose,object_pose,修正,Wiki 描述角色坐躺或跪在草地泥土沙地等地面上的依物姿势
+1396,sarashi,underwear_swim,bra_lingerie,确认,核心服装是紧紧缠绕腰腹至胸部的长厚棉布裹胸
+1397,beanie,head_accessories,hats_caps,确认,核心对象是贴合头部的针织帽
+1398,splatoon_(series),copyright,letter_s,确认,Wiki 定义为任天堂的喷射战士游戏系列
+1399,drink,food_drink,drink,确认,Wiki 泛指可饮用的饮品
+1400,artist_logo,meta_info,meta,确认,Wiki 描述艺术家用于标记作品且可含签名姓名的作者标志
+1401,interracial,relationships,romance_orientation,确认,Wiki 描述不同种族或民族人物间的性行为或浪漫互动
+1402,pasties,underwear_swim,bra_lingerie,确认,核心服装配件是用于遮盖乳头的心形或星形乳贴
+1403,borrowed_character,meta_info,meta,确认,Wiki 描述艺术家绘制由其他艺术家原创角色的创作归属信息
+1404,ice_cream,food_drink,dessert_snack,确认,核心食物是以乳制品制成的冷冻甜点冰淇淋
+1405,blood_on_clothes,sensitive,blood,确认,核心敏感元素是角色衣服上沾有血迹
+1406,light_rays,light_effect,lighting,确认,Wiki 定义为从天空或光源发出且穿过缝隙的可见光束
+1407,split_mouth,face,mouth,确认,Wiki 描述嘴部线条不完全连接形成的特定嘴型画法
+1408,street_fighter,copyright,letter_s,确认,Wiki 定义为卡普空推出的街头霸王格斗游戏系列
+1409,hands_in_pockets,pose,arm_pose,确认,核心手臂姿势是双手分别插入不同口袋
+1410,yellow_halo,light_effect,halo_effect,确认,核心视觉元素是黄色光环
+1411,body_fur,animal_traits,fur_feature,确认,Wiki 定义为角色身体上不属于衣物的毛皮
+1412,black_sweater,clothes_main,sweater_hoodie,确认,核心服装是黑色毛衣
+1413,railing,building_parts,stairs_railing,确认,核心建筑构件是带扶手并用于安全隔挡的栏杆
+1414,shoulder_cutout,clothing_detail,cutout_slit,确认,核心服装剪裁是露出肩膀的开口设计
+1415,nun,people,occupation,确认,Wiki 定义为立誓献身宗教生活的女性修女身份
+1416,shiny_clothes,clothing_appearance,clothing_material,确认,核心服装表面特征是具有明显可见光泽
+1417,chopsticks,food_drink,tableware,确认,核心餐具是由两根棍组成并以手指操作的筷子
+1418,v_arms,pose,arm_pose,确认,Wiki 描述双臂和双手在胸前合并形成 V 形的端庄姿势
+1419,brown_thighhighs,legwear_footwear,stockings,确认,核心袜装是棕色过膝袜或大腿袜
+1420,green_ribbon,accessories,bows_ribbons,确认,核心饰物是绿色缎带
+1421,nurse_cap,head_accessories,hats_caps,确认,核心对象是女性护士佩戴且有时带十字装饰的护士帽
+1422,spaghetti_strap,clothing_detail,strap_detail,确认,核心服装细节是吊带上衣常见的极细肩带
+1423,criss-cross_halter,clothing_detail,strap_detail,修正,Wiki 定义为在胸前交叉成 X 后绕颈的挂脖肩带结构
+1424,sitting_on_person,action,interaction,修正,Wiki 描述一名角色坐在另一人身上的人物互动
+1425,jacket_on_shoulders,clothing_appearance,wearing_state,修正,Wiki 描述夹克仅披在肩上而双臂未穿入袖子的穿戴状态
+1426,smoking,action,daily_action,确认,Wiki 定义为点燃烟草等物质并吸入或品尝烟雾的行为
+1427,animal_hood,head_accessories,headwrap_veil,确认,核心头戴物是带假动物耳并模仿动物外观的兜帽
+1428,new_year,time_weather,holiday,确认,Wiki 描述与公历新年第一天相关的节庆图像
+1429,alternate_color,themes,persona_variant,修正,Wiki 描述同一角色原始服装和外观的不同配色版本
+1430,pinafore_dress,clothes_main,dress,确认,Wiki 定义为无袖无领并套在衬衫外的围裙式连衣裙
+1431,black_one-piece_swimsuit,underwear_swim,onepiece_swim,确认,核心服装是黑色连体泳衣
+1432,front-tie_bikini_top,underwear_swim,bikini,确认,核心服装是前方系带的比基尼上衣
+1433,minigirl,body,build,确认,Wiki 描述相对环境异常微小的女孩体型
+1434,sailor_shirt,clothes_main,shirt_top,确认,核心服装是带水手领的衬衫
+1435,blue_panties,underwear_swim,panties_underwear,确认,核心服装是蓝色内裤
+1436,;),expression,positive,确认,Wiki 描述闭嘴微笑并闭上一只眼的眨眼笑容
+1437,bandana,head_accessories,headwrap_veil,修正,Wiki 定义为戴在头面或颈部用于保护装饰的布质头巾
+1438,yukata,traditional_clothes,traditional_japan,确认,Wiki 定义为节庆和夏季场合穿着的轻便日本浴衣
+1439,brown_pants,clothes_main,bottoms,确认,核心服装是棕色裤子
+1440,link!_like!_love_live!,copyright,letter_l,确认,Wiki 定义为 Love Live 系列的手机应用和虚拟主播项目
