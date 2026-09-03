@@ -67,13 +67,14 @@ TAXONOMY = [
         category("skin", "皮肤特征"), category("tattoo_mark", "纹身印记"),
         category("mole_freckle", "痣与雀斑"), category("scar_wound", "伤口疤痕"),
         category("bandage_patch", "绷带贴布"), category("surface_stain", "体表附着"),
-        category("body_hair", "体毛"),
+        category("body_hair", "体毛"), category("nail_care", "指甲美甲"),
         category("body_function", "生理反应"), category("body_state", "身体状态"),
     ]),
     folder("face", "面部五官", "◌", "#43c2df", "眼睛、眉毛、鼻子、脸型、口耳与妆容", [
-        category("eye_color", "眼睛颜色"), category("eye_shape", "眼形瞳孔"),
+        category("eye_color", "眼睛颜色"), category("eye_shape", "眼部形态"),
         category("eyebrows", "眉毛"), category("nose", "鼻子"), category("face_shape", "脸部轮廓"),
-        category("mouth", "嘴型嘴唇"), category("oral_detail", "舌头牙齿"),
+        category("face_mark", "面部印记"), category("mouth", "嘴型嘴唇"),
+        category("oral_detail", "舌头牙齿"),
         category("ears", "耳朵"), category("facial_hair", "面部毛发"), category("makeup", "妆容装饰"),
     ]),
     folder("hair", "发型发色", "≈", "#ee78b2", "发色、长度、造型、刘海与头发状态", [
@@ -88,7 +89,8 @@ TAXONOMY = [
     ]),
     folder("pose", "姿势视线", "↗", "#51d0ab", "视线、手势、静态姿态与身体姿势", [
         category("gaze", "视线朝向"), category("stationary_pose", "站坐跪躺"),
-        category("body_pose", "身体姿势"), category("leg_pose", "腿脚姿势"),
+        category("head_pose", "头部姿势"), category("body_pose", "身体姿势"),
+        category("object_pose", "依物姿势"), category("leg_pose", "腿脚姿势"),
         category("arm_pose", "手臂姿势"), category("hand_gesture", "手势符号"),
     ]),
     folder("action", "动作互动", "⇢", "#39c59b", "手持、运动、战斗、人物互动与日常行为", [
@@ -130,10 +132,12 @@ TAXONOMY = [
         category("full_armor", "铠甲"), category("torso_armor", "胸甲"),
         category("shoulder_armor", "肩甲"), category("arm_armor", "手臂护具"),
         category("leg_armor", "下肢护具"), category("flexible_armor", "柔性护甲"),
-        category("combat_helmet", "战斗头盔"), category("civilian_helmet", "头戴装备"),
+        category("protective_helmet", "防护头盔"), category("combat_helmet", "战斗头盔"),
+        category("civilian_helmet", "头戴装备"),
         category("protective_suit", "防护服"),
     ]),
     folder("underwear_swim", "内衣泳装", "◈", "#ef8f9f", "胸衣、内裤、泳装与紧身衣", [
+        category("underwear_general", "内衣总称"),
         category("bra_lingerie", "胸衣内衣"), category("panties_underwear", "内裤"),
         category("bodysuit_leotard", "紧身连体衣"), category("bikini", "比基尼"),
         category("onepiece_swim", "连体泳衣"), category("school_swim", "校园泳装"),
@@ -150,6 +154,7 @@ TAXONOMY = [
     folder("clothing_appearance", "服装属性", "⌁", "#b8d06a", "服装的颜色、图案、材质、风格与穿着状态", [
         category("clothing_color", "服装颜色"), category("clothing_pattern", "图案印花"),
         category("clothing_material", "面料材质"), category("fashion_style", "穿衣风格"),
+        category("wearing_state", "穿戴状态"),
         category("damaged_dirty", "破损脏污"), category("unworn_missing", "未穿缺失"),
         category("open_wear", "开合状态"),
     ]),
@@ -163,7 +168,7 @@ TAXONOMY = [
     folder("head_accessories", "头部配饰", "✦", "#e3c459", "发饰、帽子、头巾、冠饰、眼镜与面罩", [
         category("hairband_ribbon", "发带蝴蝶结"), category("hairclip_pin", "发夹与发簪"),
         category("hairtie_ring", "束发饰品"), category("wig_hairpiece", "假发与发套"),
-        category("themed_hair_ornament", "造型发饰"),
+        category("themed_hair_ornament", "其他发饰"),
         category("hats_caps", "帽子"),
         category("headwrap_veil", "头巾面纱"), category("headpiece", "冠饰头饰"),
         category("eyewear", "眼镜"), category("face_mask", "面罩"),
@@ -172,6 +177,7 @@ TAXONOMY = [
         category("earrings", "耳饰"), category("necklace_choker", "项链颈饰"),
         category("rings", "戒指"), category("bracelet_anklet", "手足饰"),
         category("piercing", "身体穿孔"), category("gem_brooch", "宝石胸针"),
+        category("other_jewelry", "其他首饰"),
     ]),
     folder("accessories", "穿戴配饰", "✧", "#d8bd5c", "领饰、手套、包袋、腰带、徽章与其他随身装饰", [
         category("neckwear", "领巾领带"),
@@ -187,6 +193,7 @@ TAXONOMY = [
         category("other_weapon", "其他武器"),
     ]),
     folder("food_drink", "食品饮料", "◍", "#e7a75b", "食材、料理、甜点、水果、饮料与餐具", [
+        category("food_general", "食物总称"),
         category("staple_food", "主食料理"), category("bakery", "面包面点"),
         category("meat_seafood", "肉类海鲜"), category("dairy_ingredient", "蛋奶食材"),
         category("seasoning", "调味食材"),
@@ -229,12 +236,14 @@ TAXONOMY = [
         category("insect", "昆虫节肢"), category("reptile", "爬行两栖"),
         category("fantasy_creature", "幻想生物"), category("other_creature", "其他生物"),
     ]),
-    folder("nature", "植物矿物", "♣", "#60c97f", "花卉、树木、草本、菌类、奇幻植物与矿物", [
+    folder("nature", "自然物", "♣", "#60c97f", "花卉、树木、草本、菌类、水体与矿物", [
+        category("plant_general", "植物总称"),
         category("flower_general", "通用花卉"),
         category("flower_species", "花卉品种"),
         category("tree", "树木"), category("foliage_vine", "枝叶藤蔓"),
         category("grass_crop", "草本与菌藻"), category("potted_shrub", "盆栽与灌木"),
-        category("unusual_plant", "奇异植物"), category("mineral", "矿物晶体"),
+        category("unusual_plant", "奇异植物"), category("water_ice", "水与冰"),
+        category("mineral", "矿物晶体"),
     ]),
     folder("mech_scifi", "机械科幻", "⚙", "#64a9c8", "机器人、机甲、义体、机械与科幻装置", [
         category("robot_android", "机器人"), category("mecha", "机甲"),
@@ -242,6 +251,7 @@ TAXONOMY = [
         category("scifi_device", "科幻装置"),
     ]),
     folder("indoor_scene", "室内场所", "▥", "#61bf91", "住宅房间、公共与商业场所，以及虚拟空间", [
+        category("indoor_general", "室内总称"),
         category("home_room", "住宅房间"), category("public_indoor", "公共室内"),
         category("commercial", "商业场所"), category("virtual_space", "虚拟空间"),
     ]),
@@ -265,7 +275,7 @@ TAXONOMY = [
         category("other_scene", "户外地点"),
     ]),
     folder("background", "背景样式", "▦", "#58c68d", "纯色、渐变、图案与抽象画面背景", [
-        category("background_plain", "纯色背景"), category("background_pattern", "图案背景"),
+        category("background_plain", "纯色渐变"), category("background_pattern", "图案背景"),
     ]),
     folder("time_weather", "时间天气", "☂", "#67b5e8", "昼夜、天气、季节、节庆与时间状态", [
         category("time_day", "昼夜时刻"), category("weather", "天气气象"),
@@ -797,6 +807,53 @@ V14_EXACT_LOCATIONS = {
 }
 
 
+# v20 begins a literal row-by-row human Wiki review.  These decisions were
+# made after comparing the complete definition with every current destination;
+# no embedding, reranker, keyword rule, or generated candidate selected them.
+V20_EXACT_LOCATIONS = {
+    ">_<": ("expression", "fear_surprise"),
+    "ass_visible_through_thighs": ("body", "waist_hips"),
+    "back": ("body", "torso_back"),
+    "bell": ("culture_objects", "music"),
+    "bottle": ("household_objects", "container"),
+    "bara": ("style", "genre"),
+    "bed_sheet": ("household_objects", "storage_furniture"),
+    "capelet": ("outerwear_suits", "cape_cloak"),
+    "covered_nipples": ("adult_body", "adult_clothes"),
+    "erection": ("adult", "adult_response"),
+    "facial_mark": ("face", "face_mark"),
+    "food": ("food_drink", "food_general"),
+    "fur_trim": ("clothing_detail", "trim_detail"),
+    "hair_flower": ("head_accessories", "themed_hair_ornament"),
+    "halterneck": ("clothing_detail", "strap_detail"),
+    "head_tilt": ("pose", "head_pose"),
+    "highleg": ("clothing_detail", "cutout_slit"),
+    "hood_down": ("clothing_appearance", "wearing_state"),
+    "indoors": ("indoor_scene", "indoor_general"),
+    "jewelry": ("jewelry_accessories", "other_jewelry"),
+    "loli": ("adult_kink", "adult_taboo"),
+    "military": ("themes", "social_theme"),
+    "looking_up": ("pose", "head_pose"),
+    "nail_polish": ("body_detail", "nail_care"),
+    "black_nails": ("body_detail", "nail_care"),
+    "off_shoulder": ("clothing_detail", "collar_detail"),
+    "on_bed": ("pose", "object_pose"),
+    "own_hands_together": ("pose", "hand_gesture"),
+    "plant": ("nature", "plant_general"),
+    "petals": ("nature", "flower_general"),
+    "pointy_ears": ("face", "ears"),
+    "sleeveless": ("clothing_detail", "sleeve_detail"),
+    "strapless": ("clothing_detail", "strap_detail"),
+    "straddling": ("pose", "object_pose"),
+    "turtleneck": ("clothing_detail", "collar_detail"),
+    "underwear": ("underwear_swim", "underwear_general"),
+    "helmet": ("protective_clothes", "protective_helmet"),
+    "water": ("nature", "water_ice"),
+    "facing_viewer": ("pose", "body_pose"),
+    "zettai_ryouiki": ("clothing_appearance", "fashion_style"),
+}
+
+
 def _normalize_location_once(location: tuple[str, str], tag_name: str = "") -> tuple[str, str]:
     """Map legacy classifier targets into the refined display taxonomy."""
     folder_id, category_id = location
@@ -808,6 +865,8 @@ def _normalize_location_once(location: tuple[str, str], tag_name: str = "") -> t
         return V13_EXACT_LOCATIONS[name]
     if name in V14_EXACT_LOCATIONS:
         return V14_EXACT_LOCATIONS[name]
+    if name in V20_EXACT_LOCATIONS:
+        return V20_EXACT_LOCATIONS[name]
 
     if folder_id == "clothing_state" and category_id in {"damaged_dirty", "unworn_missing", "open_wear"}:
         return "clothing_appearance", category_id

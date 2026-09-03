@@ -17,12 +17,12 @@ tags = {
     for tag in category["tags"]
 }
 
-assert catalog["version"] == 19
+assert catalog["version"] == 20
 assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
 assert [folder["id"] for folder in catalog["folders"]] == FOLDER_ORDER
-assert len(categories) == 397
+assert len(categories) == 409
 assert len(locations) == catalog["tagCount"]
 assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
@@ -34,6 +34,46 @@ assert locations["windshield"] == ("transport_play", "vehicle_parts")
 assert locations["hilt"] == ("weapons", "weapon_parts")
 assert locations["sandbox"] == ("recreation", "playground")
 assert locations["cyberspace"] == ("indoor_scene", "virtual_space")
+assert locations["jewelry"] == ("jewelry_accessories", "other_jewelry")
+assert locations["underwear"] == ("underwear_swim", "underwear_general")
+assert locations["food"] == ("food_drink", "food_general")
+assert locations["indoors"] == ("indoor_scene", "indoor_general")
+assert locations["pointy_ears"] == ("face", "ears")
+assert locations["sleeveless"] == ("clothing_detail", "sleeve_detail")
+assert locations["hair_flower"] == ("head_accessories", "themed_hair_ornament")
+assert locations["nail_polish"] == ("body_detail", "nail_care")
+assert locations["off_shoulder"] == ("clothing_detail", "collar_detail")
+assert locations["water"] == ("nature", "water_ice")
+assert locations["covered_nipples"] == ("adult_body", "adult_clothes")
+assert locations["fur_trim"] == ("clothing_detail", "trim_detail")
+assert locations["loli"] == ("adult_kink", "adult_taboo")
+assert locations["strapless"] == ("clothing_detail", "strap_detail")
+assert locations["bell"] == ("culture_objects", "music")
+assert locations["capelet"] == ("outerwear_suits", "cape_cloak")
+assert locations["head_tilt"] == ("pose", "head_pose")
+assert locations["highleg"] == ("clothing_detail", "cutout_slit")
+assert locations["on_bed"] == ("pose", "object_pose")
+assert locations["petals"] == ("nature", "flower_general")
+assert locations["turtleneck"] == ("clothing_detail", "collar_detail")
+assert locations["zettai_ryouiki"] == ("clothing_appearance", "fashion_style")
+assert locations["erection"] == ("adult", "adult_response")
+assert locations["facial_mark"] == ("face", "face_mark")
+assert locations["halterneck"] == ("clothing_detail", "strap_detail")
+assert locations["hood_down"] == ("clothing_appearance", "wearing_state")
+assert locations["ass_visible_through_thighs"] == ("body", "waist_hips")
+assert locations["back"] == ("body", "torso_back")
+assert locations["bed_sheet"] == ("household_objects", "storage_furniture")
+assert locations["black_nails"] == ("body_detail", "nail_care")
+assert locations["helmet"] == ("protective_clothes", "protective_helmet")
+assert locations["military"] == ("themes", "social_theme")
+assert locations["own_hands_together"] == ("pose", "hand_gesture")
+assert locations[">_<"] == ("expression", "fear_surprise")
+assert locations["bara"] == ("style", "genre")
+assert locations["bottle"] == ("household_objects", "container")
+assert locations["facing_viewer"] == ("pose", "body_pose")
+assert locations["looking_up"] == ("pose", "head_pose")
+assert locations["plant"] == ("nature", "plant_general")
+assert locations["straddling"] == ("pose", "object_pose")
 assert sum(map(len, SYMBOL_LOCATION_SETS.values())) == 414
 assert len(set().union(*SYMBOL_LOCATION_SETS.values())) == 414
 
@@ -261,11 +301,11 @@ folder_ids = {folder["id"] for folder in catalog["folders"]}
 protective = next(folder for folder in catalog["folders"] if folder["id"] == "protective_clothes")
 assert [category["id"] for category in protective["categories"]] == [
     "full_armor", "torso_armor", "shoulder_armor", "arm_armor", "leg_armor",
-    "flexible_armor", "combat_helmet", "civilian_helmet", "protective_suit",
+    "flexible_armor", "protective_helmet", "combat_helmet", "civilian_helmet", "protective_suit",
 ]
 assert [category["name"] for category in protective["categories"]] == [
     "铠甲", "胸甲", "肩甲", "手臂护具", "下肢护具",
-    "柔性护甲", "战斗头盔", "头戴装备", "防护服",
+    "柔性护甲", "防护头盔", "战斗头盔", "头戴装备", "防护服",
 ]
 traditional = next(folder for folder in catalog["folders"] if folder["id"] == "traditional_clothes")
 assert [category["id"] for category in traditional["categories"]] == [
@@ -297,4 +337,4 @@ for removed_key in {
 }:
     assert removed_key not in category_keys
 
-print("taxonomy v19: ok")
+print("taxonomy v20: ok")

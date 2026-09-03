@@ -1,0 +1,641 @@
+index,tag,folder,category,result,reason
+1,1girl,people,count_gender,确认,Wiki 明确描述画面中一位女性角色
+2,solo,people,count_gender,确认,Wiki 明确描述画面中只有一个人物
+3,long_hair,hair,hair_length,确认,核心含义是超过肩膀的头发长度
+4,breasts,body,breast_chest,确认,核心对象是乳房这一胸部结构
+5,looking_at_viewer,pose,gaze,确认,核心含义是角色对观众的视线方向
+6,smile,expression,positive,确认,核心含义是愉悦的微笑表情
+7,blush,expression,shy_blush,确认,核心含义是脸颊发红状态
+8,open_mouth,face,mouth,确认,核心含义是嘴巴张开的形态
+9,short_hair,hair,hair_length,确认,核心含义是未及肩的头发长度
+10,shirt,clothes_main,shirt_top,确认,核心对象是穿在上半身的上衣
+11,simple_background,background,background_plain,确认,核心含义是空旷无特征的简单背景
+12,blue_eyes,face,eye_color,确认,核心含义是蓝色眼睛
+13,long_sleeves,clothing_detail,sleeve_detail,确认,核心含义是覆盖至手腕的袖长
+14,white_background,background,background_plain,确认,核心含义是白色背景
+15,large_breasts,body,breast_chest,确认,核心含义是乳房大小
+16,black_hair,hair,hair_color,确认,核心含义是黑色头发
+17,blonde_hair,hair,hair_color,确认,核心含义是金黄色头发
+18,skirt,clothes_main,skirt,确认,核心对象是从腰部垂下的半身裙
+19,holding,action,holding,确认,Wiki 明确限定用手拿起可携带物品
+20,multiple_girls,people,count_gender,确认,核心含义是多位女性角色
+21,brown_hair,hair,hair_color,确认,核心含义是棕色头发
+22,1boy,people,count_gender,确认,核心含义是一位男性角色
+23,hair_ornament,head_accessories,themed_hair_ornament,确认并改名,核心对象是仅用于装饰头发的其他发饰
+24,gloves,accessories,handwear,确认,核心对象是覆盖手部或手腕的手套
+25,dress,clothes_main,dress,确认,核心对象是上身与裙摆连成一体的连衣裙
+26,closed_mouth,face,mouth,确认,核心含义是嘴唇闭合的嘴部形态
+27,red_eyes,face,eye_color,确认,核心含义是红色眼睛
+28,hair_between_eyes,hair,bangs,确认,核心含义是垂在双眼之间的刘海
+29,hat,head_accessories,hats_caps,确认,核心对象是泛指的帽子
+30,animal_ears,animal_traits,animal_ears,确认,核心含义是角色具有真实或装饰性动物耳朵
+31,bow,accessories,bows_ribbons,确认,核心对象是双环双尾的蝴蝶结
+32,navel,body,torso_back,确认,核心对象是腹部中央的肚脐
+33,original,copyright,letter_o,确认,Wiki 将其定义为不源自既有版权的原创作品来源
+34,jewelry,jewelry_accessories,other_jewelry,修正,Wiki 是首饰总称而非宝石或胸针
+35,thighhighs,legwear_footwear,stockings,确认,核心对象是覆盖脚到大腿的长袜
+36,ribbon,accessories,bows_ribbons,确认,核心对象是用于绑扎的柔性细长丝带
+37,jacket,outerwear_suits,jacket_coat,确认,核心对象是有袖的短款轻薄外套
+38,2girls,people,count_gender,确认,核心含义是两个女性角色
+39,cleavage,body,breast_chest,确认,核心对象是胸部之间形成的乳沟
+40,very_long_hair,hair,hair_length,确认,核心含义是超过腰部的头发长度
+41,bare_shoulders,body,torso_back,确认,核心含义是躯干上方肩部裸露而非某种具体服装
+42,white_shirt,clothes_main,shirt_top,确认,核心对象是白色衬衫
+43,sitting,pose,stationary_pose,确认,核心含义是臀部靠在支撑面上的坐姿
+44,standing,pose,stationary_pose,确认,核心含义是由脚支撑的直立站姿
+45,twintails,hair,hair_style,确认,核心含义是分成两束的双马尾发型
+46,full_body,composition,shot,确认,核心含义是全身可见的取景范围
+47,medium_breasts,body,breast_chest,确认,核心含义是乳房大小
+48,blue_hair,hair,hair_color,确认,核心含义是蓝色头发
+49,green_eyes,face,eye_color,确认,核心含义是绿色眼睛
+50,purple_eyes,face,eye_color,确认,核心含义是紫色眼睛
+51,upper_body,composition,shot,确认,核心含义是从肚脐附近向上的取景范围
+52,tail,animal_traits,tails,确认,核心对象是从下背部突出的尾巴
+53,nipples,body,breast_chest,确认,核心对象是胸部乳腺上的乳头
+54,touhou,copyright,letter_t,确认,Wiki 明确描述东方 Project 游戏作品系列
+55,brown_eyes,face,eye_color,确认,核心含义是棕色眼睛
+56,collarbone,body,torso_back,确认,核心对象是躯干上方的锁骨
+57,multicolored_hair,hair,hair_color,确认,核心含义是头发具有多种颜色
+58,male_focus,composition,subject_focus,确认,核心含义是画面对男性主体的强调
+59,school_uniform,uniform_costume,school_uniform,确认,Wiki 描述不限定具体作品的通用学生制服
+60,underwear,underwear_swim,underwear_general,修正,Wiki 是穿在衣服下面的内衣总称而非内裤
+61,closed_eyes,face,eye_shape,确认,核心含义是双眼闭合的眼部形态
+62,white_hair,hair,hair_color,确认,核心含义是白色头发
+63,pink_hair,hair,hair_color,确认,核心含义是粉色头发
+64,grey_hair,hair,hair_color,确认,核心含义是灰色或银色头发
+65,yellow_eyes,face,eye_color,确认,核心含义是黄色眼睛
+66,ponytail,hair,hair_style,确认,核心含义是脑后扎起的马尾发型
+67,ahoge,hair,hair_style,确认,核心含义是头顶翘起的一撮头发造型
+68,purple_hair,hair,hair_color,确认,核心含义是紫色头发
+69,swimsuit,underwear_swim,other_swim,确认,Wiki 是未限定款式的通用泳装
+70,sidelocks,hair,bangs,确认,核心含义是耳前垂下的鬓发
+71,braid,hair,hair_style,确认,核心含义是三股或更多头发交织成的辫子
+72,short_sleeves,clothing_detail,sleeve_detail,确认,核心含义是不超过肘部的袖长
+73,flower,nature,flower_general,确认,核心对象是植物的繁殖结构这一通用花卉
+74,heart,symbols,general_symbol,确认,核心对象是象征爱情的心形符号
+75,monochrome,light_effect,palette,确认,核心含义是画面主要使用单一颜色的配色
+76,panties,underwear_swim,panties_underwear,确认,核心对象是无裤腿的女性内裤
+77,earrings,jewelry_accessories,earrings,确认,核心对象是佩戴在耳部的耳饰
+78,shoes,legwear_footwear,casual_shoes,确认,核心对象是未限定款式的普通鞋履
+79,cowboy_shot,composition,shot,确认,核心含义是从大腿向上的取景范围
+80,weapon,weapons,other_weapon,确认,Wiki 是未限定具体类型的通用武器
+81,thighs,body,legs_knees,确认,核心对象是臀部到膝盖之间的大腿区域
+82,hair_ribbon,head_accessories,hairband_ribbon,确认,核心对象是戴在头发上的丝带
+83,ass,body,waist_hips,确认,核心对象是腰臀胯区域的臀部
+84,outdoors,outdoor_scene,other_scene,确认,Wiki 泛指各种室外场景
+85,hetero,relationships,romance_orientation,确认,核心含义是异性成员之间的浪漫或性配对
+86,:d,expression,positive,确认,核心含义是张大嘴的微笑表情
+87,sweat,body_detail,body_function,确认,核心含义是身体因活动形成汗液的生理反应
+88,teeth,face,oral_detail,确认,核心对象是口腔内用于咬合的牙齿
+89,pantyhose,legwear_footwear,stockings,确认,核心对象是覆盖腰部到脚趾的连裤袜
+90,hair_bow,head_accessories,hairband_ribbon,确认,核心对象是系在头发上的蝴蝶结
+91,frills,clothing_detail,trim_detail,确认,核心对象是服装上的荷叶边装饰
+92,red_hair,hair,hair_color,确认,核心含义是红色头发
+93,open_clothes,clothing_appearance,open_wear,确认,核心含义是衣物未扣上或敞开的穿着状态
+94,parted_lips,face,mouth,确认,核心含义是嘴唇微张的嘴部形态
+95,comic,text_meta,comic,确认,Wiki 描述连续画格构成的漫画形式
+96,collared_shirt,clothes_main,shirt_top,确认,核心对象是带折叠领子的衬衫
+97,pleated_skirt,clothes_main,skirt,确认,核心对象是带垂直褶皱的半身裙
+98,boots,legwear_footwear,short_boots,确认,核心对象是覆盖脚踝并可延伸至小腿的靴子
+99,small_breasts,body,breast_chest,确认,核心含义是乳房大小
+100,bikini,underwear_swim,bikini,确认,Wiki 明确描述两件式女性泳衣
+101,nude,adult_body,adult_nudity,确认,核心含义是胸部与胯部未穿衣物的身体裸露
+102,multiple_boys,people,count_gender,确认,核心含义是多个男性角色
+103,greyscale,light_effect,palette,确认,核心含义是只由黑白灰组成的画面配色
+104,hairband,head_accessories,hairband_ribbon,确认,核心对象是固定头发的发箍
+105,horns,animal_traits,horns,确认,核心对象是头部突出的角状结构
+106,pants,clothes_main,bottoms,确认,核心对象是分别覆盖双腿的长裤
+107,black_gloves,accessories,handwear,确认,核心对象是黑色手套
+108,censored,meta_info,censorship,确认,核心含义是图像内容被遮挡或打码
+109,shorts,clothes_main,bottoms,确认,核心对象是不完全覆盖腿部的短裤
+110,necktie,accessories,neckwear,确认,核心对象是系在颈部的长条领带
+111,alternate_costume,themes,persona_variant,确认,核心含义是角色穿着非典型的替换服装变体
+112,lying,pose,stationary_pose,确认,核心含义是身体靠背侧腹侧支撑的躺姿
+113,food,food_drink,food_general,修正,Wiki 是可食用营养来源的食物总称而非主食料理
+114,sleeveless,clothing_detail,sleeve_detail,修正,Wiki 描述衣物没有袖子的袖型特征
+115,virtual_youtuber,people,occupation,确认,核心含义是使用数字头像直播的内容创作者职业
+116,sky,outdoor_scene,sky_space,确认,核心对象是作为背景或主题的天空
+117,wings,animal_traits,wing_feather,确认,核心对象是角色具有或佩戴的翅膀特征
+118,one_eye_closed,face,eye_shape,确认,核心含义是一只眼睛闭合的眼部形态
+119,choker,jewelry_accessories,necklace_choker,确认,核心对象是紧贴颈部佩戴的颈饰
+120,medium_hair,hair,hair_length,确认,核心含义是大约到肩膀的头发长度
+121,kantai_collection,copyright,letter_k,确认,Wiki 明确描述舰队 Collection 游戏作品
+122,green_hair,hair,hair_color,确认,核心含义是绿色头发
+123,penis,adult_body,penis,确认,核心对象是男性生殖器官
+124,artist_name,text_meta,text,确认,核心画面元素是图像上书写的作者姓名文字
+125,detached_sleeves,clothing_detail,sleeve_detail,确认,核心含义是与衣身分离的袖型
+126,pointy_ears,face,ears,修正,Wiki 只描述耳朵末端尖锐的形状并未定义为兽耳
+127,socks,legwear_footwear,socks,确认,核心对象是穿在脚上鞋内的短袜总称
+128,tongue,face,oral_detail,确认,核心对象是清晰可见或突出的舌头
+129,indoors,indoor_scene,indoor_general,修正,Wiki 泛指房屋或封闭建筑内并不限定公共场所
+130,japanese_clothes,traditional_clothes,traditional_japan,确认,Wiki 明确指各种传统日本服饰
+131,hand_up,pose,arm_pose,确认,核心含义是单只手臂举至上身以上的姿势
+132,official_alternate_costume,themes,persona_variant,确认,核心含义是官方设计的角色替换服装变体
+133,puffy_sleeves,clothing_detail,sleeve_detail,确认,核心含义是蓬松膨胀的袖型
+134,black_thighhighs,legwear_footwear,stockings,确认,核心对象是黑色过膝长袜
+135,pussy,adult_body,vulva,确认,核心对象是女性外阴生殖部位
+136,barefoot,body,feet_toes,确认,核心含义是脚部完全裸露
+137,glasses,head_accessories,eyewear,确认,核心对象是戴在眼睛前的镜片眼镜
+138,belt,accessories,bags_belts,确认,核心对象是围绕腰部用于固定或装饰的腰带
+139,solo_focus,composition,subject_focus,确认,核心含义是在多人画面中突出单个主体
+140,hairclip,head_accessories,hairclip_pin,确认,核心对象是固定或装饰头发的夹子
+141,bowtie,accessories,neckwear,确认,核心对象是系在颈部的蝶形领结
+142,day,time_weather,time_day,确认,核心含义是白天的时间状态
+143,2boys,people,count_gender,确认,核心含义是两个男性角色
+144,fang,face,oral_detail,确认,核心对象是突出的单颗犬齿
+145,speech_bubble,text_meta,comic,确认,核心对象是漫画语法中的对话气泡
+146,black_skirt,clothes_main,skirt,确认,核心对象是黑色半身裙
+147,halo,light_effect,halo_effect,确认,核心对象是头顶上方发光的圆形光环
+148,hood,head_accessories,headwrap_veil,确认,核心对象是覆盖头颈并可连接外套的兜帽
+149,white_gloves,accessories,handwear,确认,核心对象是白色手套
+150,signature,meta_info,meta,确认,核心内容是图像携带的作者声优或角色签名元数据
+151,fate_(series),copyright,letter_f,确认,Wiki 明确描述 Fate 多媒体作品系列
+152,blunt_bangs,hair,bangs,确认,核心含义是横向剪齐的刘海
+153,white_dress,clothes_main,dress,确认,核心对象是白色连衣裙
+154,blue_archive,copyright,letter_b,确认,Wiki 明确描述蔚蓝档案游戏及动画作品
+155,twitter_username,meta_info,meta,确认,核心内容是创作者账户名这一创作署名元数据
+156,elbow_gloves,accessories,handwear,确认,核心对象是长度达到手肘的手套
+157,looking_at_another,pose,gaze,确认,核心含义是人物看向另一人物的视线
+158,pink_eyes,face,eye_color,确认,核心含义是粉红色眼睛
+159,tongue_out,face,oral_detail,确认,核心视觉特征是伸出嘴外的舌头
+160,serafuku,uniform_costume,sailor_uniform,确认,Wiki 明确描述日本女学生水手服
+161,midriff,body,torso_back,确认,核心对象是衣物间露出的腹部区域
+162,cat_ears,animal_traits,animal_ears,确认,核心对象是长有或佩戴的猫形兽耳
+163,dark_skin,body_detail,skin,确认,核心含义是较深的皮肤颜色
+164,sailor_collar,clothing_detail,collar_detail,确认,核心对象是水手风格衣领
+165,cloud,outdoor_scene,sky_space,确认,核心对象是天空中的云团
+166,holding_weapon,action,holding,确认,核心含义是手持任意武器的动作
+167,stomach,body,torso_back,确认,核心对象是正面腹部区域
+168,pokemon,copyright,letter_p,确认,Wiki 明确描述 Pokémon 作品系列
+169,hair_flower,head_accessories,themed_hair_ornament,修正,Wiki 是花朵发饰总称并不限定以发夹固定
+170,streaked_hair,hair,hair_color,确认,核心含义是主体发色中夹有少量其他颜色
+171,sex,adult,adult_sex,确认,Wiki 明确描述阴道或肛门插入性交
+172,two-tone_hair,hair,hair_color,确认,核心含义是由两种颜色组成的头发
+173,mole,body_detail,mole_freckle,确认,核心对象是皮肤上的小型色素痣
+174,english_text,text_meta,text,确认,核心画面元素是英语文字
+175,grey_background,background,background_plain,确认,核心含义是纯灰或主要为灰色的背景
+176,miniskirt,clothes_main,skirt,确认,核心对象是裙摆远高于膝盖的短裙
+177,sword,weapons,blade,确认,核心对象是带剑柄与剑刃的切刺武器
+178,looking_back,pose,gaze,确认,核心含义是主体视线转向身后
+179,black_jacket,outerwear_suits,jacket_coat,确认,核心对象是黑色夹克
+180,fingerless_gloves,accessories,handwear,确认,核心对象是不完全覆盖手指的手套
+181,open_jacket,clothing_appearance,open_wear,确认,核心含义是夹克未扣合或未拉上拉链
+182,necklace,jewelry_accessories,necklace_choker,确认,核心对象是宽松戴在颈部的链状首饰
+183,hair_bun,hair,hair_style,确认,核心含义是将头发盘成圆形的发型
+184,coat,outerwear_suits,jacket_coat,确认,核心对象是用于保暖防护的长款厚外衣
+185,chibi,style,art_style,确认,核心含义是日式超级变形的美术风格
+186,black_dress,clothes_main,dress,确认,核心对象是黑色连衣裙
+187,wide_sleeves,clothing_detail,sleeve_detail,确认,核心含义是袖口宽大的袖型
+188,striped_clothes,clothing_appearance,clothing_pattern,确认,核心含义是衣物表面的条纹图案
+189,hair_over_one_eye,hair,bangs,确认,核心含义是前发遮住一只眼睛
+190,on_back,pose,stationary_pose,确认,核心含义是身体背部朝下的仰卧姿势
+191,spread_legs,pose,leg_pose,确认,核心含义是双腿分开的姿势
+192,star_(symbol),symbols,general_symbol,确认,核心对象是表示星星的图形符号
+193,black_shirt,clothes_main,shirt_top,确认,核心对象是黑色衬衫
+194,grin,expression,positive,确认,核心含义是露出牙齿的宽大笑容
+195,orange_hair,hair,hair_color,确认,核心含义是橙色头发
+196,white_thighhighs,legwear_footwear,stockings,确认,核心对象是白色过膝长袜
+197,cum,adult,adult_fluid,确认,核心对象是男性射出的精液
+198,nail_polish,body_detail,nail_care,修正,Wiki 指手指甲或脚趾甲上的彩色涂层而非面部妆容
+199,off_shoulder,clothing_detail,collar_detail,修正,Wiki 描述露出肩部的领口与肩线剪裁
+200,kimono,traditional_clothes,traditional_japan,确认,Wiki 明确描述传统日本和服
+201,black_eyes,face,eye_color,确认,核心含义是黑色眼睛
+202,armpits,body,arms_hands,确认,核心对象是手臂与躯干连接处的腋窝
+203,3girls,people,count_gender,确认,核心含义是画面中有三位女性角色
+204,from_behind,composition,camera_angle,确认,核心含义是从主体背后观察的镜头角度
+205,hololive,copyright,letter_h,确认,Wiki 明确描述 hololive 作品与团体
+206,sweatdrop,expression,fear_surprise,确认,核心含义是表达紧张或尴尬的符号化大汗滴
+207,from_side,composition,camera_angle,确认,核心含义是从主体侧面观察的镜头角度
+208,rabbit_ears,animal_traits,animal_ears,确认,核心对象是长有或佩戴的兔形兽耳
+209,fate/grand_order,copyright,letter_f,确认,Wiki 明确描述 Fate/Grand Order 作品
+210,huge_breasts,body,breast_chest,确认,核心含义是乳房尺寸
+211,blurry,composition,focus,确认,核心含义是画面部分因视觉效果而模糊
+212,yuri,relationships,romance_orientation,确认,核心含义是女性角色之间的浪漫或性关系
+213,red_bow,accessories,bows_ribbons,确认,Wiki 只限定红色蝴蝶结而未限定佩戴部位
+214,bag,accessories,bags_belts,确认,核心对象是用于携带物品的柔性包袋
+215,genshin_impact,copyright,letter_g,确认,Wiki 明确描述原神游戏作品
+216,vest,clothes_main,vest_top,确认,核心对象是无袖无领并常套穿的背心
+217,animal_ear_fluff,animal_traits,animal_ears,确认,核心对象是动物耳朵内部突出的绒毛
+218,tears,expression,sad_cry,确认,核心对象是情绪表达时从眼睛产生的泪水
+219,armor,protective_clothes,full_armor,确认,Wiki 是由硬质材料制成的铠甲总称
+220,leotard,underwear_swim,bodysuit_leotard,确认,核心对象是运动舞蹈用紧身连体衣
+221,parted_bangs,hair,bangs,确认,核心含义是明显从中间或侧面分开的刘海
+222,cape,outerwear_suits,cape_cloak,确认,核心对象是固定在颈后并披于背部的无袖外衣
+223,arm_up,pose,arm_pose,确认,核心含义是单臂举至眼部或更高的姿势
+224,apron,clothes_main,apron_cover,确认,核心对象是覆盖身体前部的防护罩衣
+225,black_pantyhose,legwear_footwear,stockings,确认,核心对象是黑色连裤袜
+226,character_name,text_meta,text,确认,核心画面元素是写出的角色姓名或昵称
+227,idolmaster,copyright,letter_i,确认,Wiki 明确描述偶像大师作品系列
+228,sweater,clothes_main,sweater_hoodie,确认,核心对象是覆盖躯干与手臂的厚针织上衣
+229,water,nature,water_ice,修正,Wiki 定义的是可见的水这种物质并不限定户外水域场景
+230,mosaic_censoring,meta_info,censorship,确认,核心含义是用像素化马赛克遮挡图像
+231,clothes_lift,action,clothing_action,确认,核心含义是掀起衣物露出身体的动作
+232,scarf,accessories,neckwear,确认,核心对象是围在颈部用于保暖的长条织物
+233,blue_sky,outdoor_scene,sky_space,确认,核心对象是呈蓝色的天空
+234,high_heels,legwear_footwear,heels,确认,核心对象是鞋跟显著高于前掌的鞋
+235,vaginal,adult,adult_sex,确认,Wiki 描述物体进入阴道的插入行为
+236,crop_top,clothes_main,vest_top,确认,核心对象是为露出腹部而裁短的上衣
+237,bra,underwear_swim,bra_lingerie,确认,核心对象是用于支撑乳房的女性内衣
+238,completely_nude,adult_body,adult_nudity,确认,核心含义是颈部以下完全未穿衣物
+239,grey_eyes,face,eye_color,确认,核心含义是灰色眼睛
+240,feet,body,feet_toes,确认,核心对象是被突出或详细描绘的脚
+241,collar,accessories,neckwear,确认,Wiki 是独立于衣物佩戴的颈部带状配饰
+242,looking_to_the_side,pose,gaze,确认,核心含义是视线转向身体侧方
+243,bracelet,jewelry_accessories,bracelet_anklet,确认,核心对象是佩戴在手腕的装饰性珠宝
+244,hands_up,pose,arm_pose,确认,核心含义是双手举到上躯干或更高
+245,dated,meta_info,meta,确认,核心内容是图像标注的创作日期元数据
+246,fingernails,body,arms_hands,确认,核心对象是手部明显可见的指甲
+247,red_ribbon,accessories,bows_ribbons,确认,Wiki 只限定红色丝带而未限定佩戴部位
+248,arms_up,pose,arm_pose,确认,核心含义是双臂举至眼部或更高
+249,cup,food_drink,tableware,确认,核心对象是用于饮用的杯状容器
+250,eyelashes,face,eye_shape,确认,核心对象是作为眼部形态组成的显眼睫毛
+251,black_shoes,legwear_footwear,casual_shoes,确认,Wiki 是未限定鞋型的黑色鞋履
+252,v-shaped_eyebrows,face,eyebrows,确认,核心对象是向内倾斜形成 V 形的眉毛
+253,clothing_cutout,clothing_detail,cutout_slit,确认,核心含义是衣物为露出身体而设计的镂空
+254,:o,expression,fear_surprise,确认,核心含义是表达惊讶或敬畏的圆形张嘴表情
+255,aqua_eyes,face,eye_color,确认,核心含义是蓝绿色眼睛
+256,black_choker,jewelry_accessories,necklace_choker,确认,核心对象是黑色贴颈饰品
+257,multiple_views,composition,layout,确认,核心含义是同一角色以多个画面或视图呈现
+258,blue_skirt,clothes_main,skirt,确认,核心对象是蓝色半身裙或迷你裙
+259,puffy_short_sleeves,clothing_detail,sleeve_detail,确认,核心含义是短而蓬松的袖型
+260,dark-skinned_female,body_detail,skin,确认,核心含义是女性角色具有较深肤色
+261,twin_braids,hair,hair_style,确认,核心含义是由两条辫子组成的发型
+262,white_panties,underwear_swim,panties_underwear,确认,核心对象是纯白色内裤
+263,neckerchief,accessories,neckwear,确认,核心对象是系于颈部并垂下两片布端的领巾
+264,orange_eyes,face,eye_color,确认,核心含义是橙色眼睛
+265,two_side_up,hair,hair_style,确认,核心含义是两侧扎起而其余头发垂下的发型
+266,upper_teeth_only,face,oral_detail,确认,核心对象是只画出上排牙齿的口腔细节
+267,symbol-shaped_pupils,face,eye_shape,确认,核心含义是瞳孔呈符号或物品形状的眼部形态
+268,flat_chest,body,breast_chest,确认,核心含义是女性胸部完全平坦
+269,black_pants,clothes_main,bottoms,确认,核心对象是未限定款式的黑色裤装
+270,mole_under_eye,body_detail,mole_freckle,确认,核心对象是位于眼睛下方的痣
+271,thigh_strap,clothing_detail,strap_detail,确认,核心对象是环绕大腿佩戴的服装绑带
+272,black_hat,head_accessories,hats_caps,确认,核心对象是黑色帽子
+273,side_ponytail,hair,hair_style,确认,核心含义是在头侧而非后方扎起的马尾
+274,sleeves_past_wrists,clothing_detail,sleeve_detail,确认,核心含义是长度超过手腕并覆盖部分手部的袖型
+275,fur_trim,clothing_detail,trim_detail,修正,Wiki 明确描述领口袖口或下摆边缘的毛皮饰边
+276,tree,nature,tree,确认,核心对象是具有主干与枝叶冠层的多年生木本植物
+277,border,composition,border,确认,核心对象是图像四周的边框
+278,feet_out_of_frame,composition,framing,确认,核心含义是脚位于画面裁切范围之外
+279,watermark,meta_info,meta,确认,核心内容是用于署名或防盗的图像叠加标识
+280,v,pose,hand_gesture,确认,核心含义是食指与中指张开的 V 形手势
+281,strapless,clothing_detail,strap_detail,修正,Wiki 明确描述上衣没有肩带的结构
+282,pokemon_(creature),creatures,fantasy_creature,确认,核心对象是宝可梦作品中的幻想生物
+283,no_humans,people,count_gender,确认,核心含义是画面中没有人类或类人角色
+284,bar_censor,meta_info,censorship,确认,核心对象是用于遮挡图像内容的矩形条
+285,fake_animal_ears,head_accessories,headpiece,确认,Wiki 明确是假兽耳并常附着在发带或兜帽
+286,toes,body,feet_toes,确认,核心对象是足部的脚趾
+287,sleeveless_shirt,clothes_main,shirt_top,确认,核心对象是无袖款式的上衣
+288,sleeveless_dress,clothes_main,dress,确认,核心对象是无袖款式的连衣裙
+289,hand_on_own_hip,pose,arm_pose,确认,核心含义是将一只手放在自己髋部的姿势
+290,sparkle,light_effect,particles,确认,核心对象是短暂明亮且常呈星形的闪光粒子
+291,cat_tail,animal_traits,tails,确认,核心对象是角色具有的猫形尾巴
+292,white_socks,legwear_footwear,socks,确认,核心对象是白色袜子这一通用袜类
+293,gradient_hair,hair,hair_color,确认,核心含义是发色从一种颜色渐变到另一种
+294,see-through_clothes,clothing_appearance,clothing_material,确认,核心含义是由透明或湿薄材质造成的透视衣物
+295,black_bow,accessories,bows_ribbons,确认,Wiki 只限定黑色蝴蝶结而未限定佩戴部位
+296,wrist_cuffs,accessories,handwear,确认,核心对象是佩戴在手腕且形似分离袖口的饰物
+297,loli,adult_kink,adult_taboo,修正,Wiki 明确定义为青春期前外观角色的性化作品而非普通年龄描述
+298,torn_clothes,clothing_appearance,damaged_dirty,确认,核心含义是衣服处于撕裂破损状态
+299,vocaloid,copyright,letter_v,确认,Wiki 明确描述 VOCALOID 引擎及相关作品体系
+300,fox_ears,animal_traits,animal_ears,确认,核心对象是角色具有的狐狸形兽耳
+301,covered_nipples,adult_body,adult_clothes,修正,Wiki 描述乳头隔着衣物显现而不是身体裸露
+302,hair_intakes,hair,hair_style,确认,核心含义是形成两个前开勺状结构的发型
+303,maid,uniform_costume,service_uniform,确认,Wiki 的识别核心是穿着西式女仆制服
+304,buttons,clothing_detail,fastener,确认,核心对象是用于固定或装饰衣物的纽扣
+305,arknights,copyright,letter_a,确认,Wiki 明确描述明日方舟游戏作品
+306,neck_ribbon,accessories,neckwear,确认,核心对象是系在颈部代替领带的丝带
+307,maid_headdress,head_accessories,headpiece,确认,核心对象是配合女仆制服佩戴的褶边头饰
+308,tattoo,body_detail,tattoo_mark,确认,核心对象是永久绘制在皮肤上的图案或符号
+309,colored_skin,body_detail,skin,确认,核心含义是非人类自然肤色的皮肤颜色
+310,pillow,household_objects,storage_furniture,确认,核心对象是睡眠时支撑头部或身体的寝具
+311,horse_ears,animal_traits,animal_ears,确认,核心对象是角色自然生长或佩戴的马形耳朵
+312,umamusume,copyright,letter_u,确认,Wiki 明确描述赛马娘 Pretty Derby 作品
+313,sash,accessories,bags_belts,确认,核心对象是斜跨身体或环绕腰部的宽饰带
+314,sketch,style,technique,确认,核心含义是线条粗略且未完成的初步绘画技法
+315,ascot,accessories,neckwear,确认,核心对象是系在颈部并有宽尖末端的领巾
+316,wet,body_detail,body_state,确认,核心含义是身体或物体被水或体液浸湿的状态
+317,horse_girl,people,fantasy_person,确认,核心对象是具有马耳或马尾特征的人类女孩种族设定
+318,muscular,body,build,确认,核心含义是由大量训练形成的庞大肌肉体格
+319,short_shorts,clothes_main,bottoms,确认,核心对象是裤腿极短的短裤
+320,gun,weapons,firearm,确认,Wiki 明确是以火药推动弹丸的现实枪械
+321,covered_navel,body,torso_back,确认,核心对象是透过紧身衣物显出的腹部肚脐轮廓
+322,hoodie,clothes_main,sweater_hoodie,确认,核心对象是带兜帽口袋的套头运动衫
+323,uncensored,meta_info,censorship,确认,核心含义是图像未经审查遮挡
+324,groin,body,waist_hips,确认,核心对象是腹部与大腿交界的腹股沟
+325,legs,body,legs_knees,确认,核心对象是作为画面焦点的腿部
+326,bare_arms,body,arms_hands,确认,核心含义是上臂至前臂中部没有衣物覆盖
+327,book,culture_objects,books_paper,确认,核心对象是装订成册并载有内容的纸张集合
+328,black_ribbon,accessories,bows_ribbons,确认,Wiki 只限定黑色丝带而未限定佩戴部位
+329,plaid_clothes,clothing_appearance,clothing_pattern,确认,核心含义是服装表面的格子图案
+330,gradient_background,background,background_plain,确认,核心对象是没有具象图案的颜色渐变背景
+331,pov,composition,viewpoint,确认,核心含义是从观看者位置呈现的第一人称视角
+332,floating_hair,hair,hair_action,确认,核心含义是头发受风力或失重影响而飘浮
+333,cosplay,meta_info,cosplay,确认,核心含义是真人装扮成虚构角色
+334,mask,head_accessories,face_mask,确认,核心对象是用于遮盖面部的覆盖物
+335,pubic_hair,adult_body,pubic_hair,确认,核心对象是阴部区域生长的毛发
+336,black_shorts,clothes_main,bottoms,确认,核心对象是未限定款式的黑色短裤
+337,blurry_background,composition,focus,确认,核心含义是背景处于失焦状态
+338,blood,sensitive,blood,确认,核心对象是身体内外可见的血液
+339,one-piece_swimsuit,underwear_swim,onepiece_swim,确认,核心对象是作为单件穿着的连体泳衣
+340,black_panties,underwear_swim,panties_underwear,确认,核心对象是主要为黑色的内裤
+341,detached_collar,clothing_detail,collar_detail,确认,核心对象是独立于衬衫的折叠衣领
+342,makeup,face,makeup,确认,Wiki 明确是用于面部的化妆品
+343,bare_legs,body,legs_knees,确认,核心含义是腿部没有裤装裙装或长袜覆盖
+344,blue_background,background,background_plain,确认,核心对象是纯蓝或主要为蓝色的背景
+345,white_jacket,outerwear_suits,jacket_coat,确认,核心对象是白色夹克
+346,window,building_parts,door_window,确认,核心对象是建筑上供观察外部的透明窗户
+347,profile,composition,camera_angle,确认,核心含义是展示角色一侧脸部的镜头角度
+348,lips,face,mouth,确认,核心对象是围绕嘴部开口的嘴唇
+349,single_braid,hair,hair_style,确认,核心含义是只有一条辫子的发型
+350,head_tilt,pose,head_pose,修正,Wiki 描述头向一侧倾斜的头部姿势而非视线方向
+351,blue_dress,clothes_main,dress,确认,核心对象是蓝色连衣裙
+352,expressionless,expression,neutral_expression,确认,核心含义是脸部没有可见情绪表情
+353,copyright_name,text_meta,text,确认,核心画面元素是写出的作品版权标题
+354,bodysuit,underwear_swim,bodysuit_leotard,确认,核心对象是从颈部至少覆盖到大腿上部的紧身连体服
+355,black_boots,legwear_footwear,short_boots,确认,核心对象是黑色靴子
+356,double_bun,hair,hair_style,确认,核心含义是头发扎成两个圆形发髻
+357,petals,nature,flower_general,修正,Wiki 定义的是从花朵脱落的实体花瓣而非光效粒子
+358,honkai_(series),copyright,letter_h,确认,Wiki 明确描述崩坏系列作品宇宙
+359,turtleneck,clothing_detail,collar_detail,修正,Wiki 的辨识核心是覆盖颈部的高领结构且不限于毛衣
+360,zettai_ryouiki,clothing_appearance,fashion_style,修正,Wiki 描述裙摆与长袜之间裸露大腿构成的整体穿着样式
+361,aqua_hair,hair,hair_color,确认,核心含义是蓝绿色头发
+362,blue_bow,accessories,bows_ribbons,确认,Wiki 只限定蓝色蝴蝶结而未限定佩戴部位
+363,:3,expression,positive,确认,核心含义是类似猫嘴的正向俏皮表情
+364,kneehighs,legwear_footwear,stockings,确认,核心对象是长度到膝盖或略低于膝盖的长袜
+365,hug,action,interaction,确认,核心含义是用双臂环抱另一人物
+366,capelet,outerwear_suits,cape_cloak,修正,Wiki 明确是仅覆盖肩膀的小型斗篷而非开衫
+367,holding_sword,action,holding,确认,核心含义是手持一把剑的动作
+368,facial_hair,face,facial_hair,确认,核心对象是脸上生长的毛发
+369,dress_shirt,clothes_main,shirt_top,确认,核心对象是前襟有纽扣并带领的正装衬衫
+370,night,time_weather,time_day,确认,核心含义是天色黑暗的夜间时段
+371,heterochromia,face,eye_color,确认,核心含义是双眼虹膜颜色不同
+372,piercing,jewelry_accessories,piercing,确认,核心含义是身体穿孔并佩戴珠宝且不含普通耳环
+373,swept_bangs,hair,bangs,确认,核心含义是刘海松散梳向一侧
+374,on_bed,pose,object_pose,修正,Wiki 描述人物坐卧在床上的相对姿势而非床具本身
+375,azur_lane,copyright,letter_a,确认,Wiki 明确描述碧蓝航线游戏作品
+376,highleg,clothing_detail,cutout_slit,修正,Wiki 是任何服装的高位腿洞或绑带剪裁并不限于泳装
+377,shadow,light_effect,lighting,确认,核心对象是物体阻挡光线形成的暗区
+378,anus,adult_body,anus,确认,核心对象是直肠的外部开口
+379,bell,culture_objects,music,修正,Wiki 明确定义为敲击发声的中空金属乐器而非徽章饰物
+380,white_hat,head_accessories,hats_caps,确认,核心对象是白色帽子
+381,shiny_skin,body_detail,skin,确认,核心含义是皮肤因水分呈现光泽与高光
+382,low_twintails,hair,hair_style,确认,核心含义是扎在耳部或更低位置的双马尾
+383,scar,body_detail,scar_wound,确认,核心对象是伤口愈合后留在皮肤上的痕迹
+384,skindentation,body_detail,body_state,确认,核心含义是紧身衣物压迫皮肤形成的凹陷与凸肉
+385,dutch_angle,composition,camera_angle,确认,核心含义是画面整体倾斜的镜头构图
+386,black_bikini,underwear_swim,bikini,确认,核心对象是黑色比基尼泳装
+387,leaning_forward,pose,body_pose,确认,核心含义是躯干轻微向前倾斜的姿势
+388,chinese_clothes,traditional_clothes,traditional_china,确认,Wiki 明确描述传统或现代中国服饰
+389,kneeling,pose,stationary_pose,确认,核心含义是单膝或双膝着地且臀部离地
+390,sideboob,body,breast_chest,确认,核心对象是从衣物缝隙露出的乳房外侧且无乳头裸露
+391,transparent_background,background,background_plain,确认,核心含义是没有可见图案且可透出下层内容的背景
+392,red_skirt,clothes_main,skirt,确认,核心对象是红色半身裙或迷你裙
+393,siblings,relationships,family_relation,确认,核心关系是至少共享一位父母的手足
+394,blue_shirt,clothes_main,shirt_top,确认,核心对象是未限定款式的蓝色衬衫
+395,open_shirt,clothing_appearance,open_wear,确认,核心含义是衬衫纽扣完全或部分解开并敞开
+396,^_^,expression,positive,确认,核心含义是闭眼且眼角上扬并常伴微笑的正向表情
+397,saliva,body_detail,body_function,确认,核心对象是口中产生并可见的唾液
+398,frown,expression,anger,确认,核心含义是表达不满恼怒的不悦表情
+399,fangs,face,oral_detail,确认,核心对象是多个突出的犬齿
+400,pussy_juice,adult,adult_fluid,确认,核心对象是女性受性刺激产生的阴道润滑液
+401,thick_thighs,body,legs_knees,确认,核心含义是大腿比通常尺寸更粗壮
+402,fruit,food_drink,fruit_vegetable,确认,核心对象是植物可食用且常带甜味的果实
+403,blush_stickers,expression,shy_blush,确认,核心对象是用于表现脸红的二维椭圆腮红标记
+404,blue_jacket,outerwear_suits,jacket_coat,确认,核心对象是蓝色夹克
+405,bird,creatures,bird,确认,核心对象是具有羽毛与翅膀的鸟类动物
+406,wavy_hair,hair,hair_style,确认,核心含义是头发呈波浪状卷曲
+407,facial_mark,face,face_mark,修正,Wiki 是面部绘制贴附纹身或胎记等标记的总称
+408,sandals,legwear_footwear,sandals_slippers,确认,核心对象是由鞋底与绑带构成的开放式鞋
+409,alternate_hairstyle,themes,persona_variant,确认,核心含义是角色采用不同于默认设定的发型变体
+410,cat_girl,people,fantasy_person,确认,核心对象是具有真实猫耳或猫尾特征的女孩种族设定
+411,black_socks,legwear_footwear,socks,确认,核心对象是黑色袜子这一通用袜类
+412,soles,body,feet_toes,确认,核心对象是脚的底面
+413,rose,nature,flower_species,确认,核心对象是玫瑰这一具体花卉品种
+414,playboy_bunny,uniform_costume,themed_costume,确认,核心对象是由连体衣假兔耳和兔尾组成的兔女郎装扮
+415,idolmaster_cinderella_girls,copyright,letter_i,确认,Wiki 明确描述偶像大师灰姑娘女孩作品
+416,4girls,people,count_gender,确认,核心含义是画面中有四位女性角色
+417,one_side_up,hair,hair_style,确认,核心含义是头发仅在一侧束起而其余垂落
+418,phone,digital_media,phone_device,确认,核心对象是实时远距离传输声音的电话设备
+419,beret,head_accessories,hats_caps,确认,核心对象是平顶软圆帽
+420,nose_blush,expression,shy_blush,确认,核心含义是鼻梁区域因情绪或状态泛红
+421,white_border,composition,border,确认,核心对象是环绕图像边缘的白色边框
+422,holding_food,action,holding,确认,核心含义是手持可食用物品
+423,fox_tail,animal_traits,tails,确认,核心对象是角色具有的狐狸形尾巴
+424,animal,creatures,other_creature,确认,Wiki 是现实存在或曾存在动物的通用概念
+425,halterneck,clothing_detail,strap_detail,修正,Wiki 明确是由绕颈单条肩带支撑的上衣结构
+426,hatsune_miku,character,letter_h,确认,Wiki 明确描述初音未来这一角色
+427,holding_hands,action,interaction,确认,核心含义是两个或更多角色的手相互接触
+428,erection,adult,adult_response,修正,Wiki 描述阴茎处于勃起状态而不是器官类别本身
+429,pink_background,background,background_plain,确认,核心对象是纯粉或主要为粉色的背景
+430,chair,household_objects,seating_table,确认,核心对象是具有升高坐面的椅子
+431,leaf,nature,foliage_vine,确认,核心对象是植物或树木上的扁平叶片
+432,chain,household_objects,rope_lock,确认,核心对象是多个金属环连接而成的链条
+433,cum_in_pussy,adult,adult_fluid,确认,核心含义是精液留在女性阴道内部的性体液状态
+434,black_hairband,head_accessories,hairband_ribbon,确认,核心对象是黑色发带
+435,from_above,composition,camera_angle,确认,核心含义是从主体上方俯视的镜头角度
+436,white_flower,nature,flower_general,确认,Wiki 只限定白色花朵而未限定具体品种
+437,frilled_dress,clothes_main,dress,确认,核心对象是带荷叶边装饰的连衣裙
+438,sunglasses,head_accessories,eyewear,确认,核心对象是过滤强光并遮挡眼睛的太阳镜
+439,ocean,outdoor_scene,water_scene,确认,核心对象是地球表面的大面积海洋水域
+440,bed,household_objects,seating_table,确认,核心对象是用于睡眠的床具
+441,glowing,light_effect,glow_aura,确认,核心含义是物体或角色自身散发光芒
+442,colored_inner_hair,hair,hair_color,确认,核心含义是内层与外层头发颜色不同
+443,red_dress,clothes_main,dress,确认,核心对象是红色连衣裙
+444,thick_eyebrows,face,eyebrows,确认,核心对象是异常粗厚的眉毛
+445,white_bow,accessories,bows_ribbons,确认,Wiki 只限定白色蝴蝶结而未限定佩戴部位
+446,hood_down,clothing_appearance,wearing_state,修正,Wiki 描述兜帽可见但没有戴在头上的穿戴状态
+447,bob_cut,hair,hair_style,确认,核心含义是长度在耳朵与下巴间的短发造型
+448,witch_hat,head_accessories,hats_caps,确认,核心对象是尖顶宽边的女巫帽
+449,half-closed_eyes,face,eye_shape,确认,核心含义是眼睛部分闭合的眼部形态
+450,embarrassed,expression,shy_blush,确认,核心含义是因自我意识而表现出的尴尬害羞情绪
+451,muscular_male,body,build,确认,核心含义是男性角色具有经训练形成的庞大肌肉体格
+452,bright_pupils,face,eye_shape,确认,核心含义是瞳孔颜色比周围虹膜更浅的眼部形态
+453,happy,expression,positive,确认,核心含义是喜悦满足或愉悦的正向情绪
+454,looking_down,pose,gaze,确认,核心含义是角色视线朝向下方
+455,headphones,digital_media,audio_device,确认,核心对象是戴在双耳上的个人扬声器设备
+456,headband,head_accessories,headpiece,确认,Wiki 指横跨前额且常戴在头发下的头带而非束发发箍
+457,testicles,adult_body,testicles,确认,核心对象是产生精子的男性生殖器官
+458,cellphone,digital_media,phone_device,确认,核心对象是小型手持移动电话
+459,white_skirt,clothes_main,skirt,确认,核心对象是白色半身裙或迷你裙
+460,demon_horns,animal_traits,horns,确认,核心对象是恶魔类角色头部的角
+461,white_bikini,underwear_swim,bikini,确认,核心对象是白色比基尼泳装
+462,abs,body,torso_back,确认,核心对象是发达的腹部肌肉
+463,depth_of_field,composition,focus,确认,核心含义是模拟相机单一焦距形成的景深失焦
+464,dark-skinned_male,body_detail,skin,确认,核心含义是男性角色具有较深肤色
+465,groping,adult,adult_suggestive,确认,Wiki 描述性语境下抚摸他人身体的互动
+466,underboob,body,breast_chest,确认,核心对象是从衣物下方露出的乳房底部且无乳头裸露
+467,bandages,body_detail,bandage_patch,确认,核心对象是用于医疗支撑或服饰的绷带材料
+468,plaid_skirt,clothes_main,skirt,确认,核心对象是带格子图案的半身裙
+469,short_dress,clothes_main,dress,确认,核心对象是裙摆位于臀部至大腿中部的短连衣裙
+470,love_live!,copyright,letter_l,确认,Wiki 明确描述 Love Live 作品企划
+471,no_bra,clothing_appearance,unworn_missing,确认,核心含义是穿上衣时没有穿胸罩
+472,portrait,composition,shot,确认,核心含义是以脸部为主且通常不低于胸部的肖像景别
+473,pectorals,body,breast_chest,确认,核心对象是男性胸部周围的胸肌
+474,cameltoe,adult,adult_suggestive,确认,核心对象是紧身下装形成的女性阴唇轮廓
+475,beach,outdoor_scene,water_scene,确认,核心对象是陆地与水域相接的海滩地貌
+476,cum_on_body,adult,adult_fluid,确认,核心含义是精液附着在人体皮肤表面
+477,black_background,background,background_plain,确认,核心对象是纯黑或主要呈黑色且可带渐变的背景
+478,drill_hair,hair,hair_style,确认,核心含义是头发卷成圆锥钻头状
+479,no_shoes,clothing_appearance,unworn_missing,确认,核心含义是穿着袜类但没有穿鞋
+480,floral_print,clothing_appearance,clothing_pattern,确认,核心含义是衣物表面的花朵印花图案
+481,furry,people,fantasy_person,确认,核心对象是具有毛皮羽毛或鳞片的拟人动物角色
+482,side-tie_bikini_bottom,underwear_swim,bikini,确认,核心对象是两侧用系带固定的比基尼泳裤
+483,bed_sheet,household_objects,storage_furniture,修正,Wiki 定义的是铺在床上的家居布单而不是床具本体
+484,fox_girl,people,fantasy_person,确认,核心对象是具有狐耳或狐尾的女孩种族设定
+485,bottomless,adult_body,adult_nudity,确认,核心含义是只穿上衣而腰部以下裸露
+486,fire_emblem,copyright,letter_f,确认,Wiki 明确描述火焰之纹章游戏系列
+487,ring,jewelry_accessories,rings,确认,核心对象是戴在手指上的环形珠宝
+488,female_pubic_hair,adult_body,pubic_hair,确认,核心对象是女性生殖器区域的毛发
+489,demon_girl,people,fantasy_person,确认,核心对象是具有恶魔角尖牙等特征的女性幻想种族
+490,flying_sweatdrops,expression,fear_surprise,确认,核心含义是表现紧张等情绪时飞溅的夸张汗滴
+491,squatting,pose,stationary_pose,确认,核心含义是屈膝且仅用双脚支撑身体的蹲姿
+492,thigh_boots,legwear_footwear,short_boots,确认,核心对象是越过膝盖延伸至大腿的靴子
+493,on_side,pose,stationary_pose,确认,核心含义是身体一侧着地的侧躺姿势
+494,honkai:_star_rail,copyright,letter_h,确认,Wiki 明确描述崩坏星穹铁道游戏作品
+495,back,body,torso_back,修正,Wiki 描述作为画面焦点的人体背部而不是观察视角
+496,arm_support,pose,arm_pose,确认,核心含义是用手臂支撑自身体重的姿势
+497,4koma,text_meta,comic,确认,核心对象是连续四格组成的漫画形式
+498,military_uniform,uniform_costume,military_uniform,确认,核心对象是现实或虚构武装部队的正式制服
+499,standing_on_one_leg,pose,stationary_pose,确认,核心含义是单脚支撑而另一脚离地的站姿
+500,arms_behind_back,pose,arm_pose,确认,核心含义是双臂放在身体背后的姿势
+501,cardigan,outerwear_suits,cardigan_shawl,确认,核心对象是前开襟的轻薄毛衣
+502,no_panties,clothing_appearance,unworn_missing,确认,核心含义是穿着下装时没有穿内裤
+503,sharp_teeth,face,oral_detail,确认,核心对象是全部呈尖锐形态的牙齿
+504,umbrella,household_objects,umbrella_fan,确认,核心对象是用于遮雨或防晒的伞具
+505,ass_visible_through_thighs,body,waist_hips,修正,Wiki 的视觉主体是从大腿之间露出的臀部
+506,antenna_hair,hair,hair_style,确认,核心含义是多束头发翘起如天线的发型
+507,crossed_arms,pose,arm_pose,确认,核心含义是双臂在身体前方交叉
+508,heart-shaped_pupils,face,eye_shape,确认,核心含义是瞳孔呈心形的眼部形态
+509,high_ponytail,hair,hair_style,确认,核心含义是扎在后脑高处的马尾辫
+510,cleavage_cutout,clothing_detail,cutout_slit,确认,核心对象是为露出胸部或乳沟设计的衣物开口
+511,stuffed_toy,recreation,toys,确认,核心对象是织物缝制并填充柔软材料的玩具
+512,table,household_objects,seating_table,确认,核心对象是具有平坦水平表面的桌类家具
+513,1other,people,count_gender,确认,核心含义是一个性别模糊或无法确定的角色
+514,military,themes,social_theme,修正,Wiki 泛指军事制服武装角色和军事场景的军事主题
+515,tank_top,clothes_main,vest_top,确认,核心对象是带宽肩带且无袖的上衣
+516,motion_lines,text_meta,comic,确认,核心对象是漫画中表现快速运动的抽象速度线
+517,smartphone,digital_media,phone_device,确认,核心对象是触屏控制的多功能移动电话
+518,black_nails,body_detail,nail_care,修正,Wiki 明确是涂有黑色指甲油的手指甲或脚趾甲
+519,from_below,composition,camera_angle,确认,核心含义是观众从低处向上观察主体的镜头角度
+520,cat,creatures,mammal,确认,核心对象是家养猫科哺乳动物
+521,eating,action,daily_action,确认,核心含义是正在即将或刚完成消耗食物的行为
+522,oral,adult,adult_oral,确认,Wiki 明确描述用口腔或舌头刺激他人生殖器
+523,light_blush,expression,shy_blush,确认,核心含义是脸部可见的轻微泛红
+524,parody,meta_info,meme,确认,核心含义是为喜剧等效果模仿其他作品
+525,horse_tail,animal_traits,tails,确认,核心对象是角色具有的马尾巴而非马尾发型
+526,frilled_sleeves,clothing_detail,sleeve_detail,确认,核心对象是袖口带荷叶边的袖型
+527,grass,nature,grass_crop,确认,核心对象是大量绿色草本植物
+528,white_apron,clothes_main,apron_cover,确认,核心对象是白色围裙
+529,garter_straps,clothing_detail,strap_detail,确认,核心对象是连接吊袜腰带与长筒袜的带子
+530,red_necktie,accessories,neckwear,确认,核心对象是红色领带
+531,own_hands_together,pose,hand_gesture,修正,Wiki 描述单个角色将自己的双手合在一起的手势
+532,pink_bow,accessories,bows_ribbons,确认,Wiki 只限定粉色蝴蝶结而未限定佩戴部位
+533,helmet,protective_clothes,protective_helmet,修正,Wiki 是保护头部且设计多样的通用防护头盔并不限定战斗
+534,wolf_ears,animal_traits,animal_ears,确认,核心对象是角色具有的狼形兽耳
+535,leg_up,pose,leg_pose,确认,核心含义是单腿抬起的姿势
+536,crying,expression,sad_cry,确认,核心含义是受情感事件触发而流泪哭泣
+537,wariza,pose,stationary_pose,确认,核心含义是臀部着地且双腿向后弯在两侧的坐姿
+538,white_pupils,face,eye_shape,确认,核心含义是瞳孔呈白色的眼部形态
+539,elf,people,fantasy_person,确认,核心对象是年轻纤细且有尖耳的奇幻人形种族
+540,gem,nature,mineral,确认,核心对象是经打磨且常用于珠宝的珍贵石头
+541,obi,traditional_clothes,traditional_japan,确认,核心对象是搭配和服的宽长刺绣腰带
+542,final_fantasy,copyright,letter_f,确认,Wiki 明确描述最终幻想游戏系列
+543,shirt_lift,action,clothing_action,确认,核心含义是掀起上衣展示身体或内衣的动作
+544,6+girls,people,count_gender,确认,核心含义是画面中有六位或更多女性角色
+545,x_hair_ornament,head_accessories,themed_hair_ornament,确认,核心对象是 X 形发饰
+546,yaoi,relationships,romance_orientation,确认,核心含义是男性角色之间的浪漫或性关系
+547,frilled_skirt,clothes_main,skirt,确认,核心对象是带荷叶边的半身裙
+548,bound,sensitive,restraint,确认,核心含义是无论是否涉及性行为都处于被捆绑或限制状态
+549,hololive_english,copyright,letter_h,确认,Wiki 明确描述 hololive 的英语分支
+550,red_flower,nature,flower_general,确认,Wiki 只限定红色花朵而未限定具体品种
+551,blue_ribbon,accessories,bows_ribbons,确认,Wiki 只限定蓝色丝带而未限定佩戴部位
+552,magical_girl,people,role_focus,确认,核心对象是被选中以魔法能力对抗邪恶的少女角色类型
+553,trembling,body_detail,body_state,确认,核心含义是因寒冷恐惧或兴奋发生的身体颤抖
+554,clothes_pull,action,clothing_action,确认,核心含义是拉下衣物展示胸部或胯部的动作
+555,red_bowtie,accessories,neckwear,确认,核心对象是红色领结
+556,scrunchie,head_accessories,hairtie_ring,确认,核心对象是织物包覆的弹性发圈且主要用于束发
+557,light_smile,expression,positive,确认,核心含义是温和轻微的微笑
+558,red_shirt,clothes_main,shirt_top,确认,核心对象是红色衬衫
+559,crossed_legs,pose,leg_pose,确认,核心含义是坐站或躺时双腿交叉的姿势
+560,headgear,head_accessories,headpiece,确认,Wiki 是不属于帽子或发饰的特殊头部配饰
+561,fire,light_effect,fire_smoke,确认,核心对象是燃料燃烧产生的光热与火焰
+562,feathers,animal_traits,wing_feather,确认,核心对象是鸟类身体与翅膀上的羽毛
+563,moon,outdoor_scene,sky_space,确认,核心对象是围绕行星运行的月球类天体
+564,ear_piercing,jewelry_accessories,piercing,确认,核心对象是耳垂以外部位的耳部穿孔
+565,holding_cup,action,holding,确认,核心含义是手持任意杯子的动作
+566,sunlight,light_effect,lighting,确认,核心对象是太阳发出的自然光线
+567,wavy_mouth,face,mouth,确认,核心含义是嘴部轮廓呈波浪形
+568,cloudy_sky,outdoor_scene,sky_space,确认,核心对象是云量覆盖至少一半的天空
+569,3boys,people,count_gender,确认,核心含义是画面中有三位男性角色
+570,suit,outerwear_suits,formal_suit,确认,核心对象是由配套面料衣物组成的正式西式套装
+571,spiked_hair,hair,hair_style,确认,核心含义是头发形成多个尖刺的发型
+572,eyepatch,head_accessories,face_mask,确认,核心对象是通常只覆盖一只眼睛的防护或遮盖布片
+573,cross,symbols,religious_symbol,确认,核心对象是两条线垂直相交且可代表基督受难的符号
+574,mouth_hold,action,holding,确认,核心含义是用嘴叼住物品
+575,denim,clothing_appearance,clothing_material,确认,核心对象是坚固且呈斜纹的棉质或混纺面料
+576,black_leotard,underwear_swim,bodysuit_leotard,确认,核心对象是黑色紧身连体衣
+577,eyes_visible_through_hair,style,technique,确认,核心含义是让本应被头发遮住的眼睛仍可见的绘画技法
+578,plant,nature,plant_general,修正,Wiki 定义的是植物界生物总称而不是花卉
+579,mob_cap,head_accessories,hats_caps,确认,核心对象是覆盖头发并带褶边与固定带的圆形布帽
+580,clenched_teeth,face,oral_detail,确认,核心含义是上下牙齿紧紧咬合
+581,?,symbols,general_symbol,确认,核心对象是画面中表示疑惑的问号符号
+582,scar_on_face,body_detail,scar_wound,确认,核心对象是位于脸部的疤痕
+583,sleeping,action,daily_action,确认,核心含义是处于感官与运动活动暂停的睡眠行为
+584,hair_tubes,head_accessories,hairtie_ring,确认,核心对象是将部分发丝从主体头发分开的圆柱形发饰
+585,grey_shirt,clothes_main,shirt_top,确认,核心对象是未限定款式的灰色衬衫
+586,backpack,accessories,bags_belts,确认,核心对象是用肩带固定并背在背部的包
+587,hakurei_reimu,character,letter_h,确认,Wiki 明确描述博丽灵梦这一角色
+588,thigh_gap,body,legs_knees,确认,核心对象是大腿根部下方之间的缝隙
+589,black_necktie,accessories,neckwear,确认,核心对象是黑色领带
+590,couple,relationships,romance_orientation,确认,核心关系是两个彼此吸引并通常亲密的人
+591,shoulder_armor,protective_clothes,shoulder_armor,确认,核心对象是覆盖肩膀的小型护甲片
+592,bottle,household_objects,container,修正,Wiki 是储存液体的窄颈容器并不限定餐饮用途
+593,straddling,pose,object_pose,修正,Wiki 描述双腿分置于物体两侧的跨坐关系姿势
+594,juliet_sleeves,clothing_detail,sleeve_detail,确认,核心对象是上部蓬松而下部紧身的长袖型
+595,feathered_wings,animal_traits,wing_feather,确认,核心对象是表面覆盖羽毛的翅膀
+596,looking_up,pose,head_pose,修正,Wiki 明确要求头部后仰与颈部弯曲而不只是眼睛向上看
+597,bug,creatures,insect,确认,核心对象是昆虫蜘蛛节肢动物或相似生物
+598,blazer,outerwear_suits,jacket_coat,确认,核心对象是剪裁较休闲且常有翻领的西装式夹克
+599,straight_hair,hair,hair_style,确认,核心含义是头发笔直且没有卷曲波浪
+600,tassel,accessories,badges_ornaments,确认,核心对象是绳索末端由一簇垂线组成的装饰物
+601,crossed_bangs,hair,bangs,确认,核心含义是前额刘海彼此交叉重叠
+602,holding_gun,action,holding,确认,核心含义是角色手持枪支且不含水枪
+603,crown,head_accessories,headpiece,确认,核心对象是传统由皇室佩戴的礼仪性头饰
+604,holding_phone,action,holding,确认,核心含义是用手拿着手机
+605,suspenders,clothing_detail,strap_detail,确认,核心对象是从肩部延伸并用于支撑裤子的弹性带
+606,yellow_background,background,background_plain,确认,核心对象是纯黄或主要呈黄色的背景
+607,black_belt,accessories,bags_belts,确认,核心对象是黑色腰带
+608,skin_fang,face,oral_detail,确认,Wiki 明确是作为嘴部轮廓绘制的肤色尖牙
+609,animal_print,clothing_appearance,clothing_pattern,确认,核心含义是衣物或物品上的动物图案或仿皮毛纹样
+610,t-shirt,clothes_main,shirt_top,确认,核心对象是传统为短袖的无领休闲上衣
+611,skirt_lift,action,clothing_action,确认,核心含义是掀起裙子露出胯部的动作
+612,sneakers,legwear_footwear,sports_shoes,确认,核心对象是为体育活动设计的鞋
+613,facing_viewer,pose,body_pose,修正,Wiki 描述角色身体朝向观众且不要求眼神接触
+614,puffy_long_sleeves,clothing_detail,sleeve_detail,确认,核心对象是沿整个长度蓬松的长袖型
+615,stuffed_animal,recreation,toys,确认,核心对象是制成动物或生物外形的填充玩具
+616,bara,style,genre,修正,Wiki 定义的是突出男性阳刚特征与魅力的日本漫画艺术类型
+617,fellatio,adult,adult_oral,确认,Wiki 明确描述用嘴刺激伴侣阴茎的口交行为
+618,single_hair_bun,hair,hair_style,确认,核心含义是头发盘成单个圆形发髻
+619,sex_from_behind,adult,adult_sex,确认,核心含义是从后方进行性交的姿势
+620,grabbing_another's_breast,adult,adult_suggestive,确认,核心含义是抓握他人乳房的性接触行为
+621,;d,expression,positive,确认,核心含义是咧嘴微笑同时眨眼的正向颜文字表情
+622,eyewear_on_head,head_accessories,eyewear,确认,核心含义是眼镜戴在头顶而非眼前
+623,curtains,household_objects,storage_furniture,确认,核心对象是挂在窗前用于隐私和遮光的家居布片
+624,outstretched_arm,pose,arm_pose,确认,核心含义是一只手臂从身体向外伸展
+625,slit_pupils,face,eye_shape,确认,核心含义是瞳孔呈垂直或水平拉伸的非圆形
+626,outstretched_arms,pose,arm_pose,确认,核心含义是双臂从身体向外伸展
+627,black_coat,outerwear_suits,jacket_coat,确认,核心对象是黑色大衣
+628,topless_female,adult_body,adult_nudity,确认,核心含义是女性角色上身完全裸露
+629,bandaid,body_detail,bandage_patch,确认,核心对象是覆盖小伤口或擦伤的粘性绷带
+630,>_<,expression,fear_surprise,修正,Wiki 描述双眼紧闭的紧绷颜文字表情而不是中性表情
+631,pointing,pose,hand_gesture,确认,核心含义是用食指指向目标以引导注意
+632,veil,head_accessories,headwrap_veil,确认,核心对象是遮盖头部或面部部分区域的薄织物
+633,red_background,background,background_plain,确认,核心对象是纯红或红色渐变背景
+634,pink_dress,clothes_main,dress,确认,核心对象是粉色连衣裙
+635,robot,mech_scifi,robot_android,确认,核心对象是能够自主运行的机械或电子机器
+636,brooch,jewelry_accessories,gem_brooch,确认,核心对象是带珠宝装饰并用于固定衣物的胸针
+637,kiss,action,interaction,确认,核心含义是用嘴唇接触他人以表达爱意
+638,cover,meta_info,meta,确认,核心对象是书籍专辑或游戏等作品的封面艺术
+639,on_stomach,pose,stationary_pose,确认,核心含义是腹部朝下平躺的俯卧姿势
+640,head_wings,animal_traits,wing_feather,确认,核心对象是附着在头部的翅膀特征
