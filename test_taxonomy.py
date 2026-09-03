@@ -22,7 +22,7 @@ assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
 assert [folder["id"] for folder in catalog["folders"]] == FOLDER_ORDER
-assert len(categories) == 413
+assert len(categories) == 415
 assert len(locations) == catalog["tagCount"]
 assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
@@ -67,6 +67,25 @@ assert locations["black_nails"] == ("body_detail", "nail_care")
 assert locations["helmet"] == ("protective_clothes", "protective_helmet")
 assert locations["military"] == ("themes", "social_theme")
 assert locations["own_hands_together"] == ("pose", "hand_gesture")
+assert locations["between_legs"] == ("action", "body_object")
+assert locations["hakama_skirt"] == ("traditional_clothes", "traditional_japan")
+assert locations["futanari"] == ("adult_body", "genital_variation")
+assert locations["notice_lines"] == ("expression", "dramatic_effect")
+assert locations["fins"] == ("animal_traits", "aquatic_feature")
+assert locations["puffy_nipples"] == ("adult_body", "nipples")
+assert locations["animal_hands"] == ("animal_traits", "claw_scale")
+assert locations["one-hour_drawing_challenge"] == ("meta_info", "work_event")
+assert locations["reaching"] == ("action", "body_object")
+assert locations["emphasis_lines"] == ("composition", "subject_focus")
+assert locations["cuffs"] == ("sensitive", "restraint")
+assert locations["head_rest"] == ("pose", "object_pose")
+assert locations["hat_ornament"] == ("accessories", "badges_ornaments")
+assert locations[":q"] == ("face", "oral_detail")
+assert locations["crossdressing_(mtf)"] == ("clothing_appearance", "fashion_style")
+assert locations["pov_hands"] == ("composition", "viewpoint")
+assert locations["purple_nails"] == ("body_detail", "nail_care")
+assert locations["fur_collar"] == ("clothing_detail", "collar_detail")
+assert locations["toenail_polish"] == ("body_detail", "nail_care")
 assert locations[">_<"] == ("expression", "fear_surprise")
 assert locations["bara"] == ("style", "genre")
 assert locations["bottle"] == ("household_objects", "container")
@@ -344,10 +363,13 @@ assert tags["load_bearing_equipment"]["cn"] == "携行装备"
 for folder_id in {
     "head_accessories", "uniform_costume", "franchise_clothes", "traditional_clothes",
     "protective_clothes", "underwear_swim", "legwear_footwear", "nature",
-    "building_parts", "urban_architecture", "adult_body",
+    "building_parts", "urban_architecture",
 }:
     folder = next(item for item in catalog["folders"] if item["id"] == folder_id)
     assert len(folder["categories"]) <= 10, (folder_id, len(folder["categories"]))
+
+adult_body = next(item for item in catalog["folders"] if item["id"] == "adult_body")
+assert len(adult_body["categories"]) <= 11
 
 category_keys = {(folder["id"], category["id"]) for folder in catalog["folders"] for category in folder["categories"]}
 folder_ids = {folder["id"] for folder in catalog["folders"]}

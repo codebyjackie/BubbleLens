@@ -228,10 +228,10 @@ TAXONOMY = [
         category("sports", "体育用品"), category("games", "游戏牌类"), category("toys", "玩具人偶"),
         category("playground", "游乐设施"),
     ]),
-    folder("animal_traits", "动物特征", "♧", "#63ce86", "兽耳、角、尾巴、毛皮、翅膀与鳞爪等特征", [
+    folder("animal_traits", "动物特征", "♧", "#63ce86", "兽耳、角、尾巴、毛皮、翅膀、鳞爪与水生特征", [
         category("animal_ears", "兽耳"), category("horns", "角鹿角"), category("tails", "尾巴"),
         category("fur_feature", "毛皮兽征"), category("wing_feather", "翅膀羽毛"),
-        category("claw_scale", "爪鳞触手"),
+        category("claw_scale", "爪鳞触手"), category("aquatic_feature", "水生特征"),
     ]),
     folder("creatures", "动物种类", "♤", "#59c982", "现实动物、幻想生物与其他生物种类", [
         category("mammal", "哺乳动物"),
@@ -319,6 +319,7 @@ TAXONOMY = [
     ]),
     folder("adult_body", "成人身体", "◆", "#e65f78", "身体裸露、衣着走光与按部位整理的成人身体标签", [
         category("adult_nudity", "身体裸露"), category("adult_clothes", "衣着走光"),
+        category("nipples", "乳头乳晕"),
         category("penis", "阴茎"), category("testicles", "睾丸"),
         category("vulva", "外阴阴道"), category("clitoris", "阴蒂"),
         category("anus", "肛门"), category("pubic_hair", "阴毛"),
@@ -908,6 +909,25 @@ V20_EXACT_LOCATIONS = {
     "water": ("nature", "water_ice"),
     "facing_viewer": ("pose", "body_pose"),
     "zettai_ryouiki": ("clothing_appearance", "fashion_style"),
+    "between_legs": ("action", "body_object"),
+    "hakama_skirt": ("traditional_clothes", "traditional_japan"),
+    "futanari": ("adult_body", "genital_variation"),
+    "notice_lines": ("expression", "dramatic_effect"),
+    "fins": ("animal_traits", "aquatic_feature"),
+    "puffy_nipples": ("adult_body", "nipples"),
+    "animal_hands": ("animal_traits", "claw_scale"),
+    "one-hour_drawing_challenge": ("meta_info", "work_event"),
+    "reaching": ("action", "body_object"),
+    "emphasis_lines": ("composition", "subject_focus"),
+    "cuffs": ("sensitive", "restraint"),
+    "head_rest": ("pose", "object_pose"),
+    "hat_ornament": ("accessories", "badges_ornaments"),
+    ":q": ("face", "oral_detail"),
+    "crossdressing_(mtf)": ("clothing_appearance", "fashion_style"),
+    "pov_hands": ("composition", "viewpoint"),
+    "purple_nails": ("body_detail", "nail_care"),
+    "fur_collar": ("clothing_detail", "collar_detail"),
+    "toenail_polish": ("body_detail", "nail_care"),
 }
 
 
