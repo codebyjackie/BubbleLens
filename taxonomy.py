@@ -86,6 +86,7 @@ TAXONOMY = [
         category("positive", "开心笑容"), category("sad_cry", "悲伤哭泣"),
         category("anger", "愤怒不满"), category("fear_surprise", "紧张惊讶"),
         category("shy_blush", "害羞脸红"), category("neutral_expression", "中性表情"),
+        category("dramatic_effect", "表情特效"),
     ]),
     folder("pose", "姿势视线", "↗", "#51d0ab", "视线、手势、静态姿态与身体姿势", [
         category("gaze", "视线朝向"), category("stationary_pose", "站坐跪躺"),
@@ -96,6 +97,8 @@ TAXONOMY = [
     folder("action", "动作互动", "⇢", "#39c59b", "手持、运动、战斗、人物互动与日常行为", [
         category("holding", "拿持携带"), category("movement", "移动运动"),
         category("combat_action", "战斗动作"), category("interaction", "人物互动"),
+        category("body_object", "身体与物品"),
+        category("body_cover", "遮挡身体"),
         category("daily_action", "日常活动"), category("clothing_action", "穿脱整理"),
     ]),
     folder("clothes_main", "日常服装", "◇", "#9bd454", "上衣、下装、裙装、睡衣与日常穿着", [
@@ -155,7 +158,7 @@ TAXONOMY = [
         category("clothing_color", "服装颜色"), category("clothing_pattern", "图案印花"),
         category("clothing_material", "面料材质"), category("fashion_style", "穿衣风格"),
         category("wearing_state", "穿戴状态"),
-        category("damaged_dirty", "破损脏污"), category("unworn_missing", "未穿缺失"),
+        category("damaged_dirty", "破损脏湿"), category("unworn_missing", "未穿缺失"),
         category("open_wear", "开合状态"),
     ]),
     folder("clothing_detail", "服装剪裁", "⌁", "#b4ce68", "服装的版型、袖领、肩带、开衩、扣件与装饰结构", [
@@ -242,7 +245,7 @@ TAXONOMY = [
         category("flower_species", "花卉品种"),
         category("tree", "树木"), category("foliage_vine", "枝叶藤蔓"),
         category("grass_crop", "草本与菌藻"), category("potted_shrub", "盆栽与灌木"),
-        category("unusual_plant", "奇异植物"), category("water_ice", "水与冰"),
+        category("unusual_plant", "奇异植物"), category("water_ice", "水"),
         category("mineral", "矿物晶体"),
     ]),
     folder("mech_scifi", "机械科幻", "⚙", "#64a9c8", "机器人、机甲、义体、机械与科幻装置", [
@@ -328,6 +331,7 @@ TAXONOMY = [
         category("adult_suggestive", "性暗示互动"), category("adult_theme", "成人题材"),
     ]),
     folder("adult_kink", "成人偏好", "◈", "#d85770", "束缚、情趣用品、支配关系、穿孔、插入与其他成人偏好", [
+        category("kink_general", "偏好总称"),
         category("adult_bondage", "束缚调教"),
         category("adult_toys", "情趣用品"), category("adult_power", "支配服从"),
         category("adult_piercing", "私密穿孔"), category("adult_insertion", "异物插入"),
@@ -811,7 +815,60 @@ V14_EXACT_LOCATIONS = {
 # made after comparing the complete definition with every current destination;
 # no embedding, reranker, keyword rule, or generated candidate selected them.
 V20_EXACT_LOCATIONS = {
+    ":p": ("face", "oral_detail"),
+    "ball": ("household_objects", "other_object"),
+    "colored_eyelashes": ("face", "makeup"),
+    "crossdressing": ("clothing_appearance", "fashion_style"),
+    "fake_tail": ("accessories", "other_accessory"),
+    "kemonomimi_mode": ("themes", "persona_variant"),
+    "one_piece": ("clothes_main", "dress"),
+    "shirt_tucked_in": ("clothing_appearance", "wearing_state"),
+    "strap_slip": ("clothing_appearance", "wearing_state"),
+    "tray": ("food_drink", "tableware"),
+    "beads": ("accessories", "badges_ornaments"),
+    "black_sailor_collar": ("clothing_detail", "collar_detail"),
+    "clenched_hands": ("pose", "hand_gesture"),
+    "clothes_writing": ("clothing_appearance", "clothing_pattern"),
+    "covering_privates": ("action", "body_cover"),
+    "jingle_bell": ("culture_objects", "music"),
+    "low-tied_long_hair": ("hair", "hair_style"),
+    "mary_janes": ("legwear_footwear", "casual_shoes"),
+    "sleeves_rolled_up": ("clothing_appearance", "wearing_state"),
+    "tachi-e": ("style", "art_style"),
+    "third_eye": ("body", "anatomy_anomaly"),
+    "^^^": ("expression", "fear_surprise"),
+    "adapted_costume": ("themes", "persona_variant"),
+    "between_breasts": ("action", "body_object"),
+    "furrowed_brow": ("face", "eyebrows"),
+    "hair_rings": ("hair", "hair_style"),
+    "sheath": ("weapons", "weapon_parts"),
+    "spikes": ("weapons", "weapon_parts"),
+    "sweater_vest": ("clothes_main", "vest_top"),
+    "two-tone_background": ("background", "background_plain"),
+    "...": ("symbols", "general_symbol"),
+    "alternate_breast_size_(larger)": ("themes", "persona_variant"),
+    "blue_nails": ("body_detail", "nail_care"),
+    "cherry_blossoms": ("nature", "flower_species"),
+    "ejaculation": ("adult", "adult_response"),
+    "foreshortening": ("style", "technique"),
+    "gold_trim": ("clothing_detail", "trim_detail"),
+    "hood_up": ("clothing_appearance", "wearing_state"),
+    "indie_virtual_youtuber": ("people", "occupation"),
+    "lace_trim": ("clothing_detail", "trim_detail"),
+    "pink_nails": ("body_detail", "nail_care"),
+    "revealing_clothes": ("clothing_appearance", "fashion_style"),
+    "scenery": ("composition", "subject_focus"),
     ">_<": ("expression", "fear_surprise"),
+    "aged_down": ("themes", "identity_change"),
+    "armband": ("accessories", "badges_ornaments"),
+    "bdsm": ("adult_kink", "kink_general"),
+    "blue_sailor_collar": ("clothing_detail", "collar_detail"),
+    "clenched_hand": ("pose", "hand_gesture"),
+    "crossover": ("themes", "character_connection"),
+    "red_nails": ("body_detail", "nail_care"),
+    "shaded_face": ("expression", "dramatic_effect"),
+    "underwear_only": ("underwear_swim", "underwear_general"),
+    "white_sailor_collar": ("clothing_detail", "collar_detail"),
     "ass_visible_through_thighs": ("body", "waist_hips"),
     "back": ("body", "torso_back"),
     "bell": ("culture_objects", "music"),
@@ -11446,6 +11503,9 @@ def classify_general(tag: dict) -> tuple[str, str]:
 
 
 def classify_tag(tag: dict) -> tuple[str, str]:
+    name = str(tag.get("name", "")).lower()
+    if name in V20_EXACT_LOCATIONS:
+        return V20_EXACT_LOCATIONS[name]
     kind = str(tag.get("category", "0"))
     if kind == "3":
         return "copyright", initial_category(tag["name"])
