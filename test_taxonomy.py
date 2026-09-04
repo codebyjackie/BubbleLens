@@ -464,6 +464,44 @@ manual_rows_2001_2080 = {
 for tag_name, location in manual_rows_2001_2080.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
 
+manual_rows_2081_2160 = {
+    "tilted_headwear": ("clothing_appearance", "wearing_state"),
+    "one_breast_out": ("adult_body", "adult_clothes"),
+    "string": ("household_objects", "rope_lock"),
+    "red_capelet": ("outerwear_suits", "cape_cloak"),
+    "coat_on_shoulders": ("clothing_appearance", "wearing_state"),
+    "fur-trimmed_sleeves": ("clothing_detail", "trim_detail"),
+    "ear_bow": ("accessories", "bows_ribbons"),
+    "head_fins": ("animal_traits", "aquatic_feature"),
+    "scabbard": ("weapons", "weapon_parts"),
+    "giant": ("people", "fantasy_person"),
+}
+for tag_name, location in manual_rows_2081_2160.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
+manual_rows_2161_2240 = {
+    "spiked_collar": ("accessories", "neckwear"),
+    "bikini_skirt": ("underwear_swim", "bikini"),
+    "picture_frame": ("household_objects", "storage_furniture"),
+    "pantyhose_under_shorts": ("legwear_footwear", "stockings"),
+    "nosebleed": ("body_detail", "body_function"),
+    "sitting_on_lap": ("action", "interaction"),
+}
+for tag_name, location in manual_rows_2161_2240.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
+manual_rows_2241_2320 = {
+    "shimenawa": ("culture_objects", "ritual_object"),
+    "ears_through_headwear": ("animal_traits", "animal_ears"),
+    "animal_collar": ("accessories", "neckwear"),
+    "cowbell": ("culture_objects", "music"),
+    "belt_collar": ("accessories", "neckwear"),
+    "red_collar": ("accessories", "neckwear"),
+    "in_container": ("pose", "object_pose"),
+}
+for tag_name, location in manual_rows_2241_2320.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
 ritual_folder = next(item for item in catalog["folders"] if item["id"] == "culture_objects")
 assert next(category for category in ritual_folder["categories"] if category["id"] == "ritual_object")["name"] == "礼仪用品"
 
