@@ -22,7 +22,7 @@ assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
 assert [folder["id"] for folder in catalog["folders"]] == FOLDER_ORDER
-assert len(categories) == 417
+assert len(categories) == 418
 assert len(locations) == catalog["tagCount"]
 assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
@@ -424,6 +424,7 @@ assert tags["batter"]["cn"] == "面糊"
 assert tags["sett"]["cn"] == "铺路石"
 assert tags["yuri_(object)"]["cn"] == "百合题材物品"
 assert tags["pokemon_(anime)"]["cn"] == "宝可梦（动画）"
+assert tags["turtle_shell"]["cn"] == "龟壳"
 
 manual_rows_1841_1920 = {
     "thighlet": ("jewelry_accessories", "other_jewelry"),
@@ -502,8 +503,32 @@ manual_rows_2241_2320 = {
 for tag_name, location in manual_rows_2241_2320.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
 
+manual_rows_2321_2400 = {
+    "covering_crotch": ("action", "body_cover"),
+    "neck_ring": ("jewelry_accessories", "necklace_choker"),
+    "police": ("people", "occupation"),
+    "anchor": ("transport_play", "vehicle_parts"),
+    "yellow_sclera": ("face", "eye_color"),
+    "nun_headdress": ("head_accessories", "headwrap_veil"),
+    "gold": ("household_objects", "material"),
+    "weapon_on_back": ("action", "holding"),
+    "shell": ("animal_traits", "shell_feature"),
+    "seashell": ("animal_traits", "shell_feature"),
+    "turtle_shell": ("animal_traits", "shell_feature"),
+    "spiked_shell": ("animal_traits", "shell_feature"),
+    "carapace": ("animal_traits", "shell_feature"),
+    "clam_shell": ("animal_traits", "shell_feature"),
+    "snail_shell": ("animal_traits", "shell_feature"),
+    "fur-trimmed_capelet": ("outerwear_suits", "cape_cloak"),
+}
+for tag_name, location in manual_rows_2321_2400.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
 ritual_folder = next(item for item in catalog["folders"] if item["id"] == "culture_objects")
 assert next(category for category in ritual_folder["categories"] if category["id"] == "ritual_object")["name"] == "礼仪用品"
+
+shell_folder = next(item for item in catalog["folders"] if item["id"] == "animal_traits")
+assert next(category for category in shell_folder["categories"] if category["id"] == "shell_feature")["name"] == "甲壳"
 
 assert tags["load_bearing_equipment"]["cn"] == "携行装备"
 

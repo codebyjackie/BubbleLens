@@ -2319,3 +2319,83 @@ index,tag,folder,category,result,reason
 2318,mandarin_collar,clothing_detail,collar_detail,确认,Wiki 定义为短而直立的衣领结构
 2319,crescent_hair_ornament,head_accessories,themed_hair_ornament,确认,Wiki 定义为新月形发饰或发夹
 2320,black_sports_bra,underwear_swim,bra_lingerie,确认,Wiki 定义为黑色运动内衣
+2321,covering_crotch,action,body_cover,修正,Wiki 定义为用手或衣物等有意遮挡私密部位的遮体动作
+2322,vaginal_object_insertion,adult_kink,adult_insertion,确认,Wiki 定义为将物体插入阴道的成人行为
+2323,grey_gloves,accessories,handwear,确认,Wiki 定义为灰色手套
+2324,holding_can,action,holding,确认,Wiki 定义为人物手持罐状物
+2325,final_fantasy_vii_remake,copyright,letter_f,确认,Wiki 定义为《最终幻想 VII 重制版》作品标签
+2326,flat_cap,head_accessories,hats_caps,确认,Wiki 定义为圆而扁平并带短帽檐的帽子
+2327,braided_bangs,hair,bangs,确认,Wiki 定义为编成辫子的刘海
+2328,o-ring_bikini,underwear_swim,bikini,确认,Wiki 定义为用 O 形环连接布料的比基尼
+2329,torn_shirt,clothing_appearance,damaged_dirty,确认,Wiki 定义为破损或撕裂的衬衫
+2330,cum_on_clothes,adult,adult_fluid,确认,Wiki 定义为精液沾在衣物上的成人内容
+2331,light,light_effect,lighting,确认,Wiki 定义为画面中的光或光源表现
+2332,x-ray,style,technique,确认,Wiki 定义为表现内部结构的透视成像手法
+2333,inkling_player_character,character,letter_i,确认,Wiki 定义为《斯普拉遁》的玩家角色
+2334,folded,pose,body_pose,确认,Wiki 定义为身体或肢体折叠蜷曲的姿势
+2335,kitsune,creatures,fantasy_creature,确认,Wiki 定义为日本传说中会变化的狐狸妖怪
+2336,pointing_at_viewer,pose,hand_gesture,确认,Wiki 定义为手指指向观看者的手势
+2337,pink_sweater,clothes_main,sweater_hoodie,确认,Wiki 定义为粉色毛衣
+2338,holding_candy,action,holding,确认,Wiki 定义为人物手持糖果
+2339,christmas_tree,nature,tree,确认,Wiki 定义为作为圣诞装饰的常绿树
+2340,nazrin,character,letter_n,确认,Wiki 定义为东方 Project 角色娜兹玲
+2341,house,urban_architecture,residential,确认,Wiki 定义为供人居住的房屋建筑
+2342,hair_up,hair,hair_style,确认,Wiki 定义为头发向上束起或盘起的发型状态
+2343,neck_ring,jewelry_accessories,necklace_choker,修正,Wiki 定义为佩戴在颈部的刚性环状饰品而非手指戒指
+2344,firefly_(honkai:_star_rail),character,letter_f,确认,Wiki 定义为《崩坏：星穹铁道》角色流萤
+2345,2000s_(style),style,era_style,确认,Wiki 定义为模仿 2000 年代视觉特征的年代风格
+2346,grey_thighhighs,legwear_footwear,stockings,确认,Wiki 定义为灰色过膝袜
+2347,cross_hair_ornament,head_accessories,themed_hair_ornament,确认,Wiki 定义为十字形发饰
+2348,blue_hoodie,clothes_main,sweater_hoodie,确认,Wiki 定义为蓝色连帽衫
+2349,fur-trimmed_cape,outerwear_suits,cape_cloak,确认,Wiki 定义为带毛皮镶边的披风
+2350,stool,household_objects,seating_table,确认,Wiki 定义为无靠背的单人坐具
+2351,crescent_moon,outdoor_scene,sky_space,确认,Wiki 定义为天空中的新月月相
+2352,pinstripe_pattern,clothing_appearance,clothing_pattern,确认,Wiki 定义为由细而平行条纹构成的衣物图案
+2353,tea,food_drink,drink,确认,Wiki 定义为用茶叶冲泡的饮料
+2354,!!,expression,fear_surprise,确认,Wiki 定义为用双感叹号表达强烈惊讶或警觉
+2355,dark_persona,themes,persona_variant,确认,Wiki 定义为角色阴暗或邪恶人格的变体主题
+2356,singing,action,daily_action,确认,Wiki 定义为人物发声演唱的日常动作
+2357,code_geass,copyright,letter_c,确认,Wiki 定义为《Code Geass》作品系列标签
+2358,hibiscus,nature,flower_species,确认,Wiki 定义为木槿属的花卉植物
+2359,police,people,occupation,修正,Wiki 涵盖警察人员与警务概念且人物职业比制服分类更贴切
+2360,tifa_lockhart,character,letter_t,确认,Wiki 定义为《最终幻想 VII》角色蒂法·洛克哈特
+2361,food_focus,composition,subject_focus,确认,Wiki 定义为让食物成为画面主要关注对象的构图
+2362,anchor,transport_play,vehicle_parts,修正,Wiki 定义为用于固定船只位置的锚具而非船舶本体
+2363,yellow_sclera,face,eye_color,修正,Wiki 定义为眼白呈黄色的颜色特征而非眼睛形状
+2364,sphere_hair_ornament,head_accessories,themed_hair_ornament,确认,Wiki 定义为球形发饰
+2365,strap,clothing_detail,strap_detail,确认,Wiki 定义为服装或配件上的带状固定结构
+2366,pink_gloves,accessories,handwear,确认,Wiki 定义为粉色手套
+2367,dark_background,background,background_plain,确认,Wiki 定义为整体偏暗且缺少明确场景内容的背景
+2368,bead_bracelet,jewelry_accessories,bracelet_anklet,确认,Wiki 定义为由珠子串成的手链
+2369,nun_headdress,head_accessories,headwrap_veil,修正,Wiki 定义为修女所戴的头巾或面纱式头饰
+2370,sanpaku,face,eye_shape,确认,Wiki 定义为虹膜上下露出眼白的三白眼外观
+2371,biting,action,interaction,确认,Wiki 定义为用牙齿咬住人物或物体的互动动作
+2372,mecha_musume,people,fantasy_person,确认,Wiki 定义为带有机械或机甲特征的少女人物类型
+2373,casual_one-piece_swimsuit,underwear_swim,onepiece_swim,确认,Wiki 定义为非竞赛用途的连体泳装
+2374,parasol,household_objects,umbrella_fan,确认,Wiki 定义为主要用于遮阳的伞
+2375,bathroom,indoor_scene,home_room,确认,Wiki 定义为住宅或室内的浴室空间
+2376,gold,household_objects,material,修正,Wiki 定义为高密度黄色贵金属而非单纯颜色
+2377,very_dark_skin,body_detail,skin,确认,Wiki 定义为非常深的皮肤肤色
+2378,overwatch_1,copyright,letter_o,确认,Wiki 定义为第一代《守望先锋》作品标签
+2379,weapon_on_back,action,holding,修正,Wiki 定义为武器被背负在背上的携带状态而非武器种类
+2380,tassel_earrings,jewelry_accessories,earrings,确认,Wiki 定义为带流苏垂饰的耳环
+2381,shell,animal_traits,shell_feature,修正,Wiki 定义为保护动物柔软组织的外壳身体结构
+2382,looking_at_object,pose,gaze,确认,Wiki 定义为角色视线看向某个物体
+2383,moaning,action,daily_action,确认,Wiki 定义为因疼痛或愉悦等发出的呻吟动作且不限于成人语境
+2384,electric_guitar,culture_objects,music,确认,Wiki 定义为通过拾音器放大声音的电吉他乐器
+2385,asymmetrical_clothes,clothing_detail,silhouette_fit,确认,Wiki 定义为左右或前后设计不对称的服装轮廓
+2386,deep_skin,body_detail,body_state,确认,Wiki 定义为身体被挤压抓握时形成较深陷入的状态
+2387,black_halo,light_effect,halo_effect,确认,Wiki 定义为角色头部附近的黑色光环效果
+2388,shingeki_no_kyojin,copyright,letter_s,确认,Wiki 定义为《进击的巨人》作品系列标签
+2389,dolphin_shorts,clothes_main,bottoms,确认,Wiki 定义为侧边开衩且滚边的短裤款式
+2390,playing_card,recreation,games,确认,Wiki 定义为纸牌游戏所用的扑克牌
+2391,fur-trimmed_dress,clothes_main,dress,确认,Wiki 定义为带毛皮镶边的连衣裙
+2392,split,pose,leg_pose,确认,Wiki 定义为双腿劈开或大幅分开的腿部姿势
+2393,fur-trimmed_capelet,outerwear_suits,cape_cloak,修正,Wiki 定义为带毛皮镶边的短披肩并与其他披风款式同类
+2394,vehicle_focus,composition,subject_focus,确认,Wiki 定义为让交通工具成为画面主要关注对象的构图
+2395,red_gem,jewelry_accessories,gem_brooch,确认,Wiki 定义为红色宝石饰物
+2396,braided_bun,hair,hair_style,确认,Wiki 定义为由辫发盘成的发髻
+2397,brick_wall,building_parts,surface,确认,Wiki 定义为以砖砌成的墙面结构
+2398,lineart,style,technique,确认,Wiki 定义为以线条为主体且通常未上色的绘画技法
+2399,averting_eyes,pose,gaze,确认,Wiki 定义为人物将视线移开以避免注视的目光状态
+2400,shirakami_fubuki,character,letter_s,确认,Wiki 定义为 Hololive 角色白上吹雪

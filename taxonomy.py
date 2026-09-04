@@ -229,10 +229,11 @@ TAXONOMY = [
         category("sports", "体育用品"), category("games", "游戏牌类"), category("toys", "玩具人偶"),
         category("playground", "游乐设施"),
     ]),
-    folder("animal_traits", "动物特征", "♧", "#63ce86", "兽耳、角、尾巴、毛皮、翅膀、鳞爪与水生特征", [
+    folder("animal_traits", "动物特征", "♧", "#63ce86", "兽耳、角、尾巴、毛皮、翅膀、爪鳞、甲壳与水生特征", [
         category("animal_ears", "兽耳"), category("horns", "角鹿角"), category("tails", "尾巴"),
         category("fur_feature", "毛皮兽征"), category("wing_feather", "翅膀羽毛"),
-        category("claw_scale", "爪鳞触须"), category("aquatic_feature", "水生特征"),
+        category("claw_scale", "爪鳞触须"), category("shell_feature", "甲壳"),
+        category("aquatic_feature", "水生特征"),
     ]),
     folder("creatures", "动物种类", "♤", "#59c982", "现实动物、幻想生物与其他生物种类", [
         category("mammal", "哺乳动物"),
@@ -1035,6 +1036,22 @@ V20_EXACT_LOCATIONS = {
     "belt_collar": ("accessories", "neckwear"),
     "red_collar": ("accessories", "neckwear"),
     "in_container": ("pose", "object_pose"),
+    "covering_crotch": ("action", "body_cover"),
+    "neck_ring": ("jewelry_accessories", "necklace_choker"),
+    "police": ("people", "occupation"),
+    "anchor": ("transport_play", "vehicle_parts"),
+    "yellow_sclera": ("face", "eye_color"),
+    "nun_headdress": ("head_accessories", "headwrap_veil"),
+    "gold": ("household_objects", "material"),
+    "weapon_on_back": ("action", "holding"),
+    "shell": ("animal_traits", "shell_feature"),
+    "seashell": ("animal_traits", "shell_feature"),
+    "turtle_shell": ("animal_traits", "shell_feature"),
+    "spiked_shell": ("animal_traits", "shell_feature"),
+    "carapace": ("animal_traits", "shell_feature"),
+    "clam_shell": ("animal_traits", "shell_feature"),
+    "snail_shell": ("animal_traits", "shell_feature"),
+    "fur-trimmed_capelet": ("outerwear_suits", "cape_cloak"),
 }
 
 
