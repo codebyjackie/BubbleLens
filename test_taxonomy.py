@@ -449,6 +449,21 @@ manual_rows_1921_2000 = {
 for tag_name, location in manual_rows_1921_2000.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
 
+manual_rows_2001_2080 = {
+    "black_capelet": ("outerwear_suits", "cape_cloak"),
+    "tied_shirt": ("clothing_appearance", "wearing_state"),
+    "lowleg": ("clothing_detail", "cutout_slit"),
+    "alternate_eye_color": ("themes", "persona_variant"),
+    "red_pupils": ("face", "eye_color"),
+    "areolae": ("adult_body", "nipples"),
+    "whisker_markings": ("face", "face_mark"),
+    "against_wall": ("pose", "object_pose"),
+    "vampire": ("people", "fantasy_person"),
+    "hat_feather": ("accessories", "badges_ornaments"),
+}
+for tag_name, location in manual_rows_2001_2080.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
 ritual_folder = next(item for item in catalog["folders"] if item["id"] == "culture_objects")
 assert next(category for category in ritual_folder["categories"] if category["id"] == "ritual_object")["name"] == "礼仪用品"
 

@@ -1002,6 +1002,16 @@ V20_EXACT_LOCATIONS = {
     "head_wreath": ("head_accessories", "headpiece"),
     "text_focus": ("composition", "subject_focus"),
     "aqua_nails": ("body_detail", "nail_care"),
+    "black_capelet": ("outerwear_suits", "cape_cloak"),
+    "tied_shirt": ("clothing_appearance", "wearing_state"),
+    "lowleg": ("clothing_detail", "cutout_slit"),
+    "alternate_eye_color": ("themes", "persona_variant"),
+    "red_pupils": ("face", "eye_color"),
+    "areolae": ("adult_body", "nipples"),
+    "whisker_markings": ("face", "face_mark"),
+    "against_wall": ("pose", "object_pose"),
+    "vampire": ("people", "fantasy_person"),
+    "hat_feather": ("accessories", "badges_ornaments"),
 }
 
 
