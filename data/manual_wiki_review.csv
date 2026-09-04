@@ -2399,3 +2399,83 @@ index,tag,folder,category,result,reason
 2398,lineart,style,technique,确认,Wiki 定义为以线条为主体且通常未上色的绘画技法
 2399,averting_eyes,pose,gaze,确认,Wiki 定义为人物将视线移开以避免注视的目光状态
 2400,shirakami_fubuki,character,letter_s,确认,Wiki 定义为 Hololive 角色白上吹雪
+2401,glowing_eye,light_effect,glow_aura,确认,Wiki 定义为单只眼睛因超自然或科学现象发出光芒
+2402,yellow_hairband,head_accessories,hairband_ribbon,确认,Wiki 定义为黄色发带
+2403,bath,household_objects,other_object,修正,Wiki 核心对象是用于沐浴的浴缸水池或浴桶而非住宅房间本身
+2404,holding_another's_hair,action,interaction,确认,Wiki 定义为用手抓住另一个人的头发
+2405,popped_collar,clothing_detail,collar_detail,确认并改名,Wiki 定义为把衣物领子翻起并非立领这种固定领型
+2406,pants_pull,action,clothing_action,确认,Wiki 定义为将裤子从正常穿着位置拉下
+2407,long_braid,hair,hair_style,确认,Wiki 定义为延伸至臀部或更远的长辫子
+2408,aqua_bow,accessories,bows_ribbons,确认,Wiki 定义为水蓝色蝴蝶结
+2409,red_sweater,clothes_main,sweater_hoodie,确认,Wiki 定义为红色毛衣
+2410,pencil,culture_objects,stationery,确认,Wiki 定义为由石墨芯与木质外壳构成的书写绘画工具
+2411,huge_penis,adult_body,penis,修正,Wiki 明确定义为相对身体比例异常巨大的阴茎尺寸特征
+2412,pink_hairband,head_accessories,hairband_ribbon,确认,Wiki 定义为粉色发带
+2413,spiked_bracelet,jewelry_accessories,bracelet_anklet,确认,Wiki 定义为带有尖刺的手镯
+2414,cunnilingus,adult,adult_oral,确认,Wiki 定义为对女性生殖器进行口交刺激
+2415,goat_horns,animal_traits,horns,确认,Wiki 定义为角色具有通常弯曲而不完全卷曲的山羊角
+2416,bang_dream!_girls_band_party!,copyright,letter_b,确认,Wiki 定义为《BanG Dream! 少女乐团派对！》作品标签
+2417,diagonal-striped_clothes,clothing_appearance,clothing_pattern,确认,Wiki 定义为带有对角条纹图案的服装
+2418,same-sex_bathing,action,daily_action,确认,Wiki 定义为两个或更多同性角色共同洗澡或淋浴
+2419,rabbit_ear_hairband,head_accessories,hairband_ribbon,确认,Wiki 定义为模仿兔耳造型的发带
+2420,explosion,light_effect,fire_smoke,确认,Wiki 定义为爆炸产生的火球气体与碎片云视觉效果
+2421,kicking,action,combat_action,确认,Wiki 定义为使用腿脚发动攻击的动作
+2422,ribs,body,torso_back,确认,Wiki 描述透过皮肤可见的躯干肋骨轮廓
+2423,mushroom,nature,grass_crop,确认,Wiki 定义为可食或有毒的真菌且该细分类包含菌类
+2424,lace-trimmed_panties,underwear_swim,panties_underwear,确认,Wiki 定义为腰部或腿口带蕾丝装饰的内裤
+2425,slingshot_swimsuit,underwear_swim,highleg_swim,确认,Wiki 定义为从胯部延伸至肩部且覆盖极少的高叉泳装
+2426,mermaid,people,fantasy_person,修正,Wiki 定义为上半身女性而下半身鱼尾的人形幻想种族
+2427,multicolored_background,background,background_pattern,确认,Wiki 定义为包含多种颜色的背景
+2428,falling,action,movement,确认,Wiki 定义为受重力作用从空中向地面下落的动作
+2429,necktie_between_breasts,accessories,neckwear,确认,Wiki 核心对象仍是被放在乳房之间的领带配饰
+2430,saibou_shinkyoku,copyright,letter_s,确认,Wiki 定义为 Fukao Kougyou 开发的游戏作品
+2431,naval_uniform,uniform_costume,military_uniform,确认,Wiki 定义为海军成员穿着的军装
+2432,hijiri_byakuren,character,letter_h,确认,Wiki 定义为东方 Project 角色圣白莲
+2433,cloud_strife,character,letter_c,确认,Wiki 定义为《最终幻想 VII》角色克劳德·斯特莱夫
+2434,badge,accessories,badges_ornaments,确认,Wiki 定义为表示身份等级成员关系或兴趣的徽章饰物
+2435,print_thighhighs,legwear_footwear,stockings,确认,Wiki 定义为印有心形星形或动物等图案的过膝袜
+2436,platform_sandals,legwear_footwear,sandals_slippers,确认,Wiki 定义为具有厚底结构的凉鞋
+2437,raglan_sleeves,clothing_detail,sleeve_detail,确认,Wiki 定义为从腋下斜接至领口的插肩袖结构
+2438,lucky_star,copyright,letter_l,确认,Wiki 定义为《幸运星》漫画及动画作品系列
+2439,green_bowtie,accessories,neckwear,确认,Wiki 定义为绿色领结
+2440,science_adventure,copyright,letter_s,确认,Wiki 定义为包含《命运石之门》等作品的科学冒险系列
+2441,striped_necktie,accessories,neckwear,修正,Wiki 定义为带条纹图案的领带且核心物件仍是领带
+2442,television,digital_media,camera_video,确认,Wiki 定义为接收电视信号并显示图像的影音设备
+2443,kasane_teto,character,letter_k,确认并改名,Wiki 定义为 UTAU 与 Synthesizer V 角色重音Teto而非零钻
+2444,persona_3,copyright,letter_p,确认,Wiki 定义为 Atlus 开发的《女神异闻录3》游戏作品
+2445,garrison_cap,head_accessories,hats_caps,确认,Wiki 定义为可折叠且顶部带褶皱或凹陷的船形帽
+2446,aiming,action,combat_action,确认,Wiki 定义为使用枪弓等远程武器瞄准目标
+2447,hu_tao_(genshin_impact),character,letter_h,确认,Wiki 定义为《原神》角色胡桃
+2448,biceps,body,build,确认,Wiki 定义为上臂前侧位于肩肘之间的肱二头肌
+2449,gigantic_breasts,body,breast_chest,确认,Wiki 定义为尺寸通常超过头部两倍的极巨大乳房
+2450,v-neck,clothing_detail,collar_detail,确认,Wiki 定义为呈 V 形的上衣领口
+2451,kongou_(kancolle),character,letter_k,确认,Wiki 定义为《舰队Collection》角色金刚
+2452,stomach_bulge,body,torso_back,确认,Wiki 描述腹部因内部物体推挤而出现的可见躯干隆起
+2453,red_sash,accessories,bags_belts,确认,Wiki 定义为红色腰带或饰带
+2454,blue_sleeves,clothing_appearance,clothing_color,确认,Wiki 定义为颜色为蓝色的袖子
+2455,narrow_waist,body,waist_hips,确认,Wiki 定义为相对身体其他部位明显较窄的腰部体型
+2456,zzz,text_meta,comic,确认,Wiki 定义为漫画中表示打鼾或睡眠的拟声文字效果
+2457,shackles,sensitive,restraint,确认,Wiki 定义为用于束缚手臂或腿部的金属镣铐
+2458,hakama_short_skirt,traditional_clothes,traditional_japan,修正,Wiki 定义为缩短版袴裙且核心仍是日本传统服饰袴
+2459,water_bottle,food_drink,tableware,确认,Wiki 定义为携带水或其他饮料的瓶状餐饮器具
+2460,side-by-side,composition,layout,确认,Wiki 定义为两个或更多角色紧邻并排站立的画面布局
+2461,squeans,text_meta,comic,确认,Wiki 定义为漫画中表示困倦醉酒或迷醉的头旁符号
+2462,handheld_game_console,digital_media,game_device,确认,Wiki 定义为便携且紧凑的掌上游戏机
+2463,mika_(blue_archive),character,letter_m,确认,Wiki 定义为《蔚蓝档案》角色圣园未花
+2464,hoshimachi_suisei,character,letter_h,确认并改名,Wiki 定义为 Hololive VTuber 星街彗星而非古河七星
+2465,persona_4,copyright,letter_p,确认,Wiki 定义为 Atlus 开发的《女神异闻录4》游戏作品
+2466,crop_top_overhang,clothing_detail,silhouette_fit,修正,Wiki 描述宽松短上衣下摆悬垂形成的版型轮廓而非开合状态
+2467,multiple_hair_bows,head_accessories,hairband_ribbon,确认,Wiki 定义为头发上佩戴三个或更多蝴蝶结
+2468,frilled_choker,jewelry_accessories,necklace_choker,确认,Wiki 定义为边缘带蕾丝花边的项圈
+2469,shark_girl,people,fantasy_person,确认,Wiki 定义为具有鲨鱼特征的鱼娘或人形幻想种族
+2470,red_theme,light_effect,palette,确认,Wiki 定义为整体由红色主导的画面配色
+2471,sliding_doors,building_parts,door_window,确认,Wiki 定义为通过滑动方式开关的门
+2472,body_writing,text_meta,text,确认,Wiki 核心内容是在人体上书写的文字字符或数字
+2473,grey_hat,head_accessories,hats_caps,确认,Wiki 定义为灰色帽子
+2474,holding_wand,action,holding,确认,Wiki 定义为人物手持法杖
+2475,nier:automata,copyright,letter_n,确认,Wiki 定义为白金工作室开发的《尼尔：机械纪元》作品
+2476,cube_hair_ornament,head_accessories,themed_hair_ornament,确认,Wiki 定义为方块形状的发饰
+2477,ripples,nature,water_ice,修正,Wiki 定义为物体撞击液面产生的同心波纹且属于水体形态而非光效
+2478,o-ring_top,clothes_main,vest_top,确认,Wiki 定义为使用 O 形环连接衣料的上衣
+2479,hooded_coat,outerwear_suits,jacket_coat,确认,Wiki 定义为带有连帽设计的大衣
+2480,cookie,food_drink,dessert_snack,确认,Wiki 定义为小而扁平的烘焙甜点曲奇

@@ -1052,6 +1052,13 @@ V20_EXACT_LOCATIONS = {
     "clam_shell": ("animal_traits", "shell_feature"),
     "snail_shell": ("animal_traits", "shell_feature"),
     "fur-trimmed_capelet": ("outerwear_suits", "cape_cloak"),
+    "bath": ("household_objects", "other_object"),
+    "huge_penis": ("adult_body", "penis"),
+    "mermaid": ("people", "fantasy_person"),
+    "striped_necktie": ("accessories", "neckwear"),
+    "hakama_short_skirt": ("traditional_clothes", "traditional_japan"),
+    "crop_top_overhang": ("clothing_detail", "silhouette_fit"),
+    "ripples": ("nature", "water_ice"),
 }
 
 

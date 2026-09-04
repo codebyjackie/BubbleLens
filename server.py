@@ -35,6 +35,9 @@ TAG_ALIAS_OVERRIDES = {
     "yuri_(object)": ["百合题材物品", "百合作品物件", "百合题材漫画"],
     "pokemon_(anime)": ["宝可梦（动画）", "精灵宝可梦（动画）", "宝可梦动画系列"],
     "turtle_shell": ["龟壳", "乌龟壳", "龟甲"],
+    "popped_collar": ["翻起的衣领", "竖起衣领", "衣领翻起"],
+    "kasane_teto": ["重音Teto", "重音泰托", "重音テト"],
+    "hoshimachi_suisei": ["星街彗星", "星街すいせい", "Hoshimachi Suisei"],
 }
 
 

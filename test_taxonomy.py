@@ -425,6 +425,9 @@ assert tags["sett"]["cn"] == "铺路石"
 assert tags["yuri_(object)"]["cn"] == "百合题材物品"
 assert tags["pokemon_(anime)"]["cn"] == "宝可梦（动画）"
 assert tags["turtle_shell"]["cn"] == "龟壳"
+assert tags["popped_collar"]["cn"] == "翻起的衣领"
+assert tags["kasane_teto"]["cn"] == "重音Teto"
+assert tags["hoshimachi_suisei"]["cn"] == "星街彗星"
 
 manual_rows_1841_1920 = {
     "thighlet": ("jewelry_accessories", "other_jewelry"),
@@ -522,6 +525,18 @@ manual_rows_2321_2400 = {
     "fur-trimmed_capelet": ("outerwear_suits", "cape_cloak"),
 }
 for tag_name, location in manual_rows_2321_2400.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
+manual_rows_2401_2480 = {
+    "bath": ("household_objects", "other_object"),
+    "huge_penis": ("adult_body", "penis"),
+    "mermaid": ("people", "fantasy_person"),
+    "striped_necktie": ("accessories", "neckwear"),
+    "hakama_short_skirt": ("traditional_clothes", "traditional_japan"),
+    "crop_top_overhang": ("clothing_detail", "silhouette_fit"),
+    "ripples": ("nature", "water_ice"),
+}
+for tag_name, location in manual_rows_2401_2480.items():
     assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
 
 ritual_folder = next(item for item in catalog["folders"] if item["id"] == "culture_objects")
