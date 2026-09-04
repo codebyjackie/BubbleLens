@@ -22,12 +22,12 @@ assert catalog["sourceRowCount"] == 49844
 assert catalog["tagCount"] == 49837
 assert len(catalog["folders"]) == 53
 assert [folder["id"] for folder in catalog["folders"]] == FOLDER_ORDER
-assert len(categories) == 415
+assert len(categories) == 417
 assert len(locations) == catalog["tagCount"]
 assert all(category["tags"] for category in categories)
 assert max(len(folder["name"]) for folder in catalog["folders"]) <= 6
 assert max(len(category["name"]) for category in categories) <= 6
-assert max(len(folder["categories"]) for folder in catalog["folders"] if folder["id"] not in {"copyright", "character"}) <= 12
+assert max(len(folder["categories"]) for folder in catalog["folders"] if folder["id"] not in {"copyright", "character"}) <= 13
 assert catalog["fallbackCount"] == 0
 assert locations["communism"] == ("themes", "social_theme")
 assert locations["windshield"] == ("transport_play", "vehicle_parts")
@@ -112,12 +112,47 @@ assert locations["sitting_on_person"] == ("action", "interaction")
 assert locations["jacket_on_shoulders"] == ("clothing_appearance", "wearing_state")
 assert locations["alternate_color"] == ("themes", "persona_variant")
 assert locations["bandana"] == ("head_accessories", "headwrap_veil")
+assert locations["ofuda"] == ("symbols", "religious_symbol")
+assert locations["on_couch"] == ("pose", "object_pose")
+assert locations["white_capelet"] == ("outerwear_suits", "cape_cloak")
+assert locations["gag"] == ("sensitive", "restraint")
+assert locations["gagged"] == ("sensitive", "restraint")
+assert locations["licking_lips"] == ("face", "oral_detail")
+assert locations["abyssal_ship"] == ("creatures", "fantasy_creature")
+assert locations["angel"] == ("people", "fantasy_person")
+assert locations["shota"] == ("adult_kink", "adult_taboo")
+assert locations["dakimakura_(medium)"] == ("style", "medium")
+assert locations["bloomers"] == ("underwear_swim", "panties_underwear")
+assert locations["covering_breasts"] == ("action", "body_cover")
+assert locations["tress_ribbon"] == ("head_accessories", "hairband_ribbon")
+assert locations["underbust"] == ("underwear_swim", "bra_lingerie")
+assert locations["w"] == ("pose", "hand_gesture")
+assert locations["ahegao"] == ("adult", "adult_response")
+assert locations["claw_pose"] == ("pose", "hand_gesture")
+assert locations["joints"] == ("body", "internal_organs")
+assert locations["+++"] == ("expression", "dramatic_effect")
+assert locations["winter_clothes"] == ("clothing_appearance", "fashion_style")
+assert locations["on_head"] == ("action", "interaction")
+assert locations["glass"] == ("household_objects", "material")
+assert locations["retro_artstyle"] == ("style", "era_style")
+assert locations["armored_boots"] == ("protective_clothes", "leg_armor")
+assert locations["bun_cover"] == ("head_accessories", "hairtie_ring")
+assert locations["cheerleader"] == ("people", "occupation")
+assert locations["open_hand"] == ("pose", "hand_gesture")
+assert locations["road"] == ("outdoor_scene", "terrain_surface")
+assert locations["arm_strap"] == ("accessories", "badges_ornaments")
+assert locations["miko"] == ("people", "occupation")
+assert locations["squiggle"] == ("expression", "dramatic_effect")
+assert locations["fairy"] == ("people", "fantasy_person")
+assert locations["nipple_slip"] == ("adult_body", "adult_clothes")
 assert locations[">_<"] == ("expression", "fear_surprise")
 
 body_folder = next(item for item in catalog["folders"] if item["id"] == "body")
 assert next(item for item in body_folder["categories"] if item["id"] == "internal_organs")["name"] == "骨骼内脏"
 nature_folder = next(item for item in catalog["folders"] if item["id"] == "nature")
 assert next(item for item in nature_folder["categories"] if item["id"] == "water_ice")["name"] == "水与冰"
+animal_traits_folder = next(item for item in catalog["folders"] if item["id"] == "animal_traits")
+assert next(item for item in animal_traits_folder["categories"] if item["id"] == "claw_scale")["name"] == "爪鳞触须"
 assert locations["bara"] == ("style", "genre")
 assert locations["bottle"] == ("household_objects", "container")
 assert locations["facing_viewer"] == ("pose", "body_pose")
@@ -388,6 +423,34 @@ assert tags["skin_fangs"]["cn"] == "双侧口缘虎牙"
 assert tags["batter"]["cn"] == "面糊"
 assert tags["sett"]["cn"] == "铺路石"
 assert tags["yuri_(object)"]["cn"] == "百合题材物品"
+assert tags["pokemon_(anime)"]["cn"] == "宝可梦（动画）"
+
+manual_rows_1841_1920 = {
+    "thighlet": ("jewelry_accessories", "other_jewelry"),
+    "inverted_nipples": ("adult_body", "nipples"),
+    "green_nails": ("body_detail", "nail_care"),
+}
+for tag_name, location in manual_rows_1841_1920.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
+manual_rows_1921_2000 = {
+    "anchor_symbol": ("symbols", "emblem"),
+    "clothes_around_waist": ("clothing_appearance", "wearing_state"),
+    "gohei": ("culture_objects", "ritual_object"),
+    "paw_print": ("symbols", "general_symbol"),
+    "frilled_thigh_strap": ("accessories", "other_accessory"),
+    "bound_arms": ("sensitive", "restraint"),
+    "own_hands_clasped": ("pose", "hand_gesture"),
+    "naked_shirt": ("clothing_appearance", "wearing_state"),
+    "head_wreath": ("head_accessories", "headpiece"),
+    "text_focus": ("composition", "subject_focus"),
+    "aqua_nails": ("body_detail", "nail_care"),
+}
+for tag_name, location in manual_rows_1921_2000.items():
+    assert locations[tag_name] == location, (tag_name, locations[tag_name], location)
+
+ritual_folder = next(item for item in catalog["folders"] if item["id"] == "culture_objects")
+assert next(category for category in ritual_folder["categories"] if category["id"] == "ritual_object")["name"] == "礼仪用品"
 
 assert tags["load_bearing_equipment"]["cn"] == "携行装备"
 
